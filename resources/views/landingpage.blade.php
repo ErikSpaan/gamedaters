@@ -2,6 +2,7 @@
 @extends('master')
 
 {{-- <link href="{{ asset('resources/sass/landing.scss') }}" rel="stylesheet"> --}}
+
 {{-- @include ('resources/sass/landing.scss') --}}
 
 <!--Title on tab current page -->
