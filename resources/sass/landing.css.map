@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "ACCA,OAAO,CAAC,sDAAI;ADEZ,AAAA,IAAI,CAAC;EACD,KAAK,ECWF,OAAO;CDVb",
+    "mappings": "ACCA,OAAO,CAAC,sDAAI",
     "sources": [
         "landing.scss",
         "_config.scss"
