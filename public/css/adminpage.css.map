@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sDAAI;ADEZ,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,KAAK;CAC1B",
+    "sources": [
+        "adminpage.scss",
+        "_config.scss"
+    ],
+    "names": [],
+    "file": "adminpage.css"
+}

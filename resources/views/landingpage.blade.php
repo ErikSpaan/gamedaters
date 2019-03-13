@@ -1,9 +1,11 @@
 <!--Extend the master.blade.php -->
 @extends('master')
 
-{{-- <link href="{{ asset('resources/sass/landing.scss') }}" rel="stylesheet"> --}}
 
-{{-- @include ('resources/sass/landing.scss') --}}
+<head>
+<link rel="stylesheet" href="{{ asset('/css/landingpage.css') }}">
+</head>
+{{-- @include ('resources/sass/landing.css') --}}
 
 <!--Title on tab current page -->
 @section('title', 'Welcome')
