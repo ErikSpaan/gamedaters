@@ -29,10 +29,12 @@
         <div class="flex2_top">
                 @section('login')
                 @include ('codeincludes/login')
+                
         </div>
         <div class="flex2_middle">
                 @section('registerform')
                 @include ('codeincludes/register')
+                
         </div>
         <div class="flex2_bottom">
             

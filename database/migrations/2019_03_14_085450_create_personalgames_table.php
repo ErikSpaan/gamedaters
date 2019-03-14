@@ -14,9 +14,11 @@ class CreatePersonalgamesTable extends Migration
     public function up()
     {
         Schema::create('personal_games', function (Blueprint $table) {
-            $table->bigInteger('id');
-            $table->bigInteger('game_id');
+            $table->bigInteger('id')->unsigned();
+            $table->bigInteger('game_id')->unsigned();
             $table->timestamps();
+            $table -> foreign('id') -> references('id') -> on('users');
+            $table -> foreign('game_id') -> references('game_id') -> on('games');
         });
     }
 
