@@ -12,13 +12,15 @@
             </span>
             @endif
         </div>
-        <div class="remember_me_container">
+        <div class="password_container">
             <div>
-                <input id="password" type="password" placeholder="password" class="password_input" name="password" required>
-                @if ($errors->has('password'))
-                <span class="" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
+                <input id="" type="password" placeholder="password" class="password_input" name="password" required>
+            </div>
+            <div>
+                @if (Route::has('password.request'))
+                <a class="forgot_password" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
                 @endif
             </div>
         </div>
@@ -28,19 +30,7 @@
             </button>
         </div>
         <div class="checkbox_container">
-            <div>
-                <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                <label class="" for="remember">
-                    {{ __('Remember Me') }}
-                </label>
-            </div>
-            <div>
-                @if (Route::has('password.request'))
-                <a class="forgot_password" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                </a>
-                @endif
-            </div>
+           
         </div>
     </div>
 
