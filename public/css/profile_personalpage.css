@@ -8,15 +8,21 @@ body {
 }
 
 input[type="password"] {
-  padding: 10px;
   border: none;
   border-bottom: 1px solid black;
+  outline: none;
 }
 
 input[type="email"] {
-  padding: 10px;
   border: none;
   border-bottom: 1px solid black;
+  outline: none;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 .debug {
