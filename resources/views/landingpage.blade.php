@@ -9,19 +9,10 @@
 </head>
 
 <!--Name / logo landingpage -->
-{{-- @section('name/logo') --}}
+@section('name/logo')
+@include ('codeincludes/namelogo')
 
-<!-- left side landingpage flex1 top-->
-<div class="container">
-    <div class="flex1">
-        <div class="flex1_top">
-            <img src="/images/logo.jpg" alt="player 2" />
-        </div>
-        <!-- left side landingpage flex1 bottom-->
-        <div class="flex1_bottom">
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, optio sint. Iste iusto non quam doloremque voluptate eos dolorem voluptatem atque voluptatibus optio odio, praesentium enim dicta corrupti aliquam. Molestias eveniet obcaecati enim placeat quasi, quo molestiae, nihil eum et dolores nam magni quaerat rem praesentium iure non error tempora?</p>
-        </div>
-    </div>
+
 
     <!--right side landingpage Login flex2 top-->
     <div class="flex2">

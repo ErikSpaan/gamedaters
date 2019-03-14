@@ -3,34 +3,36 @@
 
 .container {
     margin: 0;
+    padding: 0;
     display: flex;
-    width: 98vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     .flex1 {
-        height: 100vh;
+        height: 100%;
         width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        border-right: 1px solid black;
-        // padding: 10px;
-
+        background-color: #C3091E;
+        
         .flex1_top {
-            width: 70%;
-            height: 30%;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                
-            }
+            width: 45%;
+            height: 25%;
+            margin: 20% auto 0 auto;
+            background-image: url('../images/logo3.jpg');
+            background-position: center center;
+            background-size: cover;
         }
         .flex1_bottom {
             width: 50%;
-            height: 30%
+            height: 20%;
+            margin: 7% auto;
+        }
+        span {
+            color: #C3091E;
+        }
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
         }
     }
     .flex2 {
@@ -40,14 +42,12 @@
         justify-content: space-between;
         height: 100vh;
         width: 50vw;
-        // padding: 10px;
 
         .flex2_top{
             display: flex;
             justify-content: space-around;
             width: 100%;
             height: 25%;
-
         }
         .flex2_middle {
             width: 30%;
