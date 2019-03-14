@@ -15,14 +15,14 @@
 <!--right side landingpage Login flex2 top-->
     <div class="flex2">
         <div class="flex2_top">
-            @section('login')
-            @include ('codeincludes/login')
+                @section('login')
+                @include ('codeincludes/login')
         </div>
 
         <!--right side landingpage Register form flex2 middle-->
         <div class="flex2_middle">
-            @section('registerform')
-            @include ('codeincludes/register')
+                @section('registerform')
+                @include ('codeincludes/register')
         </div>
         
         <div class="flex2_bottom">
