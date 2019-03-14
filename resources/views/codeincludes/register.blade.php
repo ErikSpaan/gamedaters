@@ -35,14 +35,14 @@
                 <label for="password" class="">{{ __('Password') }}</label>
 
                 <div class="">
-                    <input id="password" type="password" class="" name="password" required>
+                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                     <div>
-                    @if ($errors->has('password'))
-                    <span class="" role="alert">
-                        <strong>{{ $errors->first('password') }}</strong>
-                    </span>
-                    @endif
-                </div>
+                        @if ($errors->has('password'))
+                        <span class="" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                        @endif
+                    </div>
                 </div>
             </div>
 
@@ -50,18 +50,18 @@
                 <label for="password-confirm" class="">{{ __('Confirm Password') }}</label>
 
                 <div class="">
-                    <input id="password-confirm" type="password" class="" required>
+                    <input id="password-confirm" type="password" class="form-control" required>
                 </div>
             </div>
-        <div id="terms">
-        <input type="checkbox" required>agree with our terms.
-    </div>
+            <div id="terms">
+                <input type="checkbox" required>agree with our terms.
+            </div>
 
-    <div class="register_button">
-        <button type="submit" id="registerButton">
-            {{ __('Register') }}
-        </button>
-    </div>
-    </div>
+            <div class="register_button">
+                <button type="submit" id="registerButton" class="btn btn-primary">
+                    {{ __('Register') }}
+                </button>
+            </div>
+        </div>
     </div>
 </form>
