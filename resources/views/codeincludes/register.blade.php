@@ -4,7 +4,7 @@
         <div class="register_head">Register your account</div>
         <div class="register_content">
             <div class="">
-                <label for="name" class="">{{ __('Name') }}</label>
+                <label for="name" class=""><span>N</span>ame</label>
 
                 <div class="">
                     <input id="name" type="text" class="" name="name" value="{{ old('name') }}" required autofocus>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="">
-                <label for="email" class="">{{ __('E-Mail Address') }}</label>
+                <label for="email" class=""><span>E</span>-Mail Address</label>
 
                 <div class="">
                     <input id="" type="email" class="" name="email" value="{{ old('email') }}" required>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="">
-                <label for="password" class="">{{ __('Password') }}</label>
+                <label for="password" class=""><span>P</span>assword</label>
 
                 <div class="">
                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="">
-                <label for="password-confirm" class="">{{ __('Confirm Password') }}</label>
+                <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
 
                 <div class="">
                     <input id="password-confirm" type="password" class="form-control" required>

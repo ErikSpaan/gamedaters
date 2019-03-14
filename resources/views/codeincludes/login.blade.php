@@ -29,9 +29,7 @@
                 {{ __('Login') }}
             </button>
         </div>
-        <div class="checkbox_container">
-           
-        </div>
+        
     </div>
 
 </form>
