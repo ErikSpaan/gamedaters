@@ -14,9 +14,11 @@ class CreatePersonaleventTable extends Migration
     public function up()
     {
         Schema::create('personal_events', function (Blueprint $table) {
-            $table->bigInteger('id');
-            $table->bigInteger('event_id');
+            $table->bigInteger('id')->unsigned();
+            $table->bigInteger('event_id')->unsigned();
             $table->timestamps();
+            $table -> foreign('id') -> references('id') -> on('users');
+            $table -> foreign('event_id') -> references('event_id') -> on('events');
         });
     }
 
