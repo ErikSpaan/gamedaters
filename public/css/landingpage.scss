@@ -5,13 +5,14 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
 
     .flex1 {
         height: 100%;
         width: 50%;
-        background-color: #C3091E;
+        background-color: $red;
 
         .flex1_top {
             width: 45%;
@@ -27,7 +28,7 @@
             margin: 7% auto;
         }
         span {
-            color: #C3091E;
+            color: $red;
         }
         p {
             color: #fff;
@@ -179,3 +180,6 @@ span {
     color: $red;
     font-weight: bold;
 }
+
+// Responsive
+@import 'mobile';
