@@ -166,11 +166,6 @@ input[type="text"] {
   color: #1666a0;
 }
 
-.password_error {
-  max-width: 8vw !important;
-  overflow: hidden;
-}
-
 .password_error2 {
   font-size: 14px;
 }
