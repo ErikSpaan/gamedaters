@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route('register') }}">
     @csrf
     <div class="flex2_middle">
-        <div class="register_head">Register your account</div>
+        <div class="register_head">Sign up now</div>
         <div class="register_content">
             <div class="">
                 <label for="name" class=""><span>N</span>ame</label>
