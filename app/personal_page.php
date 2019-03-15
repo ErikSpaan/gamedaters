@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class personal_page extends Model
 {
-    public function myevent() {
+    public function myevents() {
         
-        return $this->hasMany(Personal_events::class);
+        return $this->hasMany(personal_event::class);
     }
 }
