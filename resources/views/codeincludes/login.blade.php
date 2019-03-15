@@ -16,7 +16,7 @@
             <div>
                 <input id="" type="password" placeholder="password" class="password_input" name="password" required>
             </div>
-            <div>
+            <div class="password_forgot">
                 @if (Route::has('password.request'))
                 <a class="forgot_password" href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
