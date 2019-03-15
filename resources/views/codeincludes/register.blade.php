@@ -1,7 +1,7 @@
 <form method="POST" action="{{ route('register') }}">
     @csrf
     <div class="flex2_middle">
-        <div class="register_head">Register your account</div>
+        <div class="register_head">Sign up now</div>
         <div class="register_content">
             <div class="">
                 <label for="name" class=""><span>N</span>ame</label>
@@ -20,18 +20,17 @@
             <div class="">
                 <label for="email" class=""><span>E</span>-Mail Address</label>
 
-                <div class="">
+                <div class="password_error">
                     <input id="" type="email" class="" name="email" value="{{ old('email') }}" required>
-
+                    <div>
                     @if ($errors->has('email'))
-                    <span class="" role="alert">
+                    <span class="password_error2" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                     @endif
                 </div>
+                </div>
             </div>
-
-
 
             <div class="">
                 <label for="password" class=""><span>P</span>assword</label>
@@ -48,42 +47,15 @@
                 </div>
             </div>
 
-
             <div class="">
-                <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
 
-                <div class="">
-                    <input id="password-confirm" type="password" class="form-control" required>
-                </div>
-            </div>
-            <div id="terms">
-                <input type="checkbox" required>agree with our terms.
-            </div>
-
-
-
-
-
-
-
-           
-
-            <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Register') }}
-                    </button>
-                </div>
-            </div>
-
-            {{-- <div class="">
                 <label for="password" class=""><span>P</span>assword</label>
-
-                <div class="">
+                </div>
+                <div class="password_error">
                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                    <div>
+                    <div class="">
                         @if ($errors->has('password'))
-                        <span class="" role="alert">
+                        <span class="password_error2" role="alert">
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                         @endif
@@ -95,7 +67,7 @@
                 <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
 
                 <div class="">
-                    <input id="password-confirm" type="password" class="form-control" required>
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                 </div>
             </div>
             <div id="terms">
@@ -108,7 +80,7 @@
                 </button>
             </div>
         </div>
-    </div> --}}
+    </div>
 </form>
 
 
