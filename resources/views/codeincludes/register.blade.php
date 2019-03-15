@@ -46,7 +46,7 @@
                         @endif
                     </div>
                 </div>
-            </div>
+            </div>  
 
             <div class="">
                 <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
