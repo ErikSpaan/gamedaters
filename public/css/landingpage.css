@@ -278,7 +278,6 @@ span {
 @media screen and (min-width: 1171px) {
   .container .flex1 .flex1_top {
     width: 60%;
-    margin: 40% auto 0 auto;
   }
 }
 
