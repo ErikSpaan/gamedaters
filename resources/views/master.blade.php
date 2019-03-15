@@ -14,9 +14,9 @@
 
     @yield('registerform')
 
-    @yield('content1')
-
     @yield('content')
+
+    @yield('content1')
     
 </body>
 </html>
