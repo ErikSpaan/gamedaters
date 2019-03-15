@@ -10,4 +10,12 @@ class event extends Model
         
         return $this->hasMany(personal_event::class);
     }
-}
+
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+        
+    }
+
+} //end class
