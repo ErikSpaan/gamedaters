@@ -59,10 +59,10 @@
         }
         .flex2_bottom {
             height: 30%;
-            width: 50%;
+            width: 100%;
             background-image: url("../images/gamer_couple.png");
             background-position: center;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
         }
      
@@ -86,7 +86,6 @@
 
     button {
         height: 20%;
-        width: 5vw;
         border: none;
         background-color: $blue;
         color: white;
@@ -104,6 +103,13 @@
     color: $blue;
     
 }
+}
+.password_error {
+    max-width: 8vw !important;
+    overflow: hidden;
+}
+.password_error2 {
+        font-size: 14px;
 }
 
 // classes for register.blade include

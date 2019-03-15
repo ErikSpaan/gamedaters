@@ -20,25 +20,27 @@
             <div class="">
                 <label for="email" class=""><span>E</span>-Mail Address</label>
 
-                <div class="">
+                <div class="password_error">
                     <input id="" type="email" class="" name="email" value="{{ old('email') }}" required>
-
+                    <div>
                     @if ($errors->has('email'))
-                    <span class="" role="alert">
+                    <span class="password_error2" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                     @endif
                 </div>
+                </div>
             </div>
 
             <div class="">
+                <div>
                 <label for="password" class=""><span>P</span>assword</label>
-
-                <div class="">
+                </div>
+                <div class="password_error">
                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                    <div>
+                    <div class="">
                         @if ($errors->has('password'))
-                        <span class="" role="alert">
+                        <span class="password_error2" role="alert">
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                         @endif
@@ -50,7 +52,7 @@
                 <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
 
                 <div class="">
-                    <input id="password-confirm" type="password" class="form-control" required>
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                 </div>
             </div>
             <div id="terms">
