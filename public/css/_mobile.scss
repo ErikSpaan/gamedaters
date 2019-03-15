@@ -1,13 +1,19 @@
  // Widescreens
 @include mediaXl {
-    .flex1_top {
-        width: 100%; 
+    .container .flex1 .flex1_top {
+        width: 60%;
+        background-position: center center;
+        background-size: contain;
     }
-
 }
 
 // Desktops and Laptops
 @include mediaLg {
+    .container .flex1 .flex1_top {
+        width: 60%;
+        background-position: center center;
+        background-size: contain;
+    }
 
 }
 

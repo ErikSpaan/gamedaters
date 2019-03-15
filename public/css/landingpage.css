@@ -53,7 +53,8 @@ input[type="text"] {
   margin: 20% auto 0 auto;
   background-image: url("../images/logo3.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .container .flex1 .flex1_bottom {
@@ -262,8 +263,18 @@ span {
 }
 
 @media screen and (min-width: 1171px) {
-  .flex1_top {
-    width: 100%;
+  .container .flex1 .flex1_top {
+    width: 60%;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .container .flex1 .flex1_top {
+    width: 60%;
+    background-position: center center;
+    background-size: contain;
   }
 }
 /*# sourceMappingURL=landingpage.css.map */

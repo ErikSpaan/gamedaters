@@ -20,7 +20,8 @@
             margin: 20% auto 0 auto;
             background-image: url('../images/logo3.jpg');
             background-position: center center;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
         .flex1_bottom {
             width: 50%;
