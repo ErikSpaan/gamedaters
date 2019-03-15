@@ -10,7 +10,7 @@ class PageController extends Controller
         return view('landingpage');
     }
 
-    public function homepage() {
+    public function home() {
         return view('homepage');
     }
 
