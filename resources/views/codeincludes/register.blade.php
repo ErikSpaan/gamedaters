@@ -32,23 +32,10 @@
                 </div>
             </div>
 
-            <div class="">
-                <label for="password" class=""><span>P</span>assword</label>
 
-                <div class="">
-                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                    <div>
-                        @if ($errors->has('password'))
-                        <span class="" role="alert">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                        @endif
-                    </div>
-                </div>
-            </div>
 
-            <div class="">
-
+<div class="">
+                <div>
                 <label for="password" class=""><span>P</span>assword</label>
                 </div>
                 <div class="password_error">
@@ -61,7 +48,7 @@
                         @endif
                     </div>
                 </div>
-            </div>  
+            </div>
 
             <div class="">
                 <label for="password-confirm" class=""><span>C</span>onfirm Password</label>
@@ -82,5 +69,3 @@
         </div>
     </div>
 </form>
-
-
