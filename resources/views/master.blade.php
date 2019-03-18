@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    @yield('logo/menu')
+
     @yield('name/logo')
 
     @yield('login')
