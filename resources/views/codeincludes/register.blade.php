@@ -62,7 +62,7 @@
             </div>
 
             <div class="register_button">
-                <button type="submit" id="registerButton" class="btn btn-primary">
+                <button type="submit" id="registerButton" class="">
                     {{ __('Register') }}
                 </button>
             </div>
