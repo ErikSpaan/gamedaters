@@ -3,4 +3,28 @@
 <link rel="stylesheet" href="{{ asset('/css/homepage.css') }}">
 </head>
 
-Hallo
+<!-- flex container homepage -->
+<div class="home_container">
+
+<!-- homepage link 1 -->
+<a href="#" target="_self" class="link_personal" title="Open Personal Page">
+    <div class="home_container-link1">
+        <h1>Personal</h1>
+    </div>
+</a>
+
+<!-- homepage link 2 -->
+<a href="#" target="_self" class="link_chat" title="Open Chat Page">
+    <div class="home_container-link2">
+        <h1>Chat</h1>
+    </div>
+</a>
+
+<!-- homepage link 3 -->
+<a href="events/" target="_self" class="link_events" title="Open Event Page">
+    <div class="home_container-link3"> 
+        <h1>Events</h1>
+    </div>
+</a>
+
+</div>

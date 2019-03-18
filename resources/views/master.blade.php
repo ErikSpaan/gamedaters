@@ -19,7 +19,6 @@
 <!-- included on homepage only -->
 @yield('homepageLinks')
 
-
 {{-- @yield('content')
 @yield('content1') --}}
     
