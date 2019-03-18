@@ -31,7 +31,7 @@ input[type="text"] {
 }
 
 .home_container {
-  height: 90%;
+  height: 85%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,6 +109,9 @@ input[type="text"] {
 @media screen and (min-width: 1171px) {
   .container .flex1 .flex1_top {
     width: 60%;
+  }
+  #hamburger_menu .bar1, #hamburger_menu .bar2, #hamburger_menu .bar3 {
+    margin: 5px 0;
   }
 }
 
