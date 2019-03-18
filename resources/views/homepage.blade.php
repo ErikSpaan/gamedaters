@@ -1,3 +1,4 @@
+
 <!--Extend the master.blade.php -->
 @extends('master')
 
