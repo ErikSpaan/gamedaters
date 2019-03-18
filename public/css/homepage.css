@@ -48,9 +48,13 @@ input[type="text"] {
 }
 
 .home_container .home_container, .home_container a {
-  color: #C3091E;
+  color: #000;
   text-decoration: none;
-  border: 2px solid #C3091E;
+  border: 2px solid #000;
+}
+
+.home_container .home_container span, .home_container a span {
+  color: #C3091E;
 }
 
 .home_container a.link_personal, .home_container .home_container-link1 {
@@ -58,7 +62,7 @@ input[type="text"] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 20px 70px;
+  margin: 20px 20%;
   border-radius: 10px;
 }
 
@@ -67,7 +71,7 @@ input[type="text"] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 20px 70px;
+  margin: 20px 20%;
   border-radius: 10px;
 }
 
@@ -76,22 +80,30 @@ input[type="text"] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 20px 70px;
+  margin: 20px 20%;
   border-radius: 10px;
 }
 
 .home_container h1 {
-  font-weight: bold;
   font-size: 60px;
 }
 
 .home_container a:hover {
   color: #fff;
   background-color: #C3091E;
+  border: 2px solid #C3091E;
+}
+
+.home_container a:hover i {
+  border-bottom: 2px solid #fff;
 }
 
 .home_container a:hover h1 {
   background-color: #C3091E;
+}
+
+.home_container a:hover span {
+  color: #1666a0;
 }
 
 @media screen and (min-width: 1171px) {
@@ -159,6 +171,19 @@ input[type="text"] {
   .register_button button {
     width: auto;
     margin: 5px;
+  }
+  .home_container a h1 {
+    font-size: 40px;
+    margin: 50px auto;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
   }
 }
 /*# sourceMappingURL=homepage.css.map */
