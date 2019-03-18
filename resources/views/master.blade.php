@@ -8,17 +8,17 @@
 </head>
 <body>
 
-    @yield('logo/menu')
+<!-- included on every page except the landingpage!! -->
+@yield('logo/menu')
 
-    @yield('name/logo')
+<!-- included on landingpage only! -->
+@yield('name/logo')
+@yield('login')
+@yield('registerform')
 
-    @yield('login')
 
-    @yield('registerform')
-
-    @yield('content')
-
-    @yield('content1')
+{{-- @yield('content')
+@yield('content1') --}}
     
 </body>
 </html>
