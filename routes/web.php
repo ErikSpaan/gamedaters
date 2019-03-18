@@ -24,5 +24,6 @@ Auth::routes();
 // Route::get('/events/edit', 'EventsController@edit');
 // Route::get('/events/index', 'EventsController@show');
 Route::resource('events', 'EventsController');
+Route::resource('games', 'GamesController');
 
 Route::get('/home', 'HomeController@index')->name('home');
