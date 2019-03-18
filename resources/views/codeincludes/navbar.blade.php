@@ -2,9 +2,8 @@
 
 <head>
     <!-- include css -->
-    <link rel="stylesheet" href="{{ asset('/css/homepage.css') }}">
-    <!--Title on tab current page -->
-    @section('title', 'Homepage')
+    <link rel="stylesheet" href="{{ asset('/css/navbar.css') }}">
+
 </head>
 
 @section('content')
@@ -17,10 +16,10 @@
         <div class="hamburger_container">
             <div class="logout">
                 <ul>
-                    <li> <a href="#">{{ Auth::user()->name }}</a></li>
-                    <li><a href="#">events</a></li>
-                    <li><a href="#">games</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <li id="one"> <a href="#">{{ Auth::user()->name }}</a></li>
+                    <li id="two"><a href="#">events</a></li>
+                    <li id="three"><a href="#">games</a></li>
+                    <li id="four"><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
@@ -28,8 +27,12 @@
                             @csrf
                         </form>
                     </li>
-                    <li><a href="#">admin</a></li>
-                    <li id="hamburger_menu"></li>
+                    <li id="five"><a href="#">admin</a></li>
+                    <li id="hamburger_menu">
+                        <div class="bar1" id="bar1"></div>
+                        <div class="bar1" id="bar2"></div>
+                        <div class="bar3" id="bar3"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,3 +58,4 @@
 
 
 </div>
+<script src="js/navbar.js"></script>
