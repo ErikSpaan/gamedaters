@@ -15,7 +15,7 @@ Route::get('/home', 'PageController@homepage');
 Route::get('/profile', 'PageController@profilepage');
 Route::get('/personal', 'PageController@personalpage');
 Route::get('/chat', 'PageController@chatpage');
-//Route::get('/event', 'PageController@eventpage');
+Route::get('/event', 'PageController@eventpage');
 Route::get('/admin', 'PageController@adminpage');
 
 Auth::routes();
