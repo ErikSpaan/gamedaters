@@ -25,10 +25,6 @@ input[type="text"] {
   outline: none;
 }
 
-input[type="checkbox"] {
-  visibility: hidden;
-}
-
 .debug {
   border: 1px solid blue;
 }
