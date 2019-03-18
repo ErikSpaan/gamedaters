@@ -16,6 +16,7 @@
 @yield('login')
 @yield('registerform')
 
+<!-- included on homepage only -->
 @yield('homepageLinks')
 
 
