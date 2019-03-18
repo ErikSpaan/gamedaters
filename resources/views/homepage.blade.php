@@ -1,6 +1,16 @@
+<!--Extend the master.blade.php -->
 @extends('master')
 
-    <!--Title on tab current page -->
-    @section('title', 'Homepage')
+<head>
+<!--Title on tab current page -->
+@section('title', 'Home')
+</head>
 
-@include('codeincludes/navbar')
+<!--Name / logo landingpage -->
+@section('logo/menu')
+@include ('codeincludes/navbar')
+
+<!-- homepage links -->
+@section('homepageLinks')
+@include('codeincludes/homelinks')
+
