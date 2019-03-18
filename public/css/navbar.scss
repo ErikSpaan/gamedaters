@@ -65,6 +65,27 @@
                     width: 100%;
                     padding: 0;
 
+                    #one {
+                        transform: translateY(-100px);
+                        transition: 2.1s;
+                    }
+                    #two {
+                        transform: translateY(-100px);
+                        transition: 1.7s;
+                    }
+                    #three {
+                        transform: translateY(-100px);
+                        transition: 1.3s;
+                    }
+                    #four {
+                        transform: translateY(-100px);
+                        transition: 0.9s;
+                    }
+                    #five {
+                        transform: translateY(-100px);
+                        transition: 0.5s;
+                    }
+
                     span {
                         width: 10%;
                         display: inline-block;
@@ -90,14 +111,30 @@
             }
 
             #hamburger_menu {
-                display: inline-block;
+                // display: inline-block;
                 height: 75%;
                 width: 10%;
+                margin-top: 13px;
                 float: right;
-                background-image: url("../images/hamburger_logo4.png");
-                background-size: contain;
-                background-repeat: no-repeat;
                 cursor: pointer;
+
+                .bar1, .bar2, .bar3 {
+                    width: 60%;
+                    height: 5px;
+                    background-color: black;
+                    margin: 10px 0;
+
+                }
+                #bar1 {
+                    transition: 1.2s;
+
+                }
+                #bar2 {
+                    transition: 1.2s;
+                }
+                #bar3 {
+                    transition: 1.2s;
+                }
             }
         }
     }

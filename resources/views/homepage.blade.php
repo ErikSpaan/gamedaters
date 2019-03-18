@@ -1,4 +1,3 @@
-
 <!--Extend the master.blade.php -->
 @extends('master')
 
@@ -14,3 +13,4 @@
 <!-- homepage links -->
 @section('homepageLinks')
 @include('codeincludes/homelinks')
+
