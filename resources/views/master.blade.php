@@ -16,6 +16,8 @@
 @yield('login')
 @yield('registerform')
 
+@yield('homepageLinks')
+
 
 {{-- @yield('content')
 @yield('content1') --}}

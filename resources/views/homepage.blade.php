@@ -2,8 +2,6 @@
 @extends('master')
 
 <head>
-<!-- include css -->
-<link rel="stylesheet" href="{{ asset('/css/navbar.css') }}">
 <!--Title on tab current page -->
 @section('title', 'Home')
 </head>

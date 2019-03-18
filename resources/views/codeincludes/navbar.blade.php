@@ -1,9 +1,14 @@
+<head>
+<!-- include css -->
+<link rel="stylesheet" href="{{ asset('/css/navbar.css') }}">
+</head>
+
 <div class="container">
     <div class="navbar_container">
         <div class="photo_container">
             <img src="../images/logo_new.jpg" alt="logo" />
         </div>
-        
+
         <div class="hamburger_container">
             <div class="logout">
                 <ul>
