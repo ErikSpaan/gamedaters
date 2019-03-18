@@ -110,6 +110,9 @@ input[type="text"] {
   .container .flex1 .flex1_top {
     width: 60%;
   }
+  #hamburger_menu .bar1, #hamburger_menu .bar2, #hamburger_menu .bar3 {
+    margin: 5px 0;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
