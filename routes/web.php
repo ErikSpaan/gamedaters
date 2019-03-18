@@ -25,5 +25,6 @@ Auth::routes();
 // Route::get('/events/index', 'EventsController@show');
 Route::resource('events', 'EventsController');
 Route::resource('games', 'GamesController');
+Route::resource('personalpages', 'PersonalPagesController');
 
 Route::get('/home', 'HomeController@index')->name('home');
