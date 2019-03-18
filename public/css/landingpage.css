@@ -336,5 +336,18 @@ span {
     width: auto;
     margin: 5px;
   }
+  .home_container a h1 {
+    font-size: 40px;
+    margin: 50px auto;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
+  }
+  a.link_chat, .home_container-link2 {
+    margin: 10px 10%;
+  }
 }
 /*# sourceMappingURL=landingpage.css.map */
