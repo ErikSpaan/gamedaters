@@ -18,7 +18,7 @@ class CreatePersonaldatesTable extends Migration
             $table->bigInteger('date_id')->unsigned();
             $table->timestamps();
             $table -> foreign('user_id') -> references('id') -> on('users');
-            $table -> foreign('date_id') -> references('personal_id') -> on('personalpages');
+            $table -> foreign('date_id') -> references('id') -> on('personalpages');
         });
     }
 

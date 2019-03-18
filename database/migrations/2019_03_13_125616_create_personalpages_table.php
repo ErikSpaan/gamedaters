@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonalTable extends Migration
+class CreatePersonalpagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreatePersonalTable extends Migration
     public function up()
     {
         Schema::create('personalpages', function (Blueprint $table) {
-            $table->bigIncrements('personal_id')->unsigned();
+            $table->bigIncrements('id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->string('personal_firstname',40);
             $table->string('personal_lastname',40);
@@ -28,6 +28,7 @@ class CreatePersonalTable extends Migration
             $table->string('personal_food',100)->nullable();
             $table->string('personal_extra1',100)->nullable();
             $table->string('personal_extra2',100)->nullable();
+            $table->string('adminrights',20)->nullable;
             $table->timestamps();
             $table -> foreign('user_id') -> references('id') -> on('users');
         });
