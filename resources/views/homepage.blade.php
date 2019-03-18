@@ -11,3 +11,7 @@
 <!--Name / logo landingpage -->
 @section('logo/menu')
 @include ('codeincludes/navbar')
+
+<!-- homepage links -->
+@section('homepageLinks')
+@include('codeincludes/homelinks')
