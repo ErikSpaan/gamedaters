@@ -63,6 +63,13 @@ $cyan: #6cb2eb;
 }
 
 //Media Query Mixins
+@mixin mediaXs {
+    @media screen and (min-width: 300px) and (max-width: 361px) {
+        @content;
+    }
+}
+
+
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
