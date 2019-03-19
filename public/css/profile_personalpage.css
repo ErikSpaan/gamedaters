@@ -45,12 +45,48 @@ input[type="text"] {
           align-items: center;
 }
 
+.profile_container .separate_span {
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #C3091E;
+}
+
+.profile_container .input_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 30%;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
 .profile_container .profile_boxes {
   height: 90%;
   min-width: 750px;
   max-width: 800px;
   margin: 30px 30px;
   padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.profile_container .profile_boxes input::-webkit-input-placeholder {
+  color: #1666a0;
+}
+
+.profile_container .profile_boxes input:-ms-input-placeholder {
+  color: #1666a0;
+}
+
+.profile_container .profile_boxes input::-ms-input-placeholder {
+  color: #1666a0;
+}
+
+.profile_container .profile_boxes input::placeholder {
+  color: #1666a0;
 }
 
 .profile_container .profile_boxes .photo_button_container {
@@ -67,11 +103,13 @@ input[type="text"] {
 .profile_container .profile_boxes .photo_button_container .photo_box {
   width: 500px;
   height: 100%;
+  border: 1px dotted black;
+  border-radius: 10px;
 }
 
 .profile_container .profile_boxes .photo_button_container .upload_button {
   position: relative;
-  width: 100px;
+  width: 110px;
   height: 8%;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -80,11 +118,6 @@ input[type="text"] {
   font-size: 16px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.profile_container .profile_boxes .photo_button_container .upload_button:active {
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
 }
 
 .profile_container .profile_boxes .input_container {
@@ -102,28 +135,15 @@ input[type="text"] {
   font-size: 14px;
 }
 
-.profile_container .profile_boxes .input_container .separate_span {
-  padding: 5px 10px;
-  font-size: 16px;
+.profile_container .profile_boxes .input_container .gender_span {
   color: #1666a0;
-}
-
-.profile_container .profile_boxes .input_container .input_flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 30%;
-  font-size: 12px;
-  padding-left: 5px;
 }
 
 .profile_container .profile_boxes .input_container .input_profile_page {
   width: 50%;
   height: 35px;
   margin-left: 10px;
+  color: #1666a0;
 }
 
 .profile_container .profile_boxes .input_container .input_range {
@@ -146,10 +166,97 @@ input[type="text"] {
 
 .profile_container .profile_boxes .who_am_i .text_area {
   width: 100%;
-  height: 80%;
+  height: 70%;
 }
 
 .profile_container .profile_boxes .who_am_i .see_personal_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30%;
+  margin: 10px auto;
+}
+
+.profile_container .profile_boxes .who_am_i .see_personal_page .button_personal_view {
+  border: none;
+  color: white;
+  background-color: #1666a0;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile_container .profile_boxes .who_am_i .see_personal_page .button_save_changes {
+  border: none;
+  color: white;
+  background-color: #C3091E;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile_container .profile_boxes .who_am_i .see_personal_page .button_save_changes:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.profile_container .profile_boxes .who_am_i .see_personal_page .button_personal_view:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.profile_container .filter_flex {
+  width: 750px;
+  height: 50%;
+}
+
+.profile_container .filter_flex .filter_name {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #1666a0;
+  font-size: 28px;
+}
+
+.profile_container .filter_flex .filter_options {
+  width: 100%;
+  height: 350px;
+}
+
+.profile_container .filter_flex .filter_options .input_radio_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.profile_container .filter_flex .filter_options .filter_age {
+  margin-left: 10px;
+  width: 500px;
+}
+
+.profile_container .filter_flex .find_match_button_box {
+  width: 100%;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +266,29 @@ input[type="text"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 20%;
+}
+
+.profile_container .filter_flex .find_match_button_box .find_matches_button {
+  border: none;
+  color: white;
+  background-color: #C3091E;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile_container .filter_flex .find_match_button_box .find_matches_button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.profile_container .matches_flex {
+  width: 750px;
+  height: 50%;
+  border-top: 1px solid #1666a0;
 }
 /*# sourceMappingURL=profile_personalpage.css.map */
