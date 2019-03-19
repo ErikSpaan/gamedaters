@@ -4,7 +4,16 @@
     <h1>Show personalpage</h1>
 
             {{ Auth::user()->id }}
-            
+            <div>
+                    {{ Auth::user()->id }}
+            </div>
+            <div>
+                    {{ Auth::user()->name }}
+            </div>
+            <div>
+                    {{ Auth::user()->email }}
+            </div>
+            click to change password
             <div>
                 {{ $personalpage->personal_firstname }}
             </div>

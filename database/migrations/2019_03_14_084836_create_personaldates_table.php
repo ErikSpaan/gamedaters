@@ -13,7 +13,7 @@ class CreatePersonaldatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_personalpage', function (Blueprint $table) {
+        Schema::create('personalpage_user', function (Blueprint $table) {
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('date_id')->unsigned();
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreatePersonaldatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_personalpage');
+        Schema::dropIfExists('personalpage_user');
     }
 }
