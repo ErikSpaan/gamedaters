@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\personalpage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\User;
 
 class PersonalPagesController extends Controller
 {
@@ -39,7 +41,7 @@ class PersonalPagesController extends Controller
     {
         $personalpage = new personalpage();
 
-        $personalpage->user_id = '1';  // delete this one !!!!!!!!!!
+        $personalpage->user_id = Auth::user()->id;
 
         $personalpage->personal_firstname = request('personal_firstname');
         $personalpage->personal_lastname = request('personal_lastname');

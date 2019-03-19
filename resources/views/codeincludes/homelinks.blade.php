@@ -7,14 +7,14 @@
 <div class="home_container">
 
 <!-- homepage link 1 -->
-<a href="#" target="_self" class="link_personal" title="Open Personal Page">
+<a href="personal" target="_self" class="link_personal" title="Open Personal Page">
     <div class="home_container-link1">
         <h1><i><span>P</span>ersonal</i></h1>
     </div>
 </a>
 
 <!-- homepage link 2 -->
-<a href="#" target="_self" class="link_chat" title="Open Chat Page">
+<a href="chat" target="_self" class="link_chat" title="Open Chat Page">
     <div class="home_container-link2">
         <h1><i><span>C</span>hat</i></h1>
     </div>

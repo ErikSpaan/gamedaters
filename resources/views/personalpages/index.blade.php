@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>personalpages</h1>
+    <h1>personalpages  userid: {{ Auth::user()->id }}</h1>
 
     @foreach ($personalpages as $personalpage)
         <li>
             <a href="/personalpages/{{ $personalpage->id }}">
-            {{ $personalpage->personal_lastname }}
+            {{ $personalpage->personal_lastname }} 
             </a>
         </li>
     @endforeach

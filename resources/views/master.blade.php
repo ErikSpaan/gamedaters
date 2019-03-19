@@ -19,8 +19,10 @@
 <!-- included on homepage only -->
 @yield('homepageLinks')
 
-{{-- @yield('content')
-@yield('content1') --}}
+{{-- eventpage --}}
+@yield('content')
+
+{{-- @yield('content1') --}}
     
 </body>
 </html>
