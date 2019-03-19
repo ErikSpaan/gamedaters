@@ -3,5 +3,5 @@
 <!--Title on tab current page -->
 @section('title', 'profile')
 
-@include('codeincludes/navbar')
+@include('codeincludes/newmenu')
 @include('codeincludes/profile')
