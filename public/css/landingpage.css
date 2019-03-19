@@ -299,6 +299,13 @@ span {
   .home_container a h1 {
     margin: 20px auto;
   }
+  .photo_container img {
+    width: 350px;
+  }
+  .menu .nav-link {
+    padding: 50px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
