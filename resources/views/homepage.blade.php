@@ -8,7 +8,8 @@
 
 <!--Name / logo landingpage -->
 @section('logo/menu')
-@include ('codeincludes/navbar')
+{{-- @include ('codeincludes/navbar') --}}
+@include ('codeincludes/newmenu')
 
 <!-- homepage links -->
 @section('homepageLinks')

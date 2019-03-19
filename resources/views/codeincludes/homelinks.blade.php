@@ -21,7 +21,7 @@
 </a>
 
 <!-- homepage link 3 -->
-<a href="events/" target="_self" class="link_events" title="Open Event Page">
+<a href="event" target="_self" class="link_events" title="Open Event Page">
     <div class="home_container-link3"> 
         <h1><i><span>E</span>vents</i></h1>
     </div>
