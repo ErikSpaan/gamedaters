@@ -102,7 +102,7 @@ span {
 }
 
 .container .flex2 .flex2_middle {
-  height: 65vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -115,6 +115,17 @@ span {
 .container .flex2 .flex2_middle .register_content {
   width: 150px;
   margin: 20px auto;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container .flex2 .flex2_middle .register_content input[type="text"], .container .flex2 .flex2_middle .register_content input[type="email"], .container .flex2 .flex2_middle .register_content [type="password"] {
@@ -126,7 +137,7 @@ span {
   margin: 0 auto;
 }
 
-.container .flex2 .flex2_middle .register_content .register_button button {
+.container .flex2 .flex2_middle .register_content .register_button {
   border: none;
   width: 10vw;
   height: 4vh;
@@ -139,7 +150,7 @@ span {
 }
 
 .container .flex2 .flex2_bottom {
-  height: 25vh;
+  height: 30vh;
   width: 100%;
   background-image: url("../images/gamer_couple.png");
   background-position: center;
