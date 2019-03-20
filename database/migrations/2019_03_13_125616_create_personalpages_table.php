@@ -28,7 +28,7 @@ class CreatePersonalpagesTable extends Migration
             $table->string('personal_food',100)->nullable();
             $table->string('personal_extra1',100)->nullable();
             $table->string('personal_extra2',100)->nullable();
-            $table->string('adminrights',20)->nullable;
+            $table->string('adminrights',20)->nullable();
             $table->timestamps();
             $table -> foreign('user_id') -> references('id') -> on('users');
         });
