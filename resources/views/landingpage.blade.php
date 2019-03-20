@@ -19,14 +19,13 @@
         @include ('codeincludes/login')
 
 
-        <!--left side landingpage Register form flex2 middle-->
+        <!--right side landingpage Register form flex2 middle-->
         @section('registerform')
         @include ('codeincludes/register')
 
-        <!--leftside landingpage Register form flex2 middle-->
+        <!--right side landingpage Register form flex2 middle-->
         @section('agreement')
-        @include ('codeincludes/agreement')
-            
+        @include ('codeincludes/agreement')   
     </div>
 </div>
 

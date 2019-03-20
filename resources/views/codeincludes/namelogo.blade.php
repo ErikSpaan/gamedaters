@@ -6,7 +6,7 @@
     </div>
 
     <!-- left side landingpage flex1 bottom-->
-    <div class="flex1_bottom">
+    <div class="flex1_bottom debug">
         <p>Roses are red <br>
             Violets are blue <br>
             Sign up now <br>
