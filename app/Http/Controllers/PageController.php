@@ -8,6 +8,7 @@ use App\Event;
 use App\Game;
 use App\User;
 use App\personalpage;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
@@ -40,8 +41,9 @@ class PageController extends Controller
 
     public function eventpage() {
         
-        $events = Event::all();
+        //$events = Event::all();
         $user = User::find(Auth::user()->id);
+        $events = DB::table('events')->paginate(3);
         return view('eventpage', compact('events','user'));
         
     }

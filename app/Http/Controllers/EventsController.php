@@ -6,6 +6,7 @@ use App\Event;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class EventsController extends Controller
@@ -17,8 +18,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
-
+        //$events = Event::all()->paginate(3);
+        $events = DB::table('events')->paginate(10);
         return view('events.index', compact('events'));
     }
 
