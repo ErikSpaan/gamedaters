@@ -26,6 +26,10 @@ input[type="text"] {
     
 // }
 
+span {
+    color: $red;
+}
+
 .container {
     margin: 0;
     padding: 0;
@@ -53,19 +57,16 @@ input[type="text"] {
                 height: 20%;
                 margin: 7% auto;
             
-                span {
-                    color: $red;
-            
-                    p {
-                        color: #fff;
-                        text-align: center;
-                        font-size: 16px;
-                    }
+                p {
+                    color: #fff;
+                    text-align: center;
+                    font-size: 16px;
                 }
             }
         }
     }
 }
+
     
 
         .flex2 {
