@@ -15,12 +15,6 @@ body {
   border: 1px solid purple;
 }
 
-input[type="text"] {
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-}
-
 span {
   color: #C3091E;
   font-weight: bold;
@@ -108,47 +102,31 @@ span {
 }
 
 .container .flex2 .flex2_middle {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 90vh;
-}
-
-.container .flex2 .flex2_bottom {
-  height: 30%;
+  height: 65vh;
   width: 100%;
-  background-image: url("../images/gamer_couple.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
-.register_head {
+.container .flex2 .flex2_middle .register_head {
+  text-align: center;
   font-size: 26px;
+  margin-top: 60px;
 }
 
-.register_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
+.container .flex2 .flex2_middle .register_content {
+  width: 150px;
+  margin: 20px auto;
 }
 
-.register_button button {
+.container .flex2 .flex2_middle .register_content input[type="text"], .container .flex2 .flex2_middle .register_content input[type="email"], .container .flex2 .flex2_middle .register_content [type="password"] {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 16px;
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.container .flex2 .flex2_middle .register_content .register_button button {
   border: none;
   width: 10vw;
   height: 4vh;
@@ -158,6 +136,15 @@ span {
   cursor: pointer;
   border-radius: 10px;
   outline: none;
+}
+
+.container .flex2 .flex2_bottom {
+  height: 25vh;
+  width: 100%;
+  background-image: url("../images/gamer_couple.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #terms {
