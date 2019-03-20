@@ -19,7 +19,9 @@ class PageController extends Controller
     }
 
     public function profilepage() {
-        return view('profilepage');
+        $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();
+        return view('profilepage', compact('personalpage'));
+
     }
 
     public function personalpage() {
