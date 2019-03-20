@@ -44,14 +44,13 @@
         
             <!-- terms -->
             <div id="terms">
-                <input type="checkbox" checked="checked" required><span id="terms2">agree with our terms.</span>
+                <input type="checkbox" checked="checked" required><span id="terms2">Agree With Our Terms</span>
             </div>
 
-            {{-- <div class="register_button"> --}}
+            <!-- register button -->
             <button type="submit" id="registerButton" class="register_button">
                 {{ __('Register') }}
             </button>
-            {{-- </div> --}}
         </div>
     </form>
 </div>
