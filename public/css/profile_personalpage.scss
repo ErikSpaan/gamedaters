@@ -44,6 +44,14 @@ input[type="text"] {
         width: 40%;
         font-size: 14px;
         padding-left: 5px;
+
+        // .male_checked {
+        //     display: none;
+        // }
+
+        // .male_unchecked {
+        //     display: none;
+        // }
     }
 
     // start flex-box 1
@@ -53,7 +61,7 @@ input[type="text"] {
         max-width: 550px;
         margin: 30px 30px;
         padding: 10px;
-        box-shadow: 3px -3px 10px 0px $blue;
+        box-shadow: 3px -3px 10px 0px grey;
         border-radius: 10px;
 
         input::placeholder {
@@ -70,13 +78,14 @@ input[type="text"] {
             .photo_box {
                 width: 40%;
                 height: 100%;
-                border: 1px dotted black;
                 border-radius: 10px;
 
                 .photo_image {
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;
+                    object-fit: fill;
+                    border-radius: 10px;
+                    // border: 1px dotted black;
                 }
             }
 
