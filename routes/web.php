@@ -20,8 +20,8 @@ Route::get('/admin', 'PageController@adminpage');
 
 Auth::routes();
 
-Route::get('/addevent', 'EventsController@addEvent');
-Route::get('/deleteevent', 'EventsController@deleteEvent');
+Route::get('/addevent/{event_id}', 'EventsController@addEvent');
+// Route::get('/deleteevent', 'EventsController@deleteEvent');
 // Route::get('/events/index', 'EventsController@show');
 Route::resource('events', 'EventsController');
 Route::resource('games', 'GamesController');

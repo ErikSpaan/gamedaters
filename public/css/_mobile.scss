@@ -6,20 +6,26 @@
     }
 
     //homepage:
-    .home_container a h1 {
-        // font-size: 40px;
-        margin: 20px auto;
+    .home_container {
+        margin: 70px auto;
+    
+        a h1 {
+            // font-size: 40px;
+            margin: 20px auto;
+        }
     }
 
         //logo and navbar:
         .photo_container img {
-            width: 600px;
+            width: 35%;
         }
 
         .menu .nav-link {
             padding: 50px;
-            font-size: 25px;
+            font-size: 20px;
         }
+
+        
 
 }
 
@@ -38,14 +44,18 @@
     }
 
     //homepage:
-    .home_container a h1 {
-        // font-size: 40px;
-        margin: 20px auto;
+    .home_container {
+        margin: 70px auto;
+
+        a h1 {
+            // font-size: 40px;
+            margin: 20px auto;
+        }
     }
 
     //logo and navbar:
     .photo_container img {
-        width: 300px;
+        width: 70%;
     }
 
     .menu {
@@ -54,7 +64,7 @@
         &-branding,
         &-nav {
             width: 50%;
-            height: 100vh; //100vh of screen so full screen
+            height: 100vh; //full height screen
         }
 
         &-nav {
@@ -97,14 +107,18 @@
     }
 
     //homepage:
-    .home_container a h1 {
-        font-size: 40px;
-        margin: 20px auto;
+    .home_container {
+        margin: 60px auto;
+
+        a h1 {
+            font-size: 40px;
+            margin: 20px auto;
+        } 
     }
 
     //logo and navbar:
     .photo_container img {
-        width: 300px;
+        width: 100%;
     }
 
     .menu {
@@ -112,8 +126,7 @@
 
         &-branding,
         &-nav {
-            width: 50%;
-            height: 100vh; //100vh of screen so full screen
+            height: 100vh; //full height screen
         }
 
         &-nav {
@@ -133,7 +146,6 @@
         .menu-nav {
             height: 100vh;
             transform: translate3d(100%, 0, 0);
-            font-size: 24px;
         }
 
         .menu-branding {
@@ -141,7 +153,7 @@
         }
 
         .nav-link {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 }
@@ -206,14 +218,35 @@
     }
 
     //homepage:
-    .home_container a h1 {
-        font-size: 30px;
+    .home_container { 
         margin: 50px auto;
-    }
 
+        a h1 {
+            font-size: 25px;
+            margin: 0 auto;
+        }
+
+        a.link_personal, .home_container-link1 {
+            margin: 15px 20%;   
+        }
+
+        a.link_chat, .home_container-link2 {
+                margin: 15px 20%;
+            }
+
+        a.link_events, .home_container-link3 {
+                margin: 15px 20%;
+            }
+    }
+    
     //navbar:
     .photo_container img {
-        width: 230px;
+        width: 100%;
+    }
+
+    .menu-btn {
+        right: 30px;
+        top: 30px;
     }
 
     .menu {
@@ -255,15 +288,34 @@
 @include mediaXs {
    
     //homepage:
-    .home_container a h1 {
-        // font-size: 40px;
-        margin: 35px auto;
-        font-size: 30px;
+    .home_container { 
+    margin: 40px auto;
+
+        a h1 {
+            font-size: 20px;
+        }
+
+        a.link_personal, .home_container-link1 {
+            margin: 15px 20%;   
+        }
+
+        a.link_chat, .home_container-link2 {
+            margin: 15px 20%;
+        }
+
+        a.link_events, .home_container-link3 {
+            margin: 15px 20%;
+        }
     }
 
     //logo and navbar:
     .photo_container img {
-        width: 180px;
+        width: 100%;
+    }
+
+    .menu-btn {
+        right: 25px;
+        top: 30px;
     }
 
     .menu {
@@ -272,7 +324,7 @@
         &-branding,
         &-nav {
             width: 50%;
-            height: 100vh; //100vh of screen so full screen
+            height: 100vh;
         }
 
         &-nav {
@@ -303,5 +355,4 @@
             font-size: 20px;
         }
     }
-
 }

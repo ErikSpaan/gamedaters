@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Event;
 use App\Game;
+use App\User;
 use App\personalpage;
 
 class PageController extends Controller
@@ -40,7 +41,8 @@ class PageController extends Controller
     public function eventpage() {
         
         $events = Event::all();
-        return view('eventpage', compact('events'));
+        $user = User::find(Auth::user()->id);
+        return view('eventpage', compact('events','user'));
         
     }
 
