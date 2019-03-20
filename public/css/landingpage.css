@@ -11,16 +11,8 @@ body {
   border: 1px solid blue;
 }
 
-input[type="password"] {
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-}
-
-input[type="email"] {
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
+.debug1 {
+  border: 1px solid purple;
 }
 
 input[type="text"] {
@@ -31,6 +23,7 @@ input[type="text"] {
 
 span {
   color: #C3091E;
+  font-weight: bold;
 }
 
 .container {
@@ -71,37 +64,50 @@ span {
   font-size: 16px;
 }
 
-.flex2 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.container .flex2 {
   height: 100vh;
   width: 50%;
 }
 
-.flex2 .flex2_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 50vw;
-  height: 20vh;
-  padding-top: 10px;
+.container .flex2 .flex2_top {
+  height: 10vh;
+  width: 100%;
 }
 
-.flex2 .flex2_middle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container .flex2 .flex2_top .flex2_top-input {
+  float: right;
+}
+
+.container .flex2 .flex2_top .flex2_top-input input[type="email"], .container .flex2 .flex2_top .flex2_top-input [type="password"] {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 16px;
+  margin: 0 20px;
+  max-width: 150px;
+}
+
+.container .flex2 .flex2_top .forgot_password {
+  text-decoration: none;
+  font-size: 12px;
+  color: #1666a0;
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+.container .flex2 .flex2_top button {
+  border: none;
+  background-color: #1666a0;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  padding: 4px 6px 4px 6px;
+  margin: 10px 10px 0 0;
+}
+
+.container .flex2 .flex2_middle {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -109,64 +115,16 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 65%;
+  height: 90vh;
 }
 
-.flex2 .flex2_bottom {
+.container .flex2 .flex2_bottom {
   height: 30%;
   width: 100%;
   background-image: url("../images/gamer_couple.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.password_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  height: 20vh;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.login {
-  padding-right: 20px;
-}
-
-.login button {
-  height: 20%;
-  border: none;
-  background-color: #1666a0;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  outline: none;
-}
-
-.password_forgot {
-  margin-top: 5px;
-}
-
-.password_forgot .forgot_password {
-  text-decoration: none;
-  font-size: 10px;
-  color: #1666a0;
-}
-
-.password_error {
-  max-width: 6vw !important;
-}
-
-.password_error2 {
-  font-size: 14px;
 }
 
 .register_head {
@@ -280,11 +238,6 @@ span {
 .close:hover,
 .close:focus {
   cursor: pointer;
-}
-
-span {
-  color: #C3091E;
-  font-weight: bold;
 }
 
 @media screen and (min-width: 1171px) {

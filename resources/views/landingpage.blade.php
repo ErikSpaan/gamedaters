@@ -14,7 +14,7 @@
     @include ('codeincludes/namelogo')
 
     <!--right side landingpage Login flex2 top-->
-    <div class="flex2 debug">
+    <div class="flex2">
         @section('login')
         @include ('codeincludes/login')
 

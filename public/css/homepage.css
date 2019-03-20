@@ -12,6 +12,10 @@ body {
   border: 1px solid blue;
 }
 
+.debug1 {
+  border: 1px solid purple;
+}
+
 .home_container {
   margin: 20px auto;
   width: 100%;

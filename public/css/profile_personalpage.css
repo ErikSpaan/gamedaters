@@ -11,6 +11,10 @@ body {
   border: 1px solid blue;
 }
 
+.debug1 {
+  border: 1px solid purple;
+}
+
 .profile_container {
   display: -webkit-box;
   display: -ms-flexbox;
