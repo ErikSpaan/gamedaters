@@ -16,22 +16,17 @@
             <input type="password" name="" placeholder="password" value="" class="input_profile_page">
             <span class="separate_span">gender</span>
             <div class="input_flex">
-                @if({{ $personalpage->personal_gender }} == 'male') {
-                    <input type="radio" name="gender" checked value="male" class="input_radio male_checked"><span class="gender_span male_checked">male</span>
-                }
-                    @else {
-                    <input type="radio" name="gender" value="male" class="input_radio male_unchecked"><span class="gender_span male_unchecked">male</span>
-                    }
-                    @endif
+                <input type="radio" name="gender" {{ ($personalpage->personal_gender=='male') ? 'checked="checked" ' : '' }} class="input_radio male_checked"><span class="gender_span male_checked">male</span>
             </div>
             <div class="input_flex">
-                <input type="radio" name="gender" value="female" class="input_radio"><span class="gender_span">female</span>
+                  
+                <input type="radio" name="gender" {{ ($personalpage->personal_gender=='female') ? 'checked="checked" ' : '' }} class="input_radio"><span class="gender_span">female</span>
             </div>
-            <div class="input_flex"> <input type="radio" name="gender" value="gender neutral" class="input_radio"><span
+            <div class="input_flex"> <input type="radio" name="gender" {{ ($personalpage->personal_gender=='gender neutral') ? 'checked="checked" ' : '' }} class="input_radio"><span
                     class="gender_span">gender neutral</span>
             </div><br />
             <span class="separate_span">age</span>
-            <input type="range" name="age" min="18" max="99" placeholder="" value="" class="input_range">
+            <input type="range" name="age" min="18" max="99" placeholder="" value="{{ $personalpage->personal_age }}" class="input_range">
         </div>
         <div class="who_am_i">
             <textarea class="text_area" placeholder="write something about yourself..." name="">{{ $personalpage->personal_info }}</textarea>
