@@ -131,8 +131,8 @@ header {
 
     //Branding Side
     &-branding {
-        background: #0F181F;
-        transform: translate3d(0, -100%, 0); //hide outside the bottom screen
+        background: rgba(255, 255, 255, 0); //hide from screen
+        transform: translate3d(0, -100%, 0); //hide from screen
         @include easeOut;
 
         &.show {
