@@ -1,7 +1,7 @@
-<form method="POST" action="{{ route('login') }}">
-    @csrf
+<div class="flex2_top">
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
 
-    <div class="flex2_top">
         <div class="password_error">
             <input id="email" type="email" class="" name="email" placeholder="email adress" value="{{ old('email') }}"
                 required autofocus>
@@ -23,7 +23,5 @@
                 {{ __('Login') }}
             </button>
         </div>
-        
-    </div>
-
-</form>
+    </form>
+</div>
