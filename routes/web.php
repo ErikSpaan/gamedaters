@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::get('/', 'PageController@landingpage');
-Route::get('/home', 'PageController@homepage');
+//Route::get('/home', 'PageController@homepage');
 Route::get('/profile', 'PageController@profilepage');
 Route::get('/personal', 'PageController@personalpage');
 Route::get('/chat', 'PageController@chatpage');
@@ -28,3 +30,5 @@ Route::resource('games', 'GamesController');
 Route::resource('personalpages', 'PersonalPagesController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+

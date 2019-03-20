@@ -1,9 +1,5 @@
 @extends('master')
 
-<?php
-use App\User;
-?>
-
 <!--Title on tab current page -->
 @section('title', 'events')
 
@@ -26,10 +22,11 @@ use App\User;
                afgemeld
            }
            @endif
-           
-        
     </li>
     @endforeach
+    <a href="{{$events->previousPageUrl()}}">previous page</a>
+    <a href="{{$events->nextPageUrl()}}">next page</a>
+    total events: {{ $events->total() }}
 @endsection    
 
 

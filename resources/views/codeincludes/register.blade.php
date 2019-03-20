@@ -43,6 +43,7 @@
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
         
             <!-- terms -->
+
             <div id="terms">
                 <input type="checkbox" checked="checked" required><span id="terms2">Agree With Our Terms</span>
             </div>
