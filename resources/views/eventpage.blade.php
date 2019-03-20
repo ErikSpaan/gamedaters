@@ -1,5 +1,9 @@
 @extends('master')
 
+<?php
+use App\User;
+?>
+
 <!--Title on tab current page -->
 @section('title', 'events')
 
@@ -11,7 +15,18 @@
         <a href="/events/{{ $event->id }}">
         {{ $event->event_name }}</a>
         
-           <a href="/addevent">join event</a>
+           <a href="/addevent/{{ $event->id }}">join event</a>
+
+           
+           @if ($user->events()->where('event_id', $event -> id)->exists())
+           {
+            aangemeld   
+           }
+           @else {
+               afgemeld
+           }
+           @endif
+           
         
     </li>
     @endforeach

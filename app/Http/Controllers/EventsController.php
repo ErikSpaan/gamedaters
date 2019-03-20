@@ -113,21 +113,18 @@ class EventsController extends Controller
         return redirect('/events');
     }
 
-    public function addEvent() {
+    public function addEvent(Request $request, $id) {
 
-        $user = User::find(1);
-        $user->events()->attach(2);
+        $user = User::find(Auth::user()->id);
+        if ($user->events->contains($id)) {
+            $user->events()->detach($id);
+        } else {
+        $user->events()->attach($id);
+        }
+        return redirect('event');
+        }
 
-        return dd('added my event');
-    }
-
-    public function deleteEvent() {
-
-        $user = User::find(1);
-        $user->events()->detach(2);
-
-        return dd('removed myevent');
-    }
+   
 
 
 } //end class
