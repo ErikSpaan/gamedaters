@@ -42,5 +42,15 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Event');
     }
 
+    public function games()
+    {
+        return $this->belongsToMany('App\Game');
+    }
+
+    public function dates()
+    {
+        return $this->belongsToMany('App\personalpage');
+    }
+
 
 } //end class
