@@ -135,7 +135,33 @@
 
         </div>
         <div class="games_container">
-    </div>
+            <div class="filter_name">My top 5 games</div>
+            <div class="game_card">
+                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game">
+                    <div id="game_delete_box"></div>
+            </div>
+            <div class="game_card">
+                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game">
+                    <div id="game_delete_box"></div>
+            </div>
+            <div class="game_card">
+                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game">
+                    <div id="game_delete_box"></div>
+            </div>
+            <div class="game_card">
+                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game">
+                    <div id="game_delete_box"></div>
+            </div>
+            <div class="game_card">
+                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game">
+                    <div id="game_delete_box"></div>
+            </div>
+        </div>
 
     </div>
 

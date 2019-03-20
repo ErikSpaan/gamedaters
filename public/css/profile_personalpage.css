@@ -7,6 +7,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.debug {
+  border: 1px solid blue;
+}
+
 input[type="password"] {
   border: none;
   border-bottom: 1px solid black;
@@ -23,10 +27,6 @@ input[type="text"] {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-}
-
-.debug {
-  border: 1px solid blue;
 }
 
 .profile_container {
@@ -307,7 +307,7 @@ input[type="text"] {
           flex-direction: column;
   width: 100%;
   height: 50%;
-  border-top: 1px solid #1666a0;
+  border-top: 1px solid #C3091E;
 }
 
 .profile_container .matches_flex .matches_card {
@@ -417,8 +417,8 @@ input[type="text"] {
 }
 
 .profile_container .current_dates_container .current_dates_box .matches_card #card_delete_box {
-  width: 10%;
-  height: 80%;
+  width: 5%;
+  height: 50%;
   background-image: url("../images/delete.png");
   background-position: center;
   background-size: contain;
@@ -429,5 +429,65 @@ input[type="text"] {
 .profile_container .games_container {
   width: 100%;
   height: 50%;
+  border-top: 1px solid #C3091E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile_container .games_container .filter_name {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #1666a0;
+  font-size: 28px;
+}
+
+.profile_container .games_container .game_card {
+  width: 100%;
+  height: 13%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile_container .games_container .game_card .game_photo_box {
+  height: 100%;
+  width: 15%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.profile_container .games_container .game_card .game_photo_box:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.profile_container .games_container .game_card .games_input {
+  width: 60%;
+}
+
+.profile_container .games_container .game_card #game_delete_box {
+  width: 5%;
+  height: 50%;
+  background-image: url("../images/delete.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 /*# sourceMappingURL=profile_personalpage.css.map */
