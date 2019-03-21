@@ -3,10 +3,20 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <!-- email: -->
-            <input id="email" type="email" class="" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
+            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
+                @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
 
             <!-- password: -->
-            <input id="" type="password" class=""  name="password" placeholder="Password" required>
+            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
+                @if ($errors->has('password'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                @endif
 
             <!-- login button -->
             <button type="submit" class="login">

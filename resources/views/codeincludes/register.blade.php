@@ -13,19 +13,19 @@
             <label for="name" class="labels"><span>N</span>ame</label>
                 <input id="name" type="text" class="" name="name" value="{{ old('name') }}" required autofocus>
                     @if ($errors->has('name'))
-                    <span class="" role="alert">
-                        <strong>{{ $errors->first('name') }}</strong>
-                    </span>
+                        <span class="" role="alert">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
                     @endif
 
             <!-- email -->
             <label for="email" class=""><span>E</span>-Mail Address</label>
             {{-- <div class="password_error"> --}}
-                <input id="" type="email" class="labels" name="email" value="{{ old('email') }}" required>
+                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} labels" name="email" value="{{ old('email') }}" required>
                     @if ($errors->has('email'))
-                    <span class="password_error2" role="alert">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
                     @endif
 
             <!-- password -->

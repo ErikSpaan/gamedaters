@@ -4,15 +4,20 @@
 // input[type="checkbox"] { 
 // }
 
-span {
-    color: $red;
-    font-weight: bold;
+// span {
+//     color: $red;
+//     font-weight: bold;
+// }
+
+.password_error2 {
+    font-size: 12px;
 }
 
 .container {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100vh;
 
@@ -107,6 +112,11 @@ span {
                 flex-direction: column;
                 justify-content: space-between;
 
+                span {
+                    color: $red;
+                    font-weight: bold;
+                }
+
                 input[type="text"], input[type="email"], [type="password"] {
                     border: none;
                     border-bottom: 1px solid black;
@@ -118,7 +128,6 @@ span {
             
                 .register_button {
                     border: none;
-                    width: 10vw;
                     height: 4vh;
                     color: white;
                     background-color: $blue;
