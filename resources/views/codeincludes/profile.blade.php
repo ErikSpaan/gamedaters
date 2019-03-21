@@ -5,7 +5,8 @@
 <div class="profile_container">
     <div class="profile_boxes">
         <div class="photo_button_container">
-            <div class="photo_box" id="photo_holder"><img src="images/{{ $personalpage->personal_image_url }}" class="photo_image"/></div>
+            <div class="photo_box" id="photo_holder"><img src="images/{{ $personalpage->personal_image_url }}"
+                    class="photo_image" /></div>
             <input type="file" class="upload_button" placeholder="upload img">
         </div>
         <form method="POST" action="/personalpages/{{ $personalpage->id }}">
@@ -145,29 +146,29 @@
         <div class="games_container">
             <div class="filter_name">My top 5 games</div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game...">
-                    <div id="game_delete_box"></div>
+                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                <input type="text" class="games_input" placeholder="find your game...">
+                <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game...">
-                    <div id="game_delete_box"></div>
+                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                <input type="text" class="games_input" placeholder="find your game...">
+                <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game...">
-                    <div id="game_delete_box"></div>
+                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                <input type="text" class="games_input" placeholder="find your game...">
+                <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game...">
-                    <div id="game_delete_box"></div>
+                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                <input type="text" class="games_input" placeholder="find your game...">
+                <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game...">
-                    <div id="game_delete_box"></div>
+                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                <input type="text" class="games_input" placeholder="find your game...">
+                <div id="game_delete_box"></div>
             </div>
         </div>
 

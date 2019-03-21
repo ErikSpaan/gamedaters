@@ -2,14 +2,15 @@
 @import 'config';
 
 input[type="password"] {
-    
+
     border: none;
     border-bottom: 1px solid black;
     outline: none;
 }
 
+
 input[type="email"] {
-    
+
     border: none;
     border-bottom: 1px solid black;
     outline: none;
@@ -21,6 +22,8 @@ input[type="text"] {
     border-bottom: 1px solid black;
     outline: none;
 }
+
+
 // start slider styling
 input[type="range"] {
     -webkit-appearance: none;
@@ -30,9 +33,9 @@ input[type="range"] {
 
 input[type=range]:focus {
     outline: none;
-  }
+}
 
-  input[type=range]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
@@ -40,9 +43,9 @@ input[type=range]:focus {
     background: $blue;
     border-radius: 1.3px;
     border: 0.2px solid #010101;
-  }
+}
 
-  input[type=range]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     border: 1px solid #000000;
     height: 30px;
@@ -52,13 +55,13 @@ input[type=range]:focus {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -14px;
-  }
+}
 
-  input[type=range]:focus::-webkit-slider-runnable-track {
+input[type=range]:focus::-webkit-slider-runnable-track {
     background: #367ebd;
-  }
+}
 
-  input[type=range]::-moz-range-track {
+input[type=range]::-moz-range-track {
     width: 100%;
     height: 8.4px;
     cursor: pointer;
@@ -66,9 +69,9 @@ input[type=range]:focus {
     background: #3071a9;
     border-radius: 1.3px;
     border: 0.2px solid #010101;
-  }
+}
 
-  input[type=range]::-moz-range-thumb {
+input[type=range]::-moz-range-thumb {
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     border: 1px solid #000000;
     height: 36px;
@@ -76,9 +79,9 @@ input[type=range]:focus {
     border-radius: 3px;
     background: #ffffff;
     cursor: pointer;
-  }
+}
 
-  input[type=range]::-ms-track {
+input[type=range]::-ms-track {
     width: 100%;
     height: 8.4px;
     cursor: pointer;
@@ -86,21 +89,23 @@ input[type=range]:focus {
     border-color: transparent;
     border-width: 16px 0;
     color: transparent;
-  }
+}
 
-  input[type=range]::-ms-fill-lower {
+input[type=range]::-ms-fill-lower {
     background: #2a6495;
     border: 0.2px solid #010101;
     border-radius: 2.6px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]::-ms-fill-upper {
+}
+
+input[type=range]::-ms-fill-upper {
     background: #3071a9;
     border: 0.2px solid #010101;
     border-radius: 2.6px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  }
-  input[type=range]::-ms-thumb {
+}
+
+input[type=range]::-ms-thumb {
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     border: 1px solid #000000;
     height: 36px;
@@ -108,13 +113,16 @@ input[type=range]:focus {
     border-radius: 3px;
     background: #ffffff;
     cursor: pointer;
-  }
-  input[type=range]:focus::-ms-fill-lower {
+}
+
+input[type=range]:focus::-ms-fill-lower {
     background: #3071a9;
-  }
-  input[type=range]:focus::-ms-fill-upper {
+}
+
+input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
-  }
+}
+
 // end slider styling
 
 
@@ -139,7 +147,48 @@ input[type=range]:focus {
         width: 40%;
         font-size: 14px;
         padding-left: 5px;
+        margin: 5px 0;
 
+        .checkmark {
+            height: 15px;
+            width: 15px;
+            background-color: lightgrey;
+            border-radius: 50%;
+            margin: 5px 10px 0 0;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    .input_flex:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    .input_flex input:checked~.checkmark {
+        background-color: $blue;
+    }
+
+    .input_flex input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .input_flex .checkmark:after {
+        margin: 4px 0 0 4px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: white;
     }
 
     // start flex-box 1
@@ -180,11 +229,11 @@ input[type=range]:focus {
             // start select photo knop
             .upload_button::-webkit-file-upload-button {
                 visibility: hidden;
-              }
+            }
 
             .upload_button {
                 position: relative;
-                z-index: -1;
+                z-index: 1;
                 width: 30%;
                 height: 20%;
                 align-self: flex-end;
@@ -207,7 +256,20 @@ input[type=range]:focus {
                 cursor: pointer;
             }
         }
-        // end select photo know
+
+        // end select photo knop
+
+        .age_slider_box {
+            width: 80%;
+
+            #ageOutput {
+                width: 20%;
+                height: 50px;
+                font-size: 16px;
+                color: $blue;
+                margin-left: 10px;
+            }
+        }
 
         .input_container {
             display: flex;
@@ -246,6 +308,7 @@ input[type=range]:focus {
                 width: 90%;
                 height: 40%;
                 margin: 0 auto;
+                resize: none;
             }
 
             .see_personal_page {
@@ -314,19 +377,51 @@ input[type=range]:focus {
                 align-items: center;
                 margin-right: 30px;
 
+                input {
+                    border: none;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                }
+
                 .list_dropdown {
                     margin-left: 10px;
                     height: 30px;
                 }
             }
 
-            .input_radio_box {
+            .radio_box_container {
                 display: flex;
+                width: 100%;
                 justify-content: space-around;
-                width: 70%;
-                font-size: 14px;
                 padding-left: 5px;
                 padding-top: 5px;
+
+                .input_radio_box2 {
+                    width: 40%;
+                    display: flex;
+                    justify-content: space-around;
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 14px;
+                    padding-right: 20px;
+                    align-items: center;
+
+                  
+                }
+
+                .input_radio_box {
+                    width: 25%;
+                    display: flex;
+                    justify-content: space-around;
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 14px;
+                    padding-right: 20px;
+                    align-items: center;
+                }
+
+        
+
             }
 
             .filter_age {
@@ -352,8 +447,6 @@ input[type=range]:focus {
             transform: scale(0.8);
         }
     }
-
-
 
 
     .matches_flex {
@@ -433,24 +526,24 @@ input[type=range]:focus {
                 align-items: center;
                 height: 15%;
                 width: 100%;
-    
+
                 .card_photo_box {
                     height: 100%;
                     width: 15%;
                     border: 1px dotted black;
                     transition: 0.4s;
                 }
-    
+
                 .card_photo_box:hover {
                     transform: scale(2);
                 }
-    
+
                 .card_name_box {
                     height: 50%;
                     width: 60%;
                     border-bottom: 1px solid black;
                 }
-    
+
                 #card_delete_box {
                     width: 5%;
                     height: 50%;
@@ -463,6 +556,7 @@ input[type=range]:focus {
             }
         }
     }
+
     .games_container {
         width: 100%;
         height: 50%;
@@ -483,16 +577,17 @@ input[type=range]:focus {
             width: 100%;
             height: 13%;
             display: flex;
-                justify-content: space-around;
-                align-items: center;
+            justify-content: space-around;
+            align-items: center;
 
             .game_photo_box {
                 height: 100%;
                 width: 15%;
                 border: 1px dotted black;
                 transition: 0.4s;
-                
+
             }
+
             .game_photo_box:hover {
                 transform: scale(2);
             }
@@ -500,6 +595,7 @@ input[type=range]:focus {
             .games_input {
                 width: 60%;
             }
+
             #game_delete_box {
                 width: 5%;
                 height: 50%;
