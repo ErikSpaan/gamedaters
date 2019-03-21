@@ -329,6 +329,22 @@ input[type=range]:focus::-ms-fill-upper {
   margin-left: 10px;
 }
 
+.profile_container .profile_boxes .input_container .age_box_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile_container .profile_boxes .input_container .age_box_container #ageOutput {
+  color: #1666a0;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
 .profile_container .profile_boxes .who_am_i {
   display: -webkit-box;
   display: -ms-flexbox;

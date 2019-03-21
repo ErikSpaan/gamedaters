@@ -295,6 +295,20 @@ input[type=range]:focus::-ms-fill-upper {
                 width: 50%;
                 margin-left: 10px;
             }
+
+            .age_box_container {
+                display: flex;
+                width: 80%;
+                align-items: center;
+                
+                #ageOutput {
+                    color: $blue;
+                    font-size: 16px;
+                    margin-left: 20px;
+                }
+            }
+
+
         }
 
         .who_am_i {
