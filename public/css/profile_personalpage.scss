@@ -121,7 +121,7 @@ input[type=range]:focus {
 
 .profile_container {
     display: flex;
-    height: 85%;
+    height: 80%;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -144,7 +144,7 @@ input[type=range]:focus {
 
     // start flex-box 1
     .profile_boxes {
-        height: 90%;
+        height: 100%;
         width: 400px;
         max-width: 550px;
         margin: 30px 30px;
@@ -184,6 +184,7 @@ input[type=range]:focus {
 
             .upload_button {
                 position: relative;
+                z-index: -1;
                 width: 30%;
                 height: 20%;
                 align-self: flex-end;
