@@ -88,6 +88,7 @@ header {
   opacity: 1;
   visibility: hidden;
   margin-left: 18%;
+  z-index: 2;
 }
 
 .menu.show {
@@ -234,9 +235,8 @@ header {
   position: relative;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  text-transform: uppercase;
   padding: 16px;
-  font-weight: 500;
+  font-weight: bold;
   color: black;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-out;
@@ -308,6 +308,10 @@ header {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
@@ -355,6 +359,10 @@ header {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
@@ -434,11 +442,20 @@ header {
   .home_container a.link_personal, .home_container .home_container-link1 {
     margin: 15px 20%;
   }
+  .home_container a.link_personal h1, .home_container .home_container-link1 h1 {
+    font-size: 25px;
+  }
   .home_container a.link_chat, .home_container .home_container-link2 {
     margin: 15px 20%;
   }
+  .home_container a.link_chat h1, .home_container .home_container-link2 h1 {
+    font-size: 25px;
+  }
   .home_container a.link_events, .home_container .home_container-link3 {
     margin: 15px 20%;
+  }
+  .home_container a.link_events h1, .home_container .home_container-link3 h1 {
+    font-size: 25px;
   }
   .photo_container img {
     width: 100%;

@@ -282,6 +282,10 @@ span {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
@@ -329,6 +333,10 @@ span {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
@@ -408,11 +416,20 @@ span {
   .home_container a.link_personal, .home_container .home_container-link1 {
     margin: 15px 20%;
   }
+  .home_container a.link_personal h1, .home_container .home_container-link1 h1 {
+    font-size: 25px;
+  }
   .home_container a.link_chat, .home_container .home_container-link2 {
     margin: 15px 20%;
   }
+  .home_container a.link_chat h1, .home_container .home_container-link2 h1 {
+    font-size: 25px;
+  }
   .home_container a.link_events, .home_container .home_container-link3 {
     margin: 15px 20%;
+  }
+  .home_container a.link_events h1, .home_container .home_container-link3 h1 {
+    font-size: 25px;
   }
   .photo_container img {
     width: 100%;
