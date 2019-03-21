@@ -61,6 +61,10 @@
     }
 
     //homepage:
+    html {
+        background-position-y: 200px;
+        background-position-x: 25px;
+    }
     .home_container {
         margin: 70px auto;
 
@@ -154,6 +158,11 @@
     }
 
     //homepage:
+
+    html {
+        background-position-y: 150px;
+        background-position-x: 25px;
+    }
     .home_container {
         margin: 60px auto;
 
@@ -308,6 +317,10 @@
 
         &-nav {
             background: rgba(255, 255, 255, 1);
+            background-image:  url("/images/zelda_background.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         } 
 
         ul.menu-nav,div.menu-branding {
@@ -402,6 +415,10 @@
 
         &-nav {
             background: rgba(255, 255, 255, 1);
+            background-image:  url("/images/zelda_background.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         } 
 
         ul.menu-nav,div.menu-branding {
