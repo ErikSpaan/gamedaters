@@ -16,11 +16,106 @@ input[type="email"] {
 }
 
 input[type="text"] {
+
     border: none;
     border-bottom: 1px solid black;
     outline: none;
 }
+// start slider styling
+input[type="range"] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+}
 
+input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: $blue;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 10px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+// end slider styling
 
 
 
@@ -45,13 +140,6 @@ input[type="text"] {
         font-size: 14px;
         padding-left: 5px;
 
-        // .male_checked {
-        //     display: none;
-        // }
-
-        // .male_unchecked {
-        //     display: none;
-        // }
     }
 
     // start flex-box 1
@@ -61,8 +149,8 @@ input[type="text"] {
         max-width: 550px;
         margin: 30px 30px;
         padding: 10px;
-        box-shadow: 3px -3px 10px 0px grey;
-        border-radius: 10px;
+        box-shadow: 0px 0px 5px 0px grey;
+        // border-radius: 10px;
 
         input::placeholder {
             color: $blue;
@@ -89,17 +177,36 @@ input[type="text"] {
                 }
             }
 
+            // start select photo knop
+            .upload_button::-webkit-file-upload-button {
+                visibility: hidden;
+              }
+
             .upload_button {
                 position: relative;
-                width: 110px;
+                width: 30%;
                 height: 20%;
                 align-self: flex-end;
                 border: none;
                 color: white;
                 font-size: 16px;
                 transition: 0.4s;
+                outline: none;
+            }
+
+            .upload_button::before {
+                content: 'pick a photo';
+                display: inline-block;
+                background-color: $blue;
+                border-radius: 10px;
+                padding: 6px 8px;
+                outline: none;
+                white-space: nowrap;
+                -webkit-user-select: none;
+                cursor: pointer;
             }
         }
+        // end select photo know
 
         .input_container {
             display: flex;
@@ -231,13 +338,13 @@ input[type="text"] {
             display: inline-block;
             border: none;
             color: white;
-            background-color: $red;
             font-size: 18px;
             width: 40%;
             height: 40px;
             border-radius: 10px;
             outline: none;
             transition: 0.3s;
+            background-color: $blue;
         }
 
         .find_matches_button:active {
@@ -255,7 +362,6 @@ input[type="text"] {
         flex-direction: column;
         width: 100%;
         height: 50%;
-        border-top: 1px solid $red;
 
         .matches_card {
             display: flex;
@@ -267,6 +373,7 @@ input[type="text"] {
             .card_photo_box {
                 height: 100%;
                 width: 15%;
+                border: 1px dotted black;
                 transition: 0.4s;
             }
 
@@ -277,11 +384,12 @@ input[type="text"] {
             .card_name_box {
                 height: 50%;
                 width: 60%;
+                border-bottom: 1px solid black;
             }
 
             #card_button_box {
-                width: 10%;
-                height: 80%;
+                width: 8%;
+                height: 60%;
                 background-image: url("../images/heart.png");
                 background-position: center;
                 background-size: cover;
@@ -328,6 +436,7 @@ input[type="text"] {
                 .card_photo_box {
                     height: 100%;
                     width: 15%;
+                    border: 1px dotted black;
                     transition: 0.4s;
                 }
     
@@ -338,6 +447,7 @@ input[type="text"] {
                 .card_name_box {
                     height: 50%;
                     width: 60%;
+                    border-bottom: 1px solid black;
                 }
     
                 #card_delete_box {
@@ -355,7 +465,6 @@ input[type="text"] {
     .games_container {
         width: 100%;
         height: 50%;
-        border-top: 1px solid $red;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
@@ -379,6 +488,7 @@ input[type="text"] {
             .game_photo_box {
                 height: 100%;
                 width: 15%;
+                border: 1px dotted black;
                 transition: 0.4s;
                 
             }
