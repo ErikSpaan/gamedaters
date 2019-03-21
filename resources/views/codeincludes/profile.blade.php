@@ -16,13 +16,7 @@
             <input type="password" name="" placeholder="password" value="" class="input_profile_page">
             <span class="separate_span">gender</span>
             <div class="input_flex">
-                @if({{ $personalpage->personal_gender }} == 'male') {
-                    <input type="radio" name="gender" checked value="male" class="input_radio male_checked"><span class="gender_span male_checked">male</span>
-                }
-                    @else {
-                    <input type="radio" name="gender" value="male" class="input_radio male_unchecked"><span class="gender_span male_unchecked">male</span>
-                    }
-                    @endif
+                    <input type="radio" name="gender" checked value="male" class="input_radio"><span class="gender_span">male</span>
             </div>
             <div class="input_flex">
                 <input type="radio" name="gender" value="female" class="input_radio"><span class="gender_span">female</span>
@@ -63,7 +57,7 @@
                 <div><input type="range" name="distance" min="0" max="500" placeholder="" class="filter_age"></div>
                 <span class="separate_span">game genre</span>
                 <div class="genre_box">
-                    <input list="genres" name="genre" placeholder="choose a genre" class="list_dropdown">
+                    <input list="genres" name="genre" placeholder="choose a genre..." class="list_dropdown">
                     <datalist id="genres">
                         <option value="role playing game">
                         <option value="shooter">
@@ -81,28 +75,28 @@
         </div>
         <div class="matches_flex">
             <div class="matches_card">
-                <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                <div class="card_name_box debug"></div>
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
             </div>
             <div class="matches_card">
-                <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                <div class="card_name_box debug"></div>
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
             </div>
             <div class="matches_card">
-                <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                <div class="card_name_box debug"></div>
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
             </div>
             <div class="matches_card">
-                <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                <div class="card_name_box debug"></div>
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
             </div>
             <div class="matches_card">
-                <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                <div class="card_name_box debug"></div>
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
             </div>
         </div>
@@ -113,28 +107,28 @@
             <div class="filter_name">Current dates</div>
             <div class="current_dates_box">
                 <div class="matches_card">
-                    <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                    <div class="card_name_box debug"></div>
+                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                    <div class="card_name_box"></div>
                     <div id="card_delete_box"></div>
                 </div>
                 <div class="matches_card">
-                    <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                    <div class="card_name_box debug"></div>
+                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                    <div class="card_name_box"></div>
                     <div id="card_delete_box"></div>
                 </div>
                 <div class="matches_card">
-                    <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                    <div class="card_name_box debug"></div>
+                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                    <div class="card_name_box"></div>
                     <div id="card_delete_box"></div>
                 </div>
                 <div class="matches_card">
-                    <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                    <div class="card_name_box debug"></div>
+                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                    <div class="card_name_box"></div>
                     <div id="card_delete_box"></div>
                 </div>
                 <div class="matches_card">
-                    <a href="#" class="card_photo_box debug"><img src="" alt="" /></a>
-                    <div class="card_name_box debug"></div>
+                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                    <div class="card_name_box"></div>
                     <div id="card_delete_box"></div>
                 </div>
             </div>
@@ -143,28 +137,28 @@
         <div class="games_container">
             <div class="filter_name">My top 5 games</div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game">
+                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game...">
                     <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game">
+                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game...">
                     <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game">
+                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game...">
                     <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game">
+                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game...">
                     <div id="game_delete_box"></div>
             </div>
             <div class="game_card">
-                    <a href="#" class="game_photo_box debug"><img src="" alt="" /></a>
-                    <input type="text" class="games_input" placeholder="find your game">
+                    <a href="#" class="game_photo_box"><img src="" alt="" /></a>
+                    <input type="text" class="games_input" placeholder="find your game...">
                     <div id="game_delete_box"></div>
             </div>
         </div>
