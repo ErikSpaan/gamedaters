@@ -146,6 +146,10 @@ html {
     width: 170px;
     font-size: 16px;
   }
+  html {
+    background-position-y: 200px;
+    background-position-x: 25px;
+  }
   .home_container {
     margin: 70px auto;
   }
@@ -206,6 +210,10 @@ html {
   .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 100px;
     font-size: 14px;
+  }
+  html {
+    background-position-y: 150px;
+    background-position-x: 25px;
   }
   .home_container {
     margin: 60px auto;
@@ -330,6 +338,10 @@ html {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
@@ -400,6 +412,10 @@ html {
   }
   .menu-nav {
     background: white;
+    background-image: url("/images/zelda_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .menu ul.menu-nav, .menu div.menu-branding {
     float: none;

@@ -10,7 +10,7 @@
             <input type="file" class="upload_button" placeholder="upload img">
         </div>
         <div class="input_container">
-            <input type="text" name="" placeholder="nickname" value="{{ $personalpage->personal_nickname }}"
+            <input type="text" name="" placeholder="nickname" value="{{ Auth::user()->nickname }}"
                 class="input_profile_page">
             <input type="text" name="" placeholder="first name" value="{{ $personalpage->personal_firstname }}"
                 class="input_profile_page">
