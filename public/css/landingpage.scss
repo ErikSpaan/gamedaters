@@ -1,19 +1,7 @@
 // Variables
 @import 'config';
 
-// input[type="checkbox"] { 
-// }
-
-// span {
-//     color: $red;
-//     font-weight: bold;
-// }
-
-.password_error2 {
-    font-size: 12px;
-}
-
-.container {
+.container_landing {
     margin: 0;
     padding: 0;
     display: flex;
@@ -56,7 +44,6 @@
         .flex2_top {
             height: 10vh;
             width: 100%;
-            // padding-top: 10px;
 
             .flex2_top-input {
                 float: right;
@@ -66,29 +53,35 @@
                     border-bottom: 1px solid black;
                     outline: none;
                     font-size: 16px;
-                    margin: 0 20px;
+                    margin: 5px 20px 0px 0;
                     max-width: 170px;
                 }
-            }
 
-            .forgot_password {
-                text-decoration: none;
-                font-size: 12px;
-                color: $blue;
-                float: right;
-                margin: 0 10px 0 0;
-            }
+                .invalid-feedback {
+                    font-size: 12px;
+                    color: $red;
+                }
+
+                .forgot_password {
+                    text-decoration: none;
+                    font-size: 12px;
+                    color: $blue;
+                    float: right;
+                    margin: 0 10px 0 0;
+                }
             
-            button {
-                border: none;
-                background-color: $blue;
-                color: white;
-                border-radius: 10px;
-                cursor: pointer;
-                outline: none;
-                font-size: 16px;
-                padding: 4px 6px 4px 6px;
-                margin: 10px 10px 0 0;
+                .login {
+                    border: none;
+                    background-color: $blue;
+                    color: white;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    outline: none;
+                    font-size: 16px;
+                    padding: 4px 6px 4px 6px;
+                    margin: 5px 10px 0 0;
+                    float: right;
+                }
             }
         }
     
@@ -125,16 +118,22 @@
                     max-width: 170px;
                     margin: 0 auto;
                 }
+
+                .invalid-feedback {
+                    font-size: 12px;
+                    color: $red;
+                }
             
                 .register_button {
                     border: none;
-                    height: 4vh;
+                    // height: 4vh;
                     color: white;
                     background-color: $blue;
                     font-size: 16px;
                     cursor: pointer;
                     border-radius: 10px;
                     outline: none;
+                    padding: 4px 6px 4px 6px;
                 }
             }
         }

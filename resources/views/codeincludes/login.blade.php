@@ -2,8 +2,9 @@
     <div class="flex2_top-input">
         <form method="POST" action="{{ route('login') }}">
             @csrf
+
             <!-- email: -->
-            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
+            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="E-mail" value="{{ old('email') }}" required autofocus>
                 @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -23,11 +24,12 @@
                 {{ __('Login') }}
             </button>
         </form>
+
         <!-- password forgot: -->
         @if (Route::has('password.request'))
-            <a class="forgot_password" href="{{ route('password.request') }}">
-                {{ __('Forgot Your Password?') }}
-            </a>
+        <a class="forgot_password" href="{{ route('password.request') }}">
+            {{ __('Forgot Your Password?') }}
+        </a>
         @endif
     </div>
 </div>

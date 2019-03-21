@@ -10,7 +10,7 @@
         @csrf
         <div class="register_content">
             <!--name -->
-            <label for="name" class="labels"><span>N</span>ame</label>
+            <label for="name" class="labels"><span>N</span>ickname</label>
                 <input id="name" type="text" class="" name="name" value="{{ old('name') }}" required autofocus>
                     @if ($errors->has('name'))
                         <span class="" role="alert">
@@ -19,7 +19,7 @@
                     @endif
 
             <!-- email -->
-            <label for="email" class=""><span>E</span>-Mail Address</label>
+            <label for="email" class="labels"><span>E</span>-Mail Address</label>
             {{-- <div class="password_error"> --}}
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} labels" name="email" value="{{ old('email') }}" required>
                     @if ($errors->has('email'))
@@ -33,7 +33,7 @@
                 {{-- <div class="password_error">  --}}
                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                     @if ($errors->has('password'))
-                    <span class="password_error2" role="alert">
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('password') }}</strong>
                     </span>
                     @endif

@@ -9,7 +9,7 @@
 </head>
 
 <!--Name / logo landingpage -->
-<div class="container">
+<div class="container_landing">
     @section('name/logo')
     @include ('codeincludes/namelogo')
 
