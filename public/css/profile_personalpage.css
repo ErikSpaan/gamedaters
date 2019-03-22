@@ -602,6 +602,7 @@ input[type=range]:focus::-ms-fill-upper {
           flex-direction: column;
   width: 100%;
   height: 50%;
+  border-top: 2px solid #C3091E;
 }
 
 .profile_container .matches_flex .matches_card {
@@ -615,7 +616,8 @@ input[type=range]:focus::-ms-fill-upper {
           align-items: center;
   height: 15%;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .profile_container .matches_flex .matches_card .card_photo_box {
@@ -626,9 +628,14 @@ input[type=range]:focus::-ms-fill-upper {
   transition: 0.4s;
 }
 
+.profile_container .matches_flex .matches_card .card_photo_box img {
+  width: 100%;
+  height: 100%;
+}
+
 .profile_container .matches_flex .matches_card .card_photo_box:hover {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(3);
+          transform: scale(3);
 }
 
 .profile_container .matches_flex .matches_card .card_name_box {

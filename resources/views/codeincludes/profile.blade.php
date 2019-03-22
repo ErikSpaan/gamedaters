@@ -5,7 +5,7 @@
 <div class="profile_container">
     <div class="profile_boxes">
         <div class="photo_button_container">
-            <div class="photo_box" id="photo_holder"><img src="images/{{ $personalpage->personal_image_url }}"
+            <div class="photo_box" id="photo_holder"><img src="/images/{{ $personalpage->personal_image_url }}"
                     class="photo_image" /></div>
             <input type="file" class="upload_button" placeholder="upload img">
         </div>
@@ -69,7 +69,7 @@
                     <div class="input_radio_box">
                         {{-- to change the radio buttons here for responsive, change the width in class: input_radio_box
                         !!!!! --}}
-                        <input type="radio" name="filter_gender" value="male" class="input_radio"><span class="checkmark"></span>male
+                        <input type="radio" name="filter_gender" checked value="male" class="input_radio"><span class="checkmark"></span>male
                     </div>
                     <div class="input_radio_box">
                         <input type="radio" name="filter_gender" value="female" class="input_radio"><span class="checkmark"></span>female
@@ -112,7 +112,7 @@
         @isset($filterResults)    
             @foreach ($filterResults as $filterResult) 
             <div class="matches_card">
-                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <a href="#" class="card_photo_box"><img src="/images/{{ $filterResult->personal_image_url }}" alt=""/></a>
                 <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
                 <div id="card_button_box"></div>
             </div>
