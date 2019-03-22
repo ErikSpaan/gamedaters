@@ -80,10 +80,13 @@
                     </div>
                 </div>
                     <span class="separate_span">age</span>
+                    <div class="age_box">
                     <div><input type="range" name="filter_age" min="18" max="99" placeholder="" class="filter_age">
                     </div>
-                    <span class="separate_span">distance</span>
-                    <div><input type="range" name="filter_distance" min="0" max="500" placeholder="" class="filter_age">
+                    </div>
+                    <span class="separate_span">max distance</span>
+                    <div class="distance_box"><input type="range" name="filter_distance" oninput="distanceSlider(this.value)" min="0" max="500" placeholder="" id="distanceInput">
+                    <span id="distanceOutput"></span><span class="font_box">Km</span>
                     </div>
                     <span class="separate_span">game genre</span>
                     <div class="genre_box">
