@@ -16,6 +16,7 @@ Route::get('/', 'PageController@landingpage');
 //Route::get('/home', 'PageController@homepage');
 Route::get('/profile', 'PageController@profilepage');
 Route::get('/personal', 'PageController@personalpage');
+Route::get('/personaledit', 'PageController@personaleditpage');
 Route::get('/chat', 'PageController@chatpage');
 Route::get('/event', 'PageController@eventpage');
 Route::get('/admin', 'PageController@adminpage');

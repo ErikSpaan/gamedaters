@@ -79,7 +79,7 @@ class PersonalPagesController extends Controller
         $personalpage->personal_gender = request('personal_gender');
         $personalpage->personal_age = request('personal_age');
         $personalpage->personal_location = request('personal_location');
-        $personalpage->personal_image_url = request('personal_image_url');
+        //$personalpage->personal_image_url = request('personal_image_url');
         $personalpage->personal_food = request('personal_food');
         $personalpage->personal_info = request('personal_info');
         $personalpage->personal_status = '1'; 
@@ -158,7 +158,7 @@ class PersonalPagesController extends Controller
         $personalpage->personal_gender = request('personal_gender');
         $personalpage->personal_age = request('personal_age');
         $personalpage->personal_location = request('personal_location');
-        $personalpage->personal_image_url = request('personal_image_url');
+        //$personalpage->personal_image_url = request('personal_image_url');
         $personalpage->personal_food = request('personal_food');
         $personalpage->personal_info = request('personal_info');
         $personalpage->save();
