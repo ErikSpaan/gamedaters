@@ -65,16 +65,20 @@
                 @csrf
                 <div class="filter_options">
                     <span class="separate_span">gender</span>
+                    <div class="radio_box_container">
                     <div class="input_radio_box">
                         {{-- to change the radio buttons here for responsive, change the width in class: input_radio_box
                         !!!!! --}}
-                        <input type="radio" name="filter_gender" value="male" class="input_radio">male
-
-                        <input type="radio" name="filter_gender" value="female" class="input_radio">female
-
-                        <input type="radio" name="filter_gender" value="gender neutral" class="input_radio">gender
+                        <input type="radio" name="filter_gender" value="male" class="input_radio"><span class="checkmark"></span>male
+                    </div>
+                    <div class="input_radio_box">
+                        <input type="radio" name="filter_gender" value="female" class="input_radio"><span class="checkmark"></span>female
+                    </div>
+                        <div class="input_radio_box2">
+                        <input type="radio" name="filter_gender" value="gender neutral" class="input_radio"><span class="checkmark"></span>gender
                         neutral
                     </div>
+                </div>
                     <span class="separate_span">age</span>
                     <div><input type="range" name="filter_age" min="18" max="99" placeholder="" class="filter_age">
                     </div>
