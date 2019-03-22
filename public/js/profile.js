@@ -1,4 +1,3 @@
-document.getElementById("ageOutput").innerHTML = '--';
 
 function ageSlider(val) {
     document.getElementById("ageOutput").innerHTML = val; 

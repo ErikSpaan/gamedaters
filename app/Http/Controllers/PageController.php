@@ -47,6 +47,15 @@ class PageController extends Controller
         return view('personalpage', compact('personalpage'));
     }
 
+    public function personaleditpage() {
+        // $personalpage = Personalpage::findOrFail(Auth::user()->id->first());
+        // $personalpage = Personalpage::findOrFail(1);
+        $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();
+        
+            // dd($personalpages);
+       return view('personal_profile', compact('personalpage'));
+    }
+
     public function chatpage() {
         return view('chatpage');
     }
