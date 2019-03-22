@@ -24,7 +24,7 @@ class ProfilePagesController extends Controller
     {
             
           //dd(request(['filter_age', 'filter_genre', 'filter_gender', 'filter_distance' ]));  
-          $resultsWithCorrectGender = Personalpage::where('personal_gender', request('filter_gender'))->get();
+          $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
           //dd( $resultsWithCorrectGender );
    
          
@@ -36,7 +36,7 @@ class ProfilePagesController extends Controller
            // }
            return view('profilepage', [
                'personalpage' => $personalpage,
-               'matches' => $resultsWithCorrectGender
+               'matches' => $filterResults
            ]);
 
     }
@@ -78,24 +78,26 @@ class ProfilePagesController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function show(Request $request, personalpage $personalpage)
+    public function show(Request $request)
 
     {
         //dd(request(['filter_age', 'filter_genre', 'filter_gender', 'filter_distance' ]));  
-        $resultsWithCorrectGender = Personalpage::where('personal_gender', request('filter_gender'))->get();
+        $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
+        //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
+        $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->where('user_id', '!=', Auth::user()->id)->get();
+
+     
         //dd( $resultsWithCorrectGender );
- 
-       
-         // //dd(DB::table('personalpages')->where('personal_age', '>', 30)->count()-1);
-         // $personalpages = DB::table('personalpages')->where('personal_age', '>', 30);
- 
-         // foreach ($personalpages as $personalpage) {
-         // dd($personalpage->personal_page);
-         // }
-         return view('profilepage', [
-             'personalpage' => $personalpage,
-             'matches' => $resultsWithCorrectGender
-             ]);
+        
+        //dd($personalpage);
+        //dd($resultsWithCorrectGender);
+        
+
+         return view('profilepage', compact('personalpage','filterResults'));
+        //  [
+            //  'personalpage' => $personalpage,
+            //  'matches' => $resultsWithCorrectGender
+            //  ]);
 
         //dd('show');
 
@@ -142,10 +144,11 @@ class ProfilePagesController extends Controller
         // foreach ($personalpages as $personalpage) {
         // dd($personalpage->personal_page);
         // }
-        return view('profilepage', [
-            //'personalpage' => $personalpage,
-            'matches' => $resultsWithCorrectGender
-        ]);
+        return view('profilepage', compact('personalpage'));
+        //  [
+        //     //'personalpage' => $personalpage,
+        //     'matches' => $resultsWithCorrectGender
+        // ]);
 
     }
 

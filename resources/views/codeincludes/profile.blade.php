@@ -82,8 +82,20 @@
                 </div>
             </form>    
         </div>
+        
         <div class="matches_flex">
+        
+        @isset($filterResults)    
+            @foreach ($filterResults as $filterResult) 
             <div class="matches_card">
+                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
+                <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
+                <div id="card_button_box"></div>
+            </div>
+            @endforeach
+        @endisset
+
+            {{-- <div class="matches_card">
                 <a href="#" class="card_photo_box"><img src="" alt="" /></a>
                 <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
@@ -102,12 +114,7 @@
                 <a href="#" class="card_photo_box"><img src="" alt="" /></a>
                 <div class="card_name_box"></div>
                 <div id="card_button_box"></div>
-            </div>
-            <div class="matches_card">
-                <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                <div class="card_name_box"></div>
-                <div id="card_button_box"></div>
-            </div>
+            </div> --}}
         </div> 
     </div>
     {{-- Start profile box 3 --}}
