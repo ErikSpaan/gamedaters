@@ -31,4 +31,6 @@ Route::resource('personalpages', 'PersonalPagesController');
 Route::resource('profilepages', 'ProfilePagesController');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/contacts', 'ContactsController@get');
+
 

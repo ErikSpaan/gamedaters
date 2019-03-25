@@ -11,6 +11,6 @@
 {{-- @section('homepageLinks') --}}
 @include('codeincludes/chat')
 
-@section('content')
+{{-- @section('content')
     <h1>chatpage</h1>
-@endsection    
+@endsection     --}}
