@@ -129,29 +129,43 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
-.profile_container {
+button {
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+}
+
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80%;
   width: 100%;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.profile_container .separate_span {
+.container .profile_container {
+  height: auto;
+  width: 50%;
+  max-width: 550px;
+  margin: 30px 30px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile_container .separate_span {
   padding: 5px 10px;
   font-size: 16px;
   color: #C3091E;
 }
 
-.profile_container .input_flex {
+.container .profile_container .input_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +178,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 5px 0;
 }
 
-.profile_container .input_flex .checkmark {
+.container .profile_container .input_flex .checkmark {
   height: 15px;
   width: 15px;
   background-color: lightgrey;
@@ -172,31 +186,31 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 5px 10px 0 0;
 }
 
-.profile_container .input_flex .checkmark:after {
+.container .profile_container .input_flex .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.profile_container .input_flex input {
+.container .profile_container .input_flex input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.profile_container .input_flex:hover input ~ .checkmark {
+.container .profile_container .input_flex:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-.profile_container .input_flex input:checked ~ .checkmark {
+.container .profile_container .input_flex input:checked ~ .checkmark {
   background-color: #1666a0;
 }
 
-.profile_container .input_flex input:checked ~ .checkmark:after {
+.container .profile_container .input_flex input:checked ~ .checkmark:after {
   display: block;
 }
 
-.profile_container .input_flex .checkmark:after {
+.container .profile_container .input_flex .checkmark:after {
   margin: 4px 0 0 4px;
   width: 7px;
   height: 7px;
@@ -204,35 +218,25 @@ input[type=range]:focus::-ms-fill-upper {
   background: white;
 }
 
-.profile_container .profile_boxes {
-  height: 90vh;
-  width: 400px;
-  max-width: 550px;
-  margin: 30px 30px;
-  padding: 10px;
-  -webkit-box-shadow: 0px 0px 8px 0px black;
-          box-shadow: 0px 0px 8px 0px black;
-}
-
-.profile_container .profile_boxes input::-webkit-input-placeholder {
+.container .profile_container input::-webkit-input-placeholder {
   color: #1666a0;
 }
 
-.profile_container .profile_boxes input:-ms-input-placeholder {
+.container .profile_container input:-ms-input-placeholder {
   color: #1666a0;
 }
 
-.profile_container .profile_boxes input::-ms-input-placeholder {
+.container .profile_container input::-ms-input-placeholder {
   color: #1666a0;
 }
 
-.profile_container .profile_boxes input::placeholder {
+.container .profile_container input::placeholder {
   color: #1666a0;
 }
 
-.profile_container .profile_boxes .photo_button_container {
+.container .profile_container .photo_button_container {
   width: 100%;
-  height: 25%;
+  height: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,13 +245,14 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0 auto;
 }
 
-.profile_container .profile_boxes .photo_button_container .photo_box {
-  width: 40%;
+.container .profile_container .photo_button_container .photo_box {
+  width: 55%;
   height: 100%;
   border-radius: 10px;
+  margin-left: 20px;
 }
 
-.profile_container .profile_boxes .photo_button_container .photo_box .photo_image {
+.container .profile_container .photo_button_container .photo_box img {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
@@ -256,17 +261,27 @@ input[type=range]:focus::-ms-fill-upper {
   border: 2px solid black;
 }
 
-.profile_container .profile_boxes .photo_button_container .upload_button::-webkit-file-upload-button {
-  visibility: hidden;
+.container .profile_container .photo_button_container .upload_button_box {
+  height: 100%;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 28px;
 }
 
-.profile_container .profile_boxes .photo_button_container .upload_button {
+.container .profile_container .photo_button_container .upload_button_box .upload_button {
   position: relative;
   z-index: 1;
-  width: 40%;
-  height: 20%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  width: 100%;
+  height: auto;
   border: none;
   color: white;
   font-size: 16px;
@@ -275,7 +290,11 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
 }
 
-.profile_container .profile_boxes .photo_button_container .upload_button::before {
+.container .profile_container .photo_button_container .upload_button_box .upload_button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.container .profile_container .photo_button_container .upload_button_box .upload_button::before {
   content: 'pick a photo';
   display: inline-block;
   background-color: #1666a0;
@@ -285,13 +304,17 @@ input[type=range]:focus::-ms-fill-upper {
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
-.profile_container .profile_boxes .age_slider_box {
+.container .profile_container .age_slider_box {
   width: 80%;
 }
 
-.profile_container .profile_boxes .age_slider_box #ageOutput {
+.container .profile_container .age_slider_box #ageOutput {
   width: 20%;
   height: 50px;
   font-size: 16px;
@@ -299,7 +322,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-left: 10px;
 }
 
-.profile_container .profile_boxes .input_container {
+.container .profile_container .input_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,23 +337,23 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 14px;
 }
 
-.profile_container .profile_boxes .input_container .gender_span {
+.container .profile_container .input_container .gender_span {
   color: #1666a0;
 }
 
-.profile_container .profile_boxes .input_container .input_profile_page {
+.container .profile_container .input_container .input_profile_page {
   width: 50%;
   height: 35px;
   margin-left: 10px;
   color: #1666a0;
 }
 
-.profile_container .profile_boxes .input_container .input_range {
+.container .profile_container .input_container .input_range {
   width: 50%;
   margin-left: 10px;
 }
 
-.profile_container .profile_boxes .input_container .age_box_container {
+.container .profile_container .input_container .age_box_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,13 +363,13 @@ input[type=range]:focus::-ms-fill-upper {
           align-items: center;
 }
 
-.profile_container .profile_boxes .input_container .age_box_container #ageOutput {
+.container .profile_container .input_container .age_box_container #ageOutput {
   color: #1666a0;
   font-size: 16px;
   margin-left: 20px;
 }
 
-.profile_container .profile_boxes .who_am_i {
+.container .profile_container .who_am_i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,14 +382,14 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0 auto;
 }
 
-.profile_container .profile_boxes .who_am_i .text_area {
+.container .profile_container .who_am_i .text_area {
   width: 90%;
-  height: 40%;
+  height: 60%;
   margin: 0 auto;
   resize: none;
 }
 
-.profile_container .profile_boxes .who_am_i .see_personal_page {
+.container .profile_container .who_am_i .see_personal_page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,10 +403,24 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 10px auto;
 }
 
-.profile_container .profile_boxes .who_am_i .see_personal_page .button_personal_view {
+.container .profile_container .who_am_i .see_personal_page #buttonPersonalView {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile_container .who_am_i .see_personal_page .button_personal_view {
   border: none;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #1666a0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   width: 40%;
   height: 40px;
@@ -391,9 +428,12 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  cursor: pointer;
 }
 
-.profile_container .profile_boxes .who_am_i .see_personal_page .button_save_changes {
+.container .profile_container .who_am_i .see_personal_page .button_save_changes {
   border: none;
   color: white;
   background-color: #C3091E;
@@ -404,15 +444,124 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-.profile_container .profile_boxes .who_am_i .see_personal_page .button_save_changes:active {
+.container .profile_container .who_am_i .see_personal_page .button_save_changes:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-.profile_container .profile_boxes .who_am_i .see_personal_page .button_personal_view:active {
+.container .profile_container .who_am_i .see_personal_page .button_personal_view:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+.container #personalPopup {
+  width: 30%;
+  height: 650px;
+  margin: 30px 30px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  display: none;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container #personalPopup .personal_popup_photo_box {
+  margin: 0 auto;
+  height: 30%;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.container #personalPopup .personal_popup_photo_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10px;
+}
+
+.container #personalPopup .personal_popup_input_box {
+  width: 70%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.container #personalPopup .personal_popup_input_box .input_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: 25px;
+  margin: 5px 0;
+}
+
+.container #personalPopup .personal_popup_input_box .input_area .personal_popup_input_area {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #C3091E;
+}
+
+.container #personalPopup .personal_popup_input_box .input_area .personal_popup_db_input {
+  color: #1666a0;
+  font-size: 18px;
+}
+
+.container #personalPopup .personal_page_about_me_container {
+  width: 100%;
+  height: 20%;
+  padding: 8px 5px;
+  color: #1666a0;
+  overflow-y: auto;
+}
+
+.container #personalPopup .personal_page_games_container {
+  width: 100%;
+  height: 30%;
+}
+
+.container #personalPopup .personal_page_games_container .personal_page_games_name_box {
+  margin: 0 auto;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  color: #C3091E;
+  font-size: 18px;
+}
+
+.container #personalPopup .personal_page_games_container .personal_page_games_game_link_card_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 85%;
+}
+
+.container #personalPopup .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image {
+  height: 60%;
+  width: 18%;
+}
+
+.container #personalPopup .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 /*# sourceMappingURL=personal_profile_edit.css.map */
