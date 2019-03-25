@@ -388,13 +388,100 @@ button {
             }
         }
     }
+
+    //start personal popup div
+
     #personalPopup {
-        width: 60%;
-        height: 800px;
+        width: 30%;
+        height: 650px;
         margin: 30px 30px;
         padding: 10px;
         box-shadow: 0px 0px 8px 0px black;
         display: none;
+        opacity: 0;
         transition: 1s;
+        flex-direction: column;
+
+        .personal_popup_photo_box {
+            margin: 0 auto;
+            height: 30%;
+            width: 50%;
+            margin-bottom: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                border-radius: 10px;
+                // border: 1px solid black;
+            }
+        }
+
+        .personal_popup_input_box {
+            width: 70%;
+            height: 20%;
+            margin: 0 auto;
+
+            .input_area {
+                display: flex;
+                justify-content: center;
+                width: auto;
+                height: 25px;
+                margin: 5px 0;
+
+                .personal_popup_input_area {
+                    margin-right: 10px;
+                    font-size: 18px;
+                    color: $red;
+                }
+
+                .personal_popup_db_input {
+                    color: $blue;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .personal_page_about_me_container {
+            width: 100%;
+            height: 20%;
+            padding: 8px 5px;
+            color: $blue;
+            overflow-y: auto;
+            
+        }
+
+        .personal_page_games_container {
+            width: 100%;
+            height: 30%;
+
+            .personal_page_games_name_box {
+                margin: 0 auto;
+                height: 25px;
+                width: 100%;
+                text-align: center;
+                color: $red;
+                font-size: 18px;
+            }
+
+            .personal_page_games_game_link_card_box {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 85%;
+
+                .personal_page_games_image {
+                    height: 60%;
+                    width: 18%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                    }
+                }
+            }
+        }
     }
 }

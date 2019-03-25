@@ -54,7 +54,44 @@
             </div>
         </form>
     </div>
-    <div id="personalPopup" class="debug">
+    {{-- start personal popup div --}}
+    <div id="personalPopup">
+        <div class="personal_popup_photo_box"><img src="/images/{{ $personalpage->personal_image_url }}">
+        </div>
+        <div class="personal_popup_input_box">
+            <div class="input_area">
+                <div class="personal_popup_input_area">nickname:</div>
+                <span class="personal_popup_db_input">{{ Auth::user()->name }}</span>
+            </div>
+            <div class="input_area">
+                <div class="personal_popup_input_area">gender:</div>
+                <span class="personal_popup_db_input">{{ ($personalpage->personal_gender) }}</span>
+            </div>
+            <div class="input_area">
+                <div class="personal_popup_input_area">age:</div>
+                <span class="personal_popup_db_input">{{ $personalpage->personal_age }}</span>
+            </div>
+            <div class="input_area">
+                <div class="personal_popup_input_area">location:</div>
+                <span class="personal_popup_db_input">{{ $personalpage->personal_location }}</span>
+            </div>
+        </div>
+        <div class="personal_page_about_me_container">
+                {{ $personalpage->personal_info }}
+        </div>
+        <div class="personal_page_games_container">
+            <div class="personal_page_games_name_box">games I like</div>
+            <div class="personal_page_games_game_link_card_box">
+                    <div href="#" class="personal_page_games_image"><img src="" alt="" title=""/></div>
+                    <div href="#" class="personal_page_games_image"><img src="" alt="" title=""/></div>
+                    <div href="#" class="personal_page_games_image"><img src="" alt="" title=""/></div>
+                    <div href="#" class="personal_page_games_image"><img src="" alt="" title=""/></div>
+                    <div href="#" class="personal_page_games_image"><img src="" alt="" title=""/></div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 </div>
