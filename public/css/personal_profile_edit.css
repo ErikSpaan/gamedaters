@@ -129,6 +129,11 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
+button {
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,6 +143,8 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .container .profile_container {
@@ -148,6 +155,8 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 10px;
   -webkit-box-shadow: 0px 0px 8px 0px black;
           box-shadow: 0px 0px 8px 0px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .container .profile_container .separate_span {
@@ -237,7 +246,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .container .profile_container .photo_button_container .photo_box {
-  width: 45%;
+  width: 55%;
   height: 100%;
   border-radius: 10px;
   margin-left: 20px;
@@ -252,13 +261,27 @@ input[type=range]:focus::-ms-fill-upper {
   border: 2px solid black;
 }
 
-.container .profile_container .photo_button_container .upload_button {
+.container .profile_container .photo_button_container .upload_button_box {
+  height: 100%;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.container .profile_container .photo_button_container .upload_button_box .upload_button {
   position: relative;
   z-index: 1;
-  width: 40%;
-  height: 20%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  width: 100%;
+  height: auto;
   border: none;
   color: white;
   font-size: 16px;
@@ -267,11 +290,11 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
 }
 
-.container .profile_container .photo_button_container .upload_button::-webkit-file-upload-button {
+.container .profile_container .photo_button_container .upload_button_box .upload_button::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-.container .profile_container .photo_button_container .upload_button::before {
+.container .profile_container .photo_button_container .upload_button_box .upload_button::before {
   content: 'pick a photo';
   display: inline-block;
   background-color: #1666a0;
@@ -281,6 +304,10 @@ input[type=range]:focus::-ms-fill-upper {
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .container .profile_container .age_slider_box {
@@ -376,10 +403,24 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 10px auto;
 }
 
+.container .profile_container .who_am_i .see_personal_page #buttonPersonalView {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .container .profile_container .who_am_i .see_personal_page .button_personal_view {
   border: none;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #1666a0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   width: 40%;
   height: 40px;
@@ -387,6 +428,9 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  cursor: pointer;
 }
 
 .container .profile_container .who_am_i .see_personal_page .button_save_changes {
@@ -400,6 +444,7 @@ input[type=range]:focus::-ms-fill-upper {
   outline: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .container .profile_container .who_am_i .see_personal_page .button_save_changes:active {
@@ -410,5 +455,17 @@ input[type=range]:focus::-ms-fill-upper {
 .container .profile_container .who_am_i .see_personal_page .button_personal_view:active {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+.container #personalPopup {
+  width: 60%;
+  height: 800px;
+  margin: 30px 30px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=personal_profile_edit.css.map */

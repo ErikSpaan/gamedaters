@@ -2,10 +2,10 @@
     <link rel="stylesheet" href="{{ asset('/css/personal_profile_edit.css') }}">
 </head>
 <div class="container">
-    <div class="profile_container">
+    <div class="profile_container" id="profileContainer">
         <div class="photo_button_container">
             <div class="photo_box" id="photo_holder"><img src="/images/{{ $personalpage->personal_image_url }}" /></div>
-            <input type="file" class="upload_button" placeholder="upload img">
+            <div class="upload_button_box"><input type="file" class="upload_button" placeholder="upload img"></div>
         </div>
         <form method="POST" action="/personalpages/{{ $personalpage->id }}">
             {{ method_field('PATCH') }}
@@ -48,11 +48,14 @@
                 <textarea class="text_area" placeholder="write something about yourself..."
                     name="personal_info">{{ $personalpage->personal_info }}</textarea>
                 <div class="see_personal_page">
-                    <button class="button_personal_view">my personal page</button>
+                    <div class="button_personal_view" id="buttonPersonalView">my personal page</div>
                     <button type="submit" class="button_save_changes">save my changes</button>
                 </div>
             </div>
         </form>
     </div>
+    <div id="personalPopup" class="debug">
+    </div>
+
 </div>
 <script src="/js/profile.js"></script>
