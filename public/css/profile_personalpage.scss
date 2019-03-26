@@ -510,12 +510,17 @@ input[type=range]:focus::-ms-fill-upper {
             height: 40px;
             border-radius: 10px;
             outline: none;
-            transition: 0.3s;
+            transition: 0.5s;
             background-color: $blue;
         }
 
         .find_matches_button:active {
             transform: scale(0.8);
+        }
+
+        .find_matches_button:hover {
+            box-shadow: 0px 0px 50px 5px $red;
+            background-color: $red;
         }
     }
 

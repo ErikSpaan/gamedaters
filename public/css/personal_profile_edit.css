@@ -337,6 +337,21 @@ button {
   font-size: 14px;
 }
 
+.container .profile_container .input_container #changePassword {
+  color: white;
+  font-size: 12px;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+  border: none;
+  width: 50%;
+  height: 20px;
+  background-color: #C3091E;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .container .profile_container .input_container .gender_span {
   color: #1666a0;
 }
@@ -465,28 +480,74 @@ button {
   -webkit-box-shadow: 0px 0px 8px 0px black;
           box-shadow: 0px 0px 8px 0px black;
   display: none;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation-name: personal_view;
+          animation-name: personal_view;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
-.container #personalPopup .personal_popup_photo_box {
-  margin: 0 auto;
+.container #personalPopup .photo_button_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
   height: 30%;
+}
+
+.container #personalPopup .photo_button_box .personal_popup_photo_box {
+  margin: 0 auto;
+  height: 100%;
   width: 50%;
   margin-bottom: 10px;
 }
 
-.container #personalPopup .personal_popup_photo_box img {
+.container #personalPopup .photo_button_box .personal_popup_photo_box img {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
   border-radius: 10px;
+}
+
+@-webkit-keyframes personal_view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes personal_view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container #personalPopup .back_button {
+  width: 50px;
+  height: 60px;
+}
+
+.container #personalPopup .back_button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .container #personalPopup .personal_popup_input_box {
@@ -563,5 +624,12 @@ button {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.container #personalPopup .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image img:hover {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 /*# sourceMappingURL=personal_profile_edit.css.map */

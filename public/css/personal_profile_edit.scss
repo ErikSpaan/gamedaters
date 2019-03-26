@@ -136,8 +136,8 @@ button {
     justify-content: center;
     transition: 0.5s;
 
-.profile_container {
-    height: auto;
+    .profile_container {
+        height: auto;
         width: 50%;
         max-width: 550px;
         margin: 30px 30px;
@@ -146,62 +146,62 @@ button {
         transition: 0.5s;
 
 
-    .separate_span {
-        padding: 5px 10px;
-        font-size: 16px;
-        color: $red;
-    }
+        .separate_span {
+            padding: 5px 10px;
+            font-size: 16px;
+            color: $red;
+        }
 
-    .input_flex {
-        display: flex;
-        justify-content: flex-start;
-        width: 40%;
-        font-size: 14px;
-        padding-left: 5px;
-        margin: 5px 0;
+        .input_flex {
+            display: flex;
+            justify-content: flex-start;
+            width: 40%;
+            font-size: 14px;
+            padding-left: 5px;
+            margin: 5px 0;
 
-        .checkmark {
-            height: 15px;
-            width: 15px;
-            background-color: lightgrey;
+            .checkmark {
+                height: 15px;
+                width: 15px;
+                background-color: lightgrey;
+                border-radius: 50%;
+                margin: 5px 10px 0 0;
+            }
+
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+
+        .input_flex:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        .input_flex input:checked~.checkmark {
+            background-color: $blue;
+        }
+
+        .input_flex input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .input_flex .checkmark:after {
+            margin: 4px 0 0 4px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            margin: 5px 10px 0 0;
+            background: white;
         }
 
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-
-
-        input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-        }
-    }
-
-    .input_flex:hover input~.checkmark {
-        background-color: #ccc;
-    }
-
-    .input_flex input:checked~.checkmark {
-        background-color: $blue;
-    }
-
-    .input_flex input:checked~.checkmark:after {
-        display: block;
-    }
-
-    .input_flex .checkmark:after {
-        margin: 4px 0 0 4px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: white;
-    }
-  
         input::placeholder {
             color: $blue;
         }
@@ -226,9 +226,10 @@ button {
                     border-radius: 10px;
                     border: 2px solid black;
                 }
-                
+
             }
-             .upload_button_box{
+
+            .upload_button_box {
 
                 height: 100%;
                 width: 30%;
@@ -236,38 +237,39 @@ button {
                 flex-direction: column;
                 justify-content: flex-end;
                 margin-top: 28px;
-             
-                    .upload_button {
-                        position: relative;
-                        z-index: 1;
-                        width: 100%;
-                        height: auto;
-                        border: none;
-                        color: white;
-                        font-size: 16px;
-                        transition: 0.4s;
-                        outline: none; 
-                        
-                    }
-                    .upload_button::-webkit-file-upload-button {
-                    visibility: hidden;
-                    }
-    
-                    .upload_button::before {
-                        content: 'pick a photo';
-                        display: inline-block;
-                        background-color: $blue;
-                        border-radius: 10px;
-                        padding: 6px 8px;
-                        outline: none;
-                        white-space: nowrap;
-                        -webkit-user-select: none;
-                        cursor: pointer;
-                        box-shadow: 0px 0px 8px 0px black;
-                        margin-top: 10px;
-                        margin-left: 5px;
-                    }
+
+                .upload_button {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    color: white;
+                    font-size: 16px;
+                    transition: 0.4s;
+                    outline: none;
+
                 }
+
+                .upload_button::-webkit-file-upload-button {
+                    visibility: hidden;
+                }
+
+                .upload_button::before {
+                    content: 'pick a photo';
+                    display: inline-block;
+                    background-color: $blue;
+                    border-radius: 10px;
+                    padding: 6px 8px;
+                    outline: none;
+                    white-space: nowrap;
+                    -webkit-user-select: none;
+                    cursor: pointer;
+                    box-shadow: 0px 0px 8px 0px black;
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+            }
         }
 
         // end select photo knop
@@ -293,6 +295,20 @@ button {
             margin: 0 auto;
             font-size: 14px;
 
+            #changePassword {
+                color: white;
+                font-size: 12px;
+                margin: 10px 0 0 10px;
+                cursor: pointer;
+                border: none;
+                width: 50%;
+                height: 20px;
+                background-color: $red;
+                box-shadow: unset;
+                border-radius: 10px;
+                text-align: center;
+            }
+
             .gender_span {
                 color: $blue;
             }
@@ -313,7 +329,7 @@ button {
                 display: flex;
                 width: 80%;
                 align-items: center;
-                
+
                 #ageOutput {
                     color: $blue;
                     font-size: 16px;
@@ -398,22 +414,53 @@ button {
         padding: 10px;
         box-shadow: 0px 0px 8px 0px black;
         display: none;
-        opacity: 0;
+        opacity: 1;
         transition: 1s;
         flex-direction: column;
+        animation-name: personal_view;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
 
-        .personal_popup_photo_box {
-            margin: 0 auto;
+        .photo_button_box {
+
+            display: flex;
+            width: 90%;
             height: 30%;
-            width: 50%;
-            margin-bottom: 10px;
+
+            .personal_popup_photo_box {
+                margin: 0 auto;
+                height: 100%;
+                width: 50%;
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        @keyframes personal_view {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .back_button {
+            width: 50px;
+            height: 60px;
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: fill;
-                border-radius: 10px;
-                // border: 1px solid black;
             }
         }
 
@@ -448,7 +495,7 @@ button {
             padding: 8px 5px;
             color: $blue;
             overflow-y: auto;
-            
+
         }
 
         .personal_page_games_container {
@@ -479,7 +526,12 @@ button {
                         width: 100%;
                         height: 100%;
                         object-fit: fill;
+                        transition: 0.8s;
+
                     }
+                            img:hover {
+                                transform: scale(2.5);
+                            }
                 }
             }
         }

@@ -20,7 +20,7 @@ Route::get('/personaledit', 'PageController@personaleditpage');
 Route::get('/chat', 'PageController@chatpage');
 Route::get('/event', 'PageController@eventpage');
 Route::get('/admin', 'PageController@adminpage');
-
+Route::get('/apigame', 'ApigameController@index');
 Auth::routes();
 
 Route::get('/addevent/{event_id}', 'EventsController@addEvent');
