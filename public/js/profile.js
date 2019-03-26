@@ -2,10 +2,7 @@ document.getElementById('buttonPersonalView').addEventListener ('click', openVie
 
 function openView() {
 document.getElementById('profileContainer').style = "display: none";
-
 document.getElementById('personalPopup').style.display = "flex";
-document.getElementById('personalPopup').style.opacity = "1";
-
 } 
 
 function ageSlider(val) {
