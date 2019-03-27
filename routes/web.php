@@ -32,4 +32,6 @@ Route::resource('personalpages', 'PersonalPagesController');
 Route::resource('profilepages', 'ProfilePagesController');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/personalpages',function(){ return view('personal_profile'); });
+Route::post('/getdates','AjaxController@index');
 
