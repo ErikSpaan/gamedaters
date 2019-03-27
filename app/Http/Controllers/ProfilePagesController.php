@@ -22,9 +22,23 @@ class ProfilePagesController extends Controller
     public function index(Request $request, Personalpage $personalpage)
 
     {
-            
+        $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
+        //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
+        $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->where('user_id', '!=', Auth::user()->id)->get();
+        //get the favorite dates
+        $user = User::find(Auth::user()->id);
+        $favorites =  $user::first()->dates()->get();
+        
+     
+        //dd( $resultsWithCorrectGender );
+        
+        //dd($personalpage);
+        //dd($resultsWithCorrectGender);
+        
+
+         return view('profilepage', compact('personalpage','filterResults','favorites'));  
           //dd(request(['filter_age', 'filter_genre', 'filter_gender', 'filter_distance' ]));  
-          $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
+          //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
           //dd( $resultsWithCorrectGender );
    
          
@@ -34,10 +48,10 @@ class ProfilePagesController extends Controller
            // foreach ($personalpages as $personalpage) {
            // dd($personalpage->personal_page);
            // }
-           return view('profilepage', [
-               'personalpage' => $personalpage,
-               'matches' => $filterResults
-           ]);
+        //    return view('profilepage', [
+        //        'personalpage' => $personalpage,
+        //        'matches' => $filterResults
+        //    ]);
 
     }
 
@@ -85,7 +99,10 @@ class ProfilePagesController extends Controller
         $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
         //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
         $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->where('user_id', '!=', Auth::user()->id)->get();
-
+        //get the favorite dates
+        $user = User::find(Auth::user()->id);
+        $favorites =  $user::first()->dates()->get();
+        
      
         //dd( $resultsWithCorrectGender );
         
@@ -93,7 +110,7 @@ class ProfilePagesController extends Controller
         //dd($resultsWithCorrectGender);
         
 
-         return view('profilepage', compact('personalpage','filterResults'));
+         return view('profilepage', compact('personalpage','filterResults','favorites'));
         //  [
             //  'personalpage' => $personalpage,
             //  'matches' => $resultsWithCorrectGender
