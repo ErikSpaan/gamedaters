@@ -1,5 +1,9 @@
 <head>
+     <!-- provide the csrf token -->
+     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ asset('/css/profile_personalpage.css') }}">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
 </head>
 {{-- start profile box 1 --}}
 <div class="profile_container">
@@ -55,16 +59,19 @@
                 </div>
                 
                 <div class="matches_flex">
+                                                
+                                 
                 @isset($filterResults)    
                     @foreach ($filterResults as $filterResult) 
                     <div class="matches_card">
                         <a href="#" class="card_photo_box"><img src="/images/{{ $filterResult->personal_image_url }}" alt=""/></a>
                         <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
-                        <div id="card_button_box"></div>
+                        <a onclick="mydates()" id="card_button_box"></a>
                     </div>
                     @endforeach
                 @endisset
-                
+
+                               
                </div>
     </div>
     {{-- Start profile box 2 --}}
@@ -74,6 +81,10 @@
     <div class="profile_boxes">
         <div class="current_dates_container">
             <div class="filter_name">Current dates</div>
+
+            <div id = 'mydates'>This message will be replaced using Ajax. 
+                    Click the button to replace the message.</div>
+
             <div class="current_dates_box">
                 <div class="matches_card">
                     <a href="#" class="card_photo_box"><img src="" alt="" /></a>
@@ -136,3 +147,23 @@
 
 </div>
 <script src="/js/profile.js"></script>
+<script>
+    
+        function mydates() {
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                    /* the route pointing to the post function */
+                    url: '/getdates',
+                    type: 'POST',
+                    /* send the csrf-token and the input to the controller */
+                    data: {_token: CSRF_TOKEN, message:$(".getinfo").val()},
+                    dataType: 'JSON',
+                    /* remind that 'data' is the response of the AjaxController */
+                    success: function (data) { 
+                        $("#mydates").append(data.msg); 
+                    }    
+                });
+        };  
+       
+   
+    </script>
