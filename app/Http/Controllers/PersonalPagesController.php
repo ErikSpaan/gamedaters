@@ -152,6 +152,8 @@ class PersonalPagesController extends Controller
 
     public function update(Request $request, Personalpage $personalpage)
     {
+        dd($request);
+        
         $personalpage->personal_firstname = request('personal_firstname');
         $personalpage->personal_lastname = request('personal_lastname');
         $personalpage->personal_nickname = request('personal_nickname');
