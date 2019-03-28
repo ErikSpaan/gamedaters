@@ -39,4 +39,5 @@ Route::post('/conversation/send', 'ContactsController@send');
 Route::get('/personalpages',function(){ return view('personal_profile'); });
 Route::post('/getdates','AjaxController@index');
 
-
+Route::get('/personalpages',function(){ return view('personal_profile'); });
+Route::post('/findyourmatch','AjaxController@findyourmatch');

@@ -28,12 +28,27 @@ class AjaxController extends Controller
             'status' => 'success',
             'msg' => $mydates,
         ); 
-
        
         return response()->json($response); 
      }
 
   
+    public function findyourmatch(Request $request) {
+        $gender = $request->gender; 
+
+        // $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->where('user_id', '!=', Auth::user()->id)->get();
+        $filterResults = Personalpage::where('personal_gender', $gender)->where('user_id', '!=', Auth::user()->id)->get();
+
+
+        //$user = User::find(Auth::user()->id);
+        //$mydates =  $user::first()->dates()->get();
+        $response = array(
+            'status' => 'success',
+            'msg' => $filterResults,
+        );
+
+        return response()->json($response);
+    } 
   
 } //end class
 
