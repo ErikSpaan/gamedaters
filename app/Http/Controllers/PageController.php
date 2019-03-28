@@ -30,10 +30,14 @@ class PageController extends Controller
             $personalpage->save();
             $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
          }
-        //  $filterResult = Personalpage::where("user_id", Auth::user()->id)->get();
+        //get filter results if available
+        $filterResult = Personalpage::where("user_id", Auth::user()->id)->get();
+        //get the favorite dates
+        $user = User::find(Auth::user()->id);
+        $favorites =  $user::first()->dates()->get();
 
-         //return view('profilepage', compact('personalpage','filterResult'));
-         return view('profilepage', compact('personalpage'));
+         return view('profilepage', compact('personalpage','filterResult','favorites'));
+         //return view('profilepage', compact('personalpage'));
 
     }
 
