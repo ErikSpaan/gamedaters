@@ -4,8 +4,13 @@
 <div class="container">
     <div class="profile_container" id="profileContainer">
         <div class="photo_button_container">
-            <div class="photo_box" id="photo_holder"><img src="/images/{{ $personalpage->personal_image_url }}" /></div>
-            <div class="upload_button_box"><input type="file" class="upload_button" placeholder="upload img"></div>
+            <div class="photo_box" id="photo_holder"><img src="/images/profile_images/{{ $personalpage->personal_image_url }}" /></div>
+
+            <form method="POST" action="/personalpages/{{ $personalpage->id }}" enctype="multipart/form-data">
+            <div class="upload_button_box"><input type="file" class="upload_button" placeholder="upload img" value="{{ $personalpage->personal_image_url }}"></div>
+            {{ method_field('PATCH') }} {{-- to protect against cross site... --}} {{ csrf_field() }}
+            </form>
+
         </div>
         <form method="POST" action="/personalpages/{{ $personalpage->id }}">
             {{ method_field('PATCH') }} {{-- to protect against cross site... --}} {{ csrf_field() }}

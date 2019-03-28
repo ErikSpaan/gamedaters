@@ -14,3 +14,5 @@ function ageSlider(val) {
   function distanceSlider(val) {
     document.getElementById("distanceOutput").innerHTML = val; 
   }
+
+  document.getElementById('chagePassword').addEventListener ('click', changePassword);
