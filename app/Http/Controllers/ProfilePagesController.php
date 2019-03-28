@@ -22,6 +22,7 @@ class ProfilePagesController extends Controller
     public function index(Request $request, Personalpage $personalpage)
 
     {
+        dd('show profilepagescontroller');
         $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
         //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
         $filterResults = Personalpage::where('personal_gender', request('filter_gender'))->where('user_id', '!=', Auth::user()->id)->get();
@@ -64,7 +65,7 @@ class ProfilePagesController extends Controller
     public function create()
 
     {
-        dd('create');
+        dd('create profilepagescontroller');
         return view('personalpages.create');
 
     }
@@ -79,7 +80,7 @@ class ProfilePagesController extends Controller
     public function store(Request $request)
 
     {
-        dd('store');
+        dd('store profilepagescontroller');
 
         return redirect('/personalpages');
 
@@ -92,9 +93,10 @@ class ProfilePagesController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function show(Request $request)
+    public function show(Request $request)  // this method is live in the profilepage
 
     {
+        //dd('show profilepagescontroller');
         //dd(request(['filter_age', 'filter_genre', 'filter_gender', 'filter_distance' ]));  
         $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
         //$filterResults = Personalpage::where('personal_gender', request('filter_gender'))->get();
@@ -132,7 +134,7 @@ class ProfilePagesController extends Controller
     public function edit(personalpage $personalpage)
 
     {
-        dd('edit');
+        dd('edit profilepagescontroller');
         return view('personalpages/edit', compact('personalpage'));
 
     }
@@ -148,7 +150,7 @@ class ProfilePagesController extends Controller
 
     public function update(Request $request, personalpage $personalpage)
     {
-        dd('update');
+        dd('update profilepagescontroller');
         //dd(request(['filter_age', 'filter_genre', 'filter_gender', 'filter_distance' ]));  
         $resultsWithCorrectGender = Personalpage::where('personal_gender', request('filter_gender'))->get();
         
