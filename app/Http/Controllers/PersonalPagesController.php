@@ -6,6 +6,7 @@ use App\personalpage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
+use App\Game;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
