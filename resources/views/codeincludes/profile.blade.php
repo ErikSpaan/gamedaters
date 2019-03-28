@@ -11,9 +11,9 @@
     <div class="profile_boxes">
             <div class="filter_flex">
                     <div class="filter_name">I'm looking for...</div>
-                    <form method="GET" action="/profilepages/{{ $personalpage->id }}">
+                    <form id="findyourmatchform">
                         {{-- to protect against cross site... --}}
-                        @csrf
+                        {{-- @csrf --}}
                         <div class="filter_options">
                             <span class="separate_span">gender</span>
                             <div class="radio_box_container">
@@ -53,13 +53,15 @@
                                     <option value="strategy">
                                     <option value="horror">
                                 </datalist>
-                                <button type="submit" class="find_matches_button">Find your match!</button>
+                                {{-- <button type="submit" class="find_matches_button">Find your match!</button> --}}
+                                {{-- <button type="button" class="find_matches_button" id=getRequest>Find your match!</button> --}}
+                                <a class="find_matches_button" onclick="findyourmatch(this.form)">Find your match!</a>
                             </div>
                         </div>
                     </form>
                 </div>
                 
-                <div class="matches_flex">
+                <div class="matches_flex" id="filterResults">
                                                 
                               
                 @isset($filterResults)    
@@ -172,9 +174,67 @@
                 });
         };  
        
-        // $( document ).ready(function() {
-        // ( "ready!" );
-        // });    
+        console.log("main.js gorillapower");
+
+        // $(document).ready(function() {
+        //     $('#getRequest').click(function(){
+        //         $.get('getRequest', function(data){
+        //             console.log(data);
+        //         });
+        //     });
+        //     $('#register').submit(function(){
+        //         var fname = $('#')
+        //     })
+        // });
+        
+
+        // function findyourmatch(form) {
+        //     var naam = form.filter_gender.value;
+        //     console.log(naam);
+        // }
+
+        function findyourmatch(form) {
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            // the filter parameters
+            var fgender = $("input[name=filter_gender]:checked").val();
+            var fage = $("input[name=filter_age]").val();
+            var fdistance = $("input[name=filter_distance]").val();
+            var fgenre = $("input[name=filter_genre]").val();
+            console.log(fgender,fage,fdistance,fgenre);
+            $.ajax({
+                    /* the route pointing to the post function */
+                    url: '/findyourmatch',
+                    type: 'POST',
+                    /* send the csrf-token and the input to the controller */
+                    data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), gender:fgender, age:fage, distance:fdistance, genre:fgenre},
+                    dataType: 'JSON',
+                    /* remind that 'data' is the response of the AjaxController */
+                    success: function (data) { 
+                        
+                    //alert(JSON.stringify(data.msg));
+                    // dates = data.msg[1].personal_firstname;    
+
+                    foundMatches="";     
+                    data.msg.forEach(function(filterResult) {
+
+                    showProfile = filterResult.id;
+                    
+                    foundMatches+= '<div class="matches_card">';
+                    foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/' + filterResult.personal_image_url + '" alt=""/></a>';
+                    foundMatches+= '<div class="card_name_box">' + filterResult.personal_firstname + '</div>';
+                    foundMatches+= '<a onclick="mydates(' + filterResult.id + ')" id="card_button_box"></a>';
+                    foundMatches+= '</div>';             
+                        
+                    console.log(filterResult);
+                        
+                    });
+
+
+                    //alert('dates');    
+                    $("#filterResults").html(foundMatches); 
+                    }    
+                });
+        };  
 
     </script>
 
