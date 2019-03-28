@@ -8,9 +8,9 @@
 @include ('codeincludes/newmenu')
 
 <!-- Chat page -->
-{{-- @section('homepageLinks') --}}
+@section('chat')
 @include('codeincludes/chat')
 
-@section('content')
+{{-- @section('content')
     <h1>chatpage</h1>
-@endsection    
+@endsection     --}}
