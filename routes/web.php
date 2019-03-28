@@ -16,10 +16,11 @@ Route::get('/', 'PageController@landingpage');
 //Route::get('/home', 'PageController@homepage');
 Route::get('/profile', 'PageController@profilepage');
 Route::get('/personal', 'PageController@personalpage');
+Route::get('/personaledit', 'PageController@personaleditpage');
 Route::get('/chat', 'PageController@chatpage');
 Route::get('/event', 'PageController@eventpage');
 Route::get('/admin', 'PageController@adminpage');
-
+Route::get('/apigame', 'GamesController@index');
 Auth::routes();
 
 Route::get('/addevent/{event_id}', 'EventsController@addEvent');
@@ -34,5 +35,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contacts', 'ContactsController@get');
 Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
 Route::post('/conversation/send', 'ContactsController@send');
+
+Route::get('/personalpages',function(){ return view('personal_profile'); });
+Route::post('/getdates','AjaxController@index');
 
 

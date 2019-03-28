@@ -26,7 +26,7 @@
             <!-- Menu links------------------------------------>
             <ul class="menu-nav">
                 <li class="nav-item current">
-                    <a href="/personal" class="nav-link">
+                    <a href="/personaledit" class="nav-link">
                         {{ Auth::user()->name }}
                     </a>
                 </li>
