@@ -2,6 +2,7 @@
      <!-- provide the csrf token -->
      <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ asset('/css/profile_personalpage.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     </script>
 </head>
@@ -60,13 +61,13 @@
                 
                 <div class="matches_flex">
                                                 
-                                 
+                              
                 @isset($filterResults)    
                     @foreach ($filterResults as $filterResult) 
                     <div class="matches_card">
                         <a href="#" class="card_photo_box"><img src="/images/{{ $filterResult->personal_image_url }}" alt=""/></a>
                         <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
-                        <a onclick="mydates()" id="card_button_box"></a>
+                        <a onclick="mydates('{{$filterResult->id}}')" id="card_button_box"></a>
                     </div>
                     @endforeach
                 @endisset
@@ -81,36 +82,23 @@
     <div class="profile_boxes">
         <div class="current_dates_container">
             <div class="filter_name">Current dates</div>
+                <div id = "mydates" class="current_dates_box">
+                
+                @isset($favorites)
+                    @foreach($favorites as $favorite)
+                        
+                        <div class="matches_card">
+                        <a href="#" class="card_photo_box"><img src="/images/{{ $favorite->personal_image_url }}" alt=""/></a>
+                        <div class="card_name_box">{{ $favorite->personal_firstname }}</div>
+                        <a onclick="mydates('{{ $favorite->id }}')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>
+                        </div>
 
-            <div id = 'mydates'>This message will be replaced using Ajax. 
-                    Click the button to replace the message.</div>
+                    @endforeach
+                @endisset   
 
-            <div class="current_dates_box">
-                <div class="matches_card">
-                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                    <div class="card_name_box"></div>
-                    <div id="card_delete_box"></div>
-                </div>
-                <div class="matches_card">
-                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                    <div class="card_name_box"></div>
-                    <div id="card_delete_box"></div>
-                </div>
-                <div class="matches_card">
-                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                    <div class="card_name_box"></div>
-                    <div id="card_delete_box"></div>
-                </div>
-                <div class="matches_card">
-                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                    <div class="card_name_box"></div>
-                    <div id="card_delete_box"></div>
-                </div>
-                <div class="matches_card">
-                    <a href="#" class="card_photo_box"><img src="" alt="" /></a>
-                    <div class="card_name_box"></div>
-                    <div id="card_delete_box"></div>
-                </div>
+            {{-- <div>{{$loaddates}} in this box your favorites will appear if you click the heart</div> --}}
+                
+                          
             </div>
 
         </div>
@@ -149,21 +137,44 @@
 <script src="/js/profile.js"></script>
 <script>
     
-        function mydates() {
+        function mydates(personalId) {
+            //alert(argument);
             var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             $.ajax({
                     /* the route pointing to the post function */
                     url: '/getdates',
                     type: 'POST',
                     /* send the csrf-token and the input to the controller */
-                    data: {_token: CSRF_TOKEN, message:$(".getinfo").val()},
+                    data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), mydate:personalId},
                     dataType: 'JSON',
                     /* remind that 'data' is the response of the AjaxController */
                     success: function (data) { 
-                        $("#mydates").append(data.msg); 
+                        
+                    //alert(JSON.stringify(data.msg));
+                    //dates = data.msg[1].personal_firstname;    
+
+                    dates="";     
+                    data.msg.forEach(function(favorite) {
+                         //alert(favorite.personal_firstname);
+                         deletebutton = favorite.id;
+                         dates+= '<div class="matches_card">';
+                         dates+= '<a href="#" class="card_photo_box"><img src="/images/' + favorite.personal_image_url + '" alt=""/></a>';
+                         dates+= '<div class="card_name_box">' + favorite.personal_firstname + '</div>';
+                         dates+= '<a onclick="mydates('+deletebutton+')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>';
+                         dates+= '</div>';
+                         //dates+= favorite.personal_firstname
+                         });
+
+
+                    //alert(dates);    
+                    $("#mydates").html(dates); 
                     }    
                 });
         };  
        
-   
+        // $( document ).ready(function() {
+        // ( "ready!" );
+        // });    
+
     </script>
+
