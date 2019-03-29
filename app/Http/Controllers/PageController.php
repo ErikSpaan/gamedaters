@@ -52,6 +52,15 @@ class PageController extends Controller
     }
 
     public function personaleditpage() {
+        if (Personalpage::where("user_id",Auth::user()->id)->first()) {
+            $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();
+        } else {
+            $personalpage = new Personalpage();
+            $personalpage->user_id = Auth::user()->id;
+            $personalpage->save();
+            $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();  
+         }
+         
         $personalpage = Personalpage::where("user_id",Auth::user()->id)->first();
         $games = User::find(Auth::user()->id)->games()->get();
         return view('personal_profile', compact('personalpage','games'));

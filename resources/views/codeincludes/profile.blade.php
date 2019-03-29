@@ -32,7 +32,8 @@
                         </div>
                             <span class="separate_span">age</span>
                             <div class="age_box">
-                            <div><input type="range" name="filter_age" min="18" max="99" placeholder="" class="filter_age">
+                            <div><input type="range" oninput="ageSlider(this.value)" name="filter_age" min="18" max="99" placeholder="" class="filter_age">
+                                <span id="ageOutput"></span>
                             </div>
                             </div>
                             <span class="separate_span">max distance</span>
@@ -55,7 +56,7 @@
                                 </datalist>
                                 {{-- <button type="submit" class="find_matches_button">Find your match!</button> --}}
                                 {{-- <button type="button" class="find_matches_button" id=getRequest>Find your match!</button> --}}
-                                <a class="find_matches_button" onclick="findyourmatch(this.form)">Find your match!</a>
+                                <a class="find_matches_button" onclick="findyourmatch(this.form)"><p>Find your match!</p></a>
                             </div>
                         </div>
                     </form>
@@ -67,7 +68,7 @@
                 @isset($filterResults)    
                     @foreach ($filterResults as $filterResult) 
                     <div class="matches_card">
-                        <a href="#" class="card_photo_box"><img src="/images/{{ $filterResult->personal_image_url }}" alt=""/></a>
+                        <a href="#" class="card_photo_box"><img src="../images/profile_images/{{ $filterResult->personal_image_url }}" alt=""/></a>
                         <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
                         <a onclick="mydates('{{$filterResult->id}}')" id="card_button_box"></a>
                     </div>
@@ -90,7 +91,7 @@
                     @foreach($favorites as $favorite)
                         
                         <div class="matches_card">
-                        <a href="#" class="card_photo_box"><img src="/images/{{ $favorite->personal_image_url }}" alt=""/></a>
+                        <a href="#" class="card_photo_box"><img src="/images/profile_images/{{ $favorite->personal_image_url }}" alt=""/></a>
                         <div class="card_name_box">{{ $favorite->personal_firstname }}</div>
                         <a onclick="mydates('{{ $favorite->id }}')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>
                         </div>
@@ -160,7 +161,7 @@
                          //alert(favorite.personal_firstname);
                          deletebutton = favorite.id;
                          dates+= '<div class="matches_card">';
-                         dates+= '<a href="#" class="card_photo_box"><img src="/images/' + favorite.personal_image_url + '" alt=""/></a>';
+                         dates+= '<a href="#" class="card_photo_box"><img src="/images/profile_images/' + favorite.personal_image_url + '" alt=""/></a>';
                          dates+= '<div class="card_name_box">' + favorite.personal_firstname + '</div>';
                          dates+= '<a onclick="mydates('+deletebutton+')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>';
                          dates+= '</div>';
@@ -220,7 +221,7 @@
                     showProfile = filterResult.id;
                     
                     foundMatches+= '<div class="matches_card">';
-                    foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/' + filterResult.personal_image_url + '" alt=""/></a>';
+                    foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/profile_images/' + filterResult.personal_image_url + '" alt=""/></a>';
                     foundMatches+= '<div class="card_name_box">' + filterResult.personal_firstname + '</div>';
                     foundMatches+= '<a onclick="mydates(' + filterResult.id + ')" id="card_button_box"></a>';
                     foundMatches+= '</div>';             
@@ -237,4 +238,5 @@
         };  
 
     </script>
+    <script src="/js/profile.js"></script>
 
