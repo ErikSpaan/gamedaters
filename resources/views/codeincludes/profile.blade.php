@@ -55,7 +55,7 @@
                                 </datalist>
                                 {{-- <button type="submit" class="find_matches_button">Find your match!</button> --}}
                                 {{-- <button type="button" class="find_matches_button" id=getRequest>Find your match!</button> --}}
-                                <a class="find_matches_button" onclick="findyourmatch(this.form)">Find your match!</a>
+                                <a class="find_matches_button" onclick="findyourmatch(this.form)"><p>Find your match!</p></a>
                             </div>
                         </div>
                     </form>
@@ -67,7 +67,7 @@
                 @isset($filterResults)    
                     @foreach ($filterResults as $filterResult) 
                     <div class="matches_card">
-                        <a href="#" class="card_photo_box"><img src="/images/{{ $filterResult->personal_image_url }}" alt=""/></a>
+                        <a href="#" class="card_photo_box"><img src="../images/profile_images/{{ $filterResult->personal_image_url }}" alt=""/></a>
                         <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
                         <a onclick="mydates('{{$filterResult->id}}')" id="card_button_box"></a>
                     </div>
@@ -220,7 +220,7 @@
                     showProfile = filterResult.id;
                     
                     foundMatches+= '<div class="matches_card">';
-                    foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/' + filterResult.personal_image_url + '" alt=""/></a>';
+                    foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/profile_images/' + filterResult.personal_image_url + '" alt=""/></a>';
                     foundMatches+= '<div class="card_name_box">' + filterResult.personal_firstname + '</div>';
                     foundMatches+= '<a onclick="mydates(' + filterResult.id + ')" id="card_button_box"></a>';
                     foundMatches+= '</div>';             

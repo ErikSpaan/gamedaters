@@ -420,6 +420,8 @@ input[type=range]:focus::-ms-fill-upper {
   background-image: url("/images/hearts_background.jpg");
   background-position: center;
   background-size: cover;
+  -webkit-box-shadow: 0 0 10px 4px #C3091E;
+          box-shadow: 0 0 10px 4px #C3091E;
 }
 
 .profile_container .radio_box_container {
@@ -577,14 +579,16 @@ input[type=range]:focus::-ms-fill-upper {
   display: inline-block;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   width: 40%;
-  height: 40px;
+  height: 50px;
   border-radius: 10px;
   outline: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #1666a0;
+  text-align: center;
+  cursor: pointer;
 }
 
 .profile_container .filter_flex .find_matches_button:active {
