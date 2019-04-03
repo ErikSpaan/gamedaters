@@ -7,7 +7,7 @@
     <!-- Menu button top right------------------------>
     <header class="">
         <div class="photo_container">
-                <img src="../images/logo_new.jpg" alt="logo" />
+                <img src="/images/logo_new.jpg" alt="logo" />
             </div>
 
         <div class="menu-btn">
