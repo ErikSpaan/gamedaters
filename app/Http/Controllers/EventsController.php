@@ -122,6 +122,7 @@ class EventsController extends Controller
             $user->events()->detach($id);
         } else {
         $user->events()->attach($id);
+        $events->id->event_count = 1;
         }
         return redirect('event');
         }
