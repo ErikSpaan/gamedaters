@@ -10,7 +10,7 @@
         margin: 70px auto;
     
         a h1 {
-            // font-size: 40px;
+            font-size: 40px;
             margin: 20px auto;
         }
     }
@@ -21,8 +21,8 @@
         }
 
         .menu .nav-link {
-            padding: 50px;
-            font-size: 20px;
+            padding: 40px;
+            font-size: 16px;
         }
 }
 
@@ -51,12 +51,12 @@
                     }
                 }
             }
-            .flex2_middle {
-                .register_head {
-                }
-                .register_content {
-                }
-            }
+            // .flex2_middle {
+            //     .register_head {
+            //     }
+            //     .register_content {
+            //     }
+            // }
         }
     }
 
@@ -148,12 +148,12 @@
                     }
                 }
             }
-            .flex2_middle {
-                .register_head {
-                }
-                .register_content {
-                }
-            }
+            // .flex2_middle {
+            //     .register_head {
+            //     }
+            //     .register_content {
+            //     }
+            // }
         }
     }
 
@@ -163,13 +163,38 @@
         background-position-y: 150px;
         background-position-x: 25px;
     }
-    .home_container {
+
+    .home_container { 
         margin: 60px auto;
 
         a h1 {
-            font-size: 40px;
-            margin: 20px auto;
-        } 
+            font-size: 30px;
+            margin: 0 auto;
+        }
+
+        a.link_personal, .home_container-link1 {
+            margin: 15px 20%;   
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        a.link_chat, .home_container-link2 {
+            margin: 15px 20%;
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        a.link_events, .home_container-link3 {
+            margin: 15px 20%;
+
+            h1 {
+                font-size: 30px;
+            }
+        }
     }
 
     //logo and navbar:

@@ -174,7 +174,6 @@ textarea {
 
 }
 
-
 .button_events_edit_los {
     border-radius: 6px;
     padding:15px;
@@ -190,4 +189,21 @@ textarea {
 .button_events_edit_los:active {
     border-radius: 6px;
     background-color: color(button_edit_active);
+}
+
+.button_events_delete_los {
+    border-radius: 6px;
+    padding:15px;
+    margin: 5px;
+    background-color: color(button_delete);
+}
+
+.button_events_delete_los:hover {
+    background-color: color(button_delete_hover);
+    color: color(hover_text);
+}
+
+.button_events_delete_los:active {
+    border-radius: 6px;
+    background-color: color(button_delete_active);
 }

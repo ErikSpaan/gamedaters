@@ -160,10 +160,11 @@ class PersonalPagesController extends Controller
     {
         $image = $request->file('personal_image');
 
-        $extension = $image->getClientOriginalExtension();        
-
-        Storage::disk('public')->put($image->getFilename().'.'.$extension, File::get($image));
-
+        if (isset ($image)) {
+            $extension = $image->getClientOriginalExtension();        
+            Storage::disk('public')->put($image->getFilename().'.'.$extension, File::get($image));
+        };
+        
        // dd($image->getFilename().'.'.$extension); 
 
         $personalpage->personal_firstname = request('personal_firstname');
@@ -173,7 +174,9 @@ class PersonalPagesController extends Controller
         $personalpage->personal_age = request('personal_age');
         $personalpage->personal_location_x = request('personal_location_x');
         $personalpage->personal_location_y = request('personal_location_y');
-        $personalpage->personal_image_url = $image->getFilename().'.'.$extension;
+        if (isset ($image)) {
+            $personalpage->personal_image_url = $image->getFilename().'.'.$extension;
+        };    
         $personalpage->personal_food = request('personal_food');
         $personalpage->personal_info = request('personal_info');
         $personalpage->save();

@@ -25,7 +25,7 @@
             </div>
             <!-- Menu links------------------------------------>
             <ul class="menu-nav">
-                <li class="nav-item current">
+                <li class="nav-item">
                     <a href="/personaledit" class="nav-link">
                         {{ Auth::user()->name }}
                     </a>
@@ -34,6 +34,12 @@
                     <a href="/home" class="nav-link">
                         Home
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin" class="nav-link">
+                        Admin
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
