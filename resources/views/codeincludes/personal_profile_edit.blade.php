@@ -19,18 +19,12 @@
                 <input type="email" name="user_email" placeholder="email" value="{{ Auth::user()->email }}"
                     class="input_profile_page">
                 <div id="changePassword">change password</div>
-
-                {{-- Start forgot password form --}}
-                <form action="" method="">
                 <div id="password_modal">
                     <div class="old_password_text">Please confirm your password</div>
                     <div class="old_password"><input type="password" name=""></div>
                     <div class="new_password_text">Choose a new password</div>
                     <div class="new_password"><input type="password" name=""><input type="password" name=""></div>
                 </div>
-                </form>
-                 {{-- Start forgot password form --}}
-
                 <span class="separate_span">gender</span>
                 <div class="input_flex">
                     <input type="radio" name="personal_gender" {{ ($personalpage->personal_gender=='male') ? 'checked="checked"
