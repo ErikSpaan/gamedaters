@@ -1918,6 +1918,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -48184,7 +48185,7 @@ var render = function() {
         _vm._v(
           _vm._s(_vm.contact ? _vm.contact.name : "Select a Contact") + " --> "
         ),
-        _c("a", { attrs: { href: "#" } }, [_vm._v("View profile")])
+        _c("a", { attrs: { href: "#" } }, [_vm._v("View Profile")])
       ]),
       _vm._v(" "),
       _c("MessagesFeed", {
