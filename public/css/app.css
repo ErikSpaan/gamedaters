@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -579,7 +579,7 @@ pre code {
   overflow-y: scroll;
 }
 
-.container {
+.container_chat {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -588,30 +588,30 @@ pre code {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .container_chat {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container_chat {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container_chat {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container_chat {
     max-width: 1140px;
   }
 }
 
-.container-fluid {
+.container_chat-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

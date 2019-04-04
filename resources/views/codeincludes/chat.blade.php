@@ -20,7 +20,7 @@
 
 @section('chat')
 
-<div class="container">
+<div class="container_chat">
     <div class="row justify-content-center">
         <div class="col-sm-12">
             <div class="card">
