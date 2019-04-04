@@ -48139,9 +48139,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "contact" }, [
-              _c("p", { staticClass: "name" }, [_vm._v(_vm._s(contact.name))]),
-              _vm._v(" "),
-              _c("p", { staticClass: "email" }, [_vm._v(_vm._s(contact.email))])
+              _c("p", { staticClass: "name" }, [_vm._v(_vm._s(contact.name))])
             ]),
             _vm._v(" "),
             contact.unread
@@ -48183,7 +48181,10 @@ var render = function() {
     { staticClass: "conversation" },
     [
       _c("h1", [
-        _vm._v(_vm._s(_vm.contact ? _vm.contact.name : "Select a Contact"))
+        _vm._v(
+          _vm._s(_vm.contact ? _vm.contact.name : "Select a Contact") + " --> "
+        ),
+        _c("a", { attrs: { href: "#" } }, [_vm._v("View profile")])
       ]),
       _vm._v(" "),
       _c("MessagesFeed", {
