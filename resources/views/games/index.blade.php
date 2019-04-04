@@ -45,7 +45,7 @@
     
     <div class=container_events_create>
         <a href="/games/create"><button class="button_events_create">Create game</button></a>
-        <a href="admin"><button class="button_events_back">Back</button></a>    
+        <a href="admin"><button class="button_events_back">Admin home</button></a>    
     </div>
 </div>  {{-- end container events --}}
 
