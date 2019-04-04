@@ -36,7 +36,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="/admin" class="nav-link">
                         Admin
                     </a>
                 </li>
