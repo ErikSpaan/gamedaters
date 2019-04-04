@@ -1,3 +1,5 @@
+@if (Auth::user() && Auth::user()->role == 'admin')
+
 @extends('master')
 
 <!--Title on tab current page -->
@@ -46,7 +48,9 @@
                 <button class="button_events_delete_los" type="submit">Delete game</button>
             </form>    
         </p>   
-        
 
-@endsection    
+@endsection  
+
+@else 'Acces not allowed, only for admin!'
+@endif
 

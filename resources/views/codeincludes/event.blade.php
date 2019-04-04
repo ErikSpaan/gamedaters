@@ -20,9 +20,7 @@
     <div class="event_card_container">
         <div class="card_image">
             <img src="/images/e3.png" alt="e3"/>
-<<<<<<< HEAD
             <a href="" class="join_event_button"></a>
-=======
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
@@ -39,7 +37,6 @@
         </div>
         <div class="card_image">
             <img src="/images/e3.png" alt="e3"/>
->>>>>>> 5efb277bc3b4b1f2e6c1b84f2c1d8d91f3669c15
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>

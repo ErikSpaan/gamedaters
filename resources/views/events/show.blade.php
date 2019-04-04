@@ -1,3 +1,5 @@
+@if (Auth::user() && Auth::user()->role == 'admin')
+
 @extends('master')
 
 <!--Title on tab current page -->
@@ -41,7 +43,6 @@
     <label class="event_show_label" for="event_time">Event description :</label><br>
     {{ $event->event_description }}
 </div>       
-      
 <p>
     <a href="/events/{{ $event->id }}/edit"><button class="button_events_edit_los">Edit</button></a>
     <a href="\events"><button class="button_events_back">Back</button></a>  
@@ -53,3 +54,6 @@
 </p>        
 
 @endsection    
+
+@else 'Acces not allowed, only for admin!'
+@endif

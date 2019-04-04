@@ -17,6 +17,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  overflow-y: auto;
 }
 
 .container_events_title {
@@ -184,5 +185,4 @@ textarea {
   border-radius: 6px;
   background-color: maroon;
 }
-
 /*# sourceMappingURL=adminevents.css.map */
