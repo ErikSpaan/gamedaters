@@ -86,6 +86,12 @@ body {
   z-index: -1;
 }
 
+.container .event_card_container .card_image .join_event_button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid pink;
+}
+
 .container .event_card_container .card_image .card_sign_in {
   cursor: pointer;
 }

@@ -83,7 +83,8 @@ class PersonalPagesController extends Controller
         $personalpage->personal_nickname = request('personal_nickname');
         $personalpage->personal_gender = request('personal_gender');
         $personalpage->personal_age = request('personal_age');
-        $personalpage->personal_location = request('personal_location');
+        $personalpage->personal_location_x = request('personal_location_x');
+        $personalpage->personal_location_y = request('personal_location_y');
         //$personalpage->personal_image_url = request('personal_image_url');
         $personalpage->personal_food = request('personal_food');
         $personalpage->personal_info = request('personal_info');
@@ -170,7 +171,8 @@ class PersonalPagesController extends Controller
         $personalpage->personal_nickname = request('personal_nickname');
         $personalpage->personal_gender = request('personal_gender');
         $personalpage->personal_age = request('personal_age');
-        $personalpage->personal_location = request('personal_location');
+        $personalpage->personal_location_x = request('personal_location_x');
+        $personalpage->personal_location_y = request('personal_location_y');
         $personalpage->personal_image_url = $image->getFilename().'.'.$extension;
         $personalpage->personal_food = request('personal_food');
         $personalpage->personal_info = request('personal_info');
