@@ -20,12 +20,31 @@
     <div class="event_card_container">
         <div class="card_image">
             <img src="/images/e3.png" alt="e3"/>
+<<<<<<< HEAD
             <a href="" class="join_event_button"></a>
+=======
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
             <div class="card_name card_options">hier komt de naam</div>
-            <div class="card_description card_options">hier komt de description</div>
+            <div class="card_description card_options">click here for description</div>
+        </div>
+        <div class="card_image">
+            <img src="/images/e3.png" alt="e3"/>
+            <div class="card_date card_options">hier komt de date</div>
+            <div class="card_time card_options">hier komt de tijd</div>
+            <div class="card_sign_in card_options">hier komt inschrijven</div>
+            <div class="card_name card_options">hier komt de naam</div>
+            <div class="card_description card_options">click here for description</div>
+        </div>
+        <div class="card_image">
+            <img src="/images/e3.png" alt="e3"/>
+>>>>>>> 5efb277bc3b4b1f2e6c1b84f2c1d8d91f3669c15
+            <div class="card_date card_options">hier komt de date</div>
+            <div class="card_time card_options">hier komt de tijd</div>
+            <div class="card_sign_in card_options">hier komt inschrijven</div>
+            <div class="card_name card_options">hier komt de naam</div>
+            <div class="card_description card_options">click here for description</div>
         </div>
     </div>
     <div class="navigate_container">
