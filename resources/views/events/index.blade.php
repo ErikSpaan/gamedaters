@@ -42,7 +42,6 @@
         @endforeach
         </table>  
     </div> {{-- end div container events table  --}}
-    
     <div class=container_events_create>
         <a href="/events/create"><button class="button_events_create">Create event</button></a>
         <a href="admin"><button class="button_events_back">Admin home</button></a>    

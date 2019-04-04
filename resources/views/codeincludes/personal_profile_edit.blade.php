@@ -79,7 +79,7 @@
             </div>
             <div class="input_area">
                 <div class="personal_popup_input_area">location:</div>
-                <span class="personal_popup_db_input">{{ $personalpage->personal_location }}</span>
+                <span class="personal_popup_db_input"></span>
             </div>
         </div>
         <div class="personal_page_about_me_container">

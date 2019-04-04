@@ -465,6 +465,30 @@ header {
   }
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile_container {
+  height: auto;
+  width: 100%;
+  margin: 30px 30px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+          box-shadow: 0px 0px 8px 0px black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 @media screen and (min-width: 300px) and (max-width: 361px) {
   .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 100px;

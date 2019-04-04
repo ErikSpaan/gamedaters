@@ -183,8 +183,7 @@
         //             console.log(data);
         //         });
         //     });
-        //     $('#register').submit(function(){
-        //         var fname = $('#')
+        //     $('#register').submit(function(){        //         var fname = $('#')
         //     })
         // });
         

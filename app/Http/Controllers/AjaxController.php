@@ -19,7 +19,7 @@ class AjaxController extends Controller
         //count mydates
         $count = $user->dates()->count();
         //set maxcount
-        $maxCount = 2;
+        $maxCount = 5;
         if ($user->dates->contains($request->mydate)) {
                 $user->dates()->detach($request->mydate);
         } else {

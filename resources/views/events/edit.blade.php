@@ -59,14 +59,13 @@
             </div>
         </div>
         <button class="button_events_edit_los" type="submit">Update event</button>
-        <a href="\events"><button class="button_events_back">Back</button></a>  
     </form> 
+    <a href="\events"><button class="button_events_back">Back</button></a>    
     <form method="POST" action="/events/{{ $event->id }}">       
         @method('DELETE')
         @csrf
         <button class="button_events_delete_los" type="submit">Delete event</button>
     </form>
-    
 </div>
 
 @endsection
