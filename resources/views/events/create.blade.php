@@ -1,3 +1,5 @@
+@if (Auth::user() && Auth::user()->role == 'admin')
+
 @extends('master')
 
 <!--Title on tab current page -->
@@ -47,6 +49,9 @@
     </form>  
     <a href="\events"><button class="button_events_back">Back</button></a> 
 </div>
+@endsection
 
-</body>
-</html>
+@else 'Acces not allowed, only for admin!'
+@endif
+
+
