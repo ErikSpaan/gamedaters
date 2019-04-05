@@ -208,4 +208,33 @@ textarea {
 .button_events_delete_los:active {
     border-radius: 6px;
     background-color: color(button_delete_active);
+    
+    
+}
+
+.event_pos_back_but {
+    display:block;
+    position:relative;
+    top:-58px;
+}
+
+.event_pos_del_but {
+    display:block;
+    position:relative;
+    top:-118px;
+    left:140px;
+}
+
+.show_pos_del_but {
+    display:block;
+    position:relative;
+    top:-75px;
+    left:138px;
+}
+
+.game_pos_del_but {
+    display:block;
+    position:relative;
+    top:-60px;
+    left:200px;
 }

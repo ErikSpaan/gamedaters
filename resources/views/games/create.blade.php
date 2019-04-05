@@ -40,7 +40,9 @@
         </div>
         <button class="button_events_create" type="submit">Create game</button>
       </form> 
-      <a href="\events"><button class="button_events_back">Back</button></a>    
+      <div class="event_pos_back_but">
+        <a href="\events"><button class="button_events_back">Back</button></a>    
+      </div>
  </div>
 @endsection
 
