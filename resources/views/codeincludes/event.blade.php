@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{ asset('/css/eventpage.css') }}">
 </head>
 
-<div class="container">
+<div class="container_events">
     <div class="month_container">
         <a href="">january</a>
         <a href="">februari</a>
@@ -28,7 +28,7 @@
             <div class="card_description card_options">click here for description</div>
         </div>
         <div class="card_image">
-            <img src="/images/e3.png" alt="e3"/>
+            <img src="/images/e3.png" class="background_image" alt="e3"/>
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
@@ -36,7 +36,7 @@
             <div class="card_description card_options">click here for description</div>
         </div>
         <div class="card_image">
-            <img src="/images/e3.png" alt="e3"/>
+            <img src="/images/e3.png" class="background_image" alt="e3"/>
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
