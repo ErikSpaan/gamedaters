@@ -44,3 +44,4 @@ Route::post('/getdates','AjaxController@index');
 //ajax route for filter the database and show the dates
 Route::get('/personalpages',function(){ return view('personal_profile'); });
 Route::post('/findyourmatch','AjaxController@findyourmatch');
+
