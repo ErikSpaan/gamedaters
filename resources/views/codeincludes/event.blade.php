@@ -18,9 +18,9 @@
         <a href="">december</a>
     </div>
     <div class="event_card_container">
-        <div class="card_image debug">
-            <a href="" class="join_event"><img src="images/plus.png" alt="plus"/></a>
-            <img src="/images/e3.png" class="background_image" alt="e3"/>
+        <div class="card_image">
+            <img src="/images/e3.png" alt="e3"/>
+            <a href="" class="join_event_button"></a>
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
