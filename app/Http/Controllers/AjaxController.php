@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Personalpage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Event;
+
 
 class AjaxController extends Controller
 {
@@ -92,9 +94,30 @@ class AjaxController extends Controller
 
         echo json_encode($response);
         // return response()->json($response);
+
+    public function addevent(Request $request) {
+        
+        $event_id = $request->eventid;
+        $user = User::find(Auth::user()->id);
+        if ($user->events->contains($event_id)) {
+            $user->events()->detach($event_id);
+            $event_join = 'no';
+        } else {
+            $user->events()->attach($event_id);
+            $event_join = 'yes';
+        }
+       
+        $response = array(
+            'status' => 'success',
+            'msg' => $event_join,
+        );
+
+        return response()->json($response);
+       
     }
   
 } //end class
+
 
 
 
