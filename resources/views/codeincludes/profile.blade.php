@@ -68,8 +68,8 @@
                 @isset($filterResults)    
                     @foreach ($filterResults as $filterResult) 
                     <div class="matches_card">
-                        <a href="#" class="card_photo_box"><img src="../images/profile_images/{{ $filterResult->personal_image_url }}" alt=""/></a>
-                        <div class="card_name_box">{{ $filterResult->personal_firstname }}</div>
+                        <img class="card_photo_box" src="../images/profile_images/{{ $filterResult->personal_image_url }}" alt=""/>
+                        <div class="card_name_box"><a onclick="getProfile({{ $favorite->id }})">{{ $filterResult->personal_firstname }}</a></div>
                         <a onclick="mydates('{{$filterResult->id}}')" id="card_button_box"></a>
                     </div>
                     @endforeach
@@ -79,7 +79,7 @@
                </div>
     </div>
     {{-- Start profile box 2 --}}
-    <div class="profile_boxes relative_box">
+    <div class="profile_boxes relative_box" id="dateprofile">
     </div>
     {{-- Start profile box 3 --}}
     <div class="profile_boxes">
@@ -89,10 +89,9 @@
                 
                 @isset($favorites)
                     @foreach($favorites as $favorite)
-                        
                         <div class="matches_card">
                         <a href="#" class="card_photo_box"><img src="/images/profile_images/{{ $favorite->personal_image_url }}" alt=""/></a>
-                        <div class="card_name_box">{{ $favorite->personal_firstname }}</div>
+                        <div class="card_name_box"><a onclick="getProfile({{ $favorite->id }})">{{ $favorite->personal_firstname }}</a></div>
                         <a onclick="mydates('{{ $favorite->id }}')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>
                         </div>
 
