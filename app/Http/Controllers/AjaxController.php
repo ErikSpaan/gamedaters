@@ -95,6 +95,8 @@ class AjaxController extends Controller
         echo json_encode($response);
         // return response()->json($response);
 
+    }
+
     public function addevent(Request $request) {
         
         $event_id = $request->eventid;
