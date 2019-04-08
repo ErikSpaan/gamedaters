@@ -53,3 +53,7 @@ Route::post('/changepassword','AjaxController@changePassword');
 //Route::get('/codeincludes',function(){ return view('eventpage'); });
 Route::post('/addevent','AjaxController@addevent');
 
+//ajax route for join an event, saves in database and shows result of join
+//Route::get('/codeincludes',function(){ return view('eventpage'); });
+Route::post('/getprofile','AjaxController@getProfile');
+

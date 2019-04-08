@@ -36,8 +36,8 @@ function ageSlider(val) {
                  //alert(favorite.personal_firstname);
                  deletebutton = favorite.id;
                  dates+= '<div class="matches_card">';
-                 dates+= '<a href="#" class="card_photo_box"><img src="/images/profile_images/' + favorite.personal_image_url + '" alt=""/></a>';
-                 dates+= '<div class="card_name_box">' + favorite.personal_firstname + '</div>';
+                 dates+= '<img class="card_photo_box" src="/images/profile_images/' + favorite.personal_image_url + '" alt=""/>';
+                 dates+= '<div class="card_name_box"><a onclick="getProfile('+favorite.id+')">' + favorite.personal_firstname + '</a></div>';
                  dates+= '<a onclick="mydates('+deletebutton+')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>';
                  dates+= '</div>';
                  //dates+= favorite.personal_firstname
@@ -75,8 +75,8 @@ function findyourmatch(form) {
             showProfile = filterResult.id;
            
             foundMatches+= '<div class="matches_card">';
-            foundMatches+= '<a href="#" class="card_photo_box"><img src="/images/profile_images/' + filterResult.personal_image_url + '" alt=""/></a>';
-            foundMatches+= '<div class="card_name_box">' + filterResult.personal_firstname + '</div>';
+            foundMatches+= '<img class="card_photo_box" src="/images/profile_images/' + filterResult.personal_image_url + '" alt=""/>';
+            foundMatches+= '<div class="card_name_box"><a onclick="getProfile(' + filterResult.id +')">' + filterResult.personal_firstname + '</a></div>';
             foundMatches+= '<a onclick="mydates(' + filterResult.id + ')" id="card_button_box"></a>';
             foundMatches+= '</div>';             
                 
@@ -88,5 +88,71 @@ function findyourmatch(form) {
             $("#filterResults").html(foundMatches); 
             }    
         });
+};  
+
+//function erik
+function getProfile(personalId) {
+  //alert(argument);
+  var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+  $.ajax({
+          /* the route pointing to the post function */
+          url: '/getprofile',
+          type: 'POST',
+          /* send the csrf-token and the input to the controller */
+          data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), mydate:personalId},
+          dataType: 'JSON',
+          /* remind that 'data' is the response of the AjaxController */
+          success: function (data) { 
+          console.log(JSON.stringify(data.msg));
+          console.log(data.msg);  
+          console.log(data.nickname);
+          console.log(data.datergames);
+          console.log(data.user);
+
+
+          profile="";     
+          profile+='<div class="photo_button_box">';
+          profile+='<div class="personal_popup_photo_box"><img src="/images/profile_images/'+data.msg.personal_image_url+'">';
+          profile+='</div>';
+          profile+='</div>';
+          profile+='<div class="personal_popup_input_box">';
+          profile+='<div class="input_area">';
+          profile+='<div class="personal_popup_input_area">nickname:</div>';
+          profile+='<span class="personal_popup_db_input">'+data.nickname+'</span>';
+          profile+='</div>';
+          profile+='<div class="input_area">';
+          profile+='<div class="personal_popup_input_area">gender:</div>';
+          profile+='<span class="personal_popup_db_input">'+data.msg.personal_gender+'</span>';
+          profile+='</div>';
+          profile+='<div class="input_area">';
+          profile+='<div class="personal_popup_input_area">age:</div>';
+          profile+='<span class="personal_popup_db_input">'+data.msg.personal_age+'</span>';
+          profile+='</div>';
+          profile+='<div class="input_area">';
+          profile+='<div class="personal_popup_input_area">location:</div>';
+          profile+='<span class="personal_popup_db_input"></span>';
+          profile+='</div>';
+          profile+='</div>';
+          profile+='<div class="personal_page_about_me_container">';
+          profile+=data.msg.personal_info;
+          profile+='</div>';
+          profile+='<div class="personal_page_games_container">';
+          profile+='<div class="personal_page_games_name_box">games I like</div>';
+          profile+='<div class="personal_page_games_game_link_card_box">';
+          data.datergames.forEach(function(datergame) {
+          console.log(datergame);  
+          profile+='<div class="personal_page_games_image"><img src="/images/games/'+datergame.game_image_url+'" alt="" title="{{ $game->game_description }}" /></div>';
+          });  
+          profile+='</div>';
+          profile+='</div>';
+    
+
+
+
+               
+          
+          $("#dateprofile").html(profile); 
+          }    
+      });
 };  
   

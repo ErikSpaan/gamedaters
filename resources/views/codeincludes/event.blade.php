@@ -21,15 +21,14 @@
         <a href="">november</a>
         <a href="">december</a>
     </div>
-    <br><br><br>
     <div class="event_card_container">
         @foreach ($events as $event)
         <div class="card_image">
-            <img src="/images/e3.png" class="background_image" alt="e3"/>
+            <img src="/images/events/{{$event->event_image_url}}" class="background_image" alt="e3"/>
             @if ($user->events()->where('event_id', $event -> id)->exists()) 
-            <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_on.gif" width="20%"></a>
-                @else 
-                <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_off.gif" width="20%"></a>
+                <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_on.gif" width="250%"></a>
+            @else 
+                <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_off.gif" width="250%"></a>
             @endif
             <div class="card_date card_options">date: {{ $event->event_date }}</div>
             <div class="card_time card_options">time: {{ $event->event_time }}</div>
