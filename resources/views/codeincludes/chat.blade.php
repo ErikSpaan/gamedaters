@@ -37,3 +37,5 @@
 @endsection
 
 </html>
+
+<script src="/js/vue.js"></script>

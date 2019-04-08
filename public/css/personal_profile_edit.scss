@@ -135,6 +135,9 @@ button {
     height: auto;
     justify-content: center;
     transition: 0.5s;
+    background-image: url(/images/red_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .profile_container {
         height: auto;
@@ -142,8 +145,11 @@ button {
         max-width: 550px;
         margin: 30px 30px;
         padding: 10px;
-        box-shadow: 0px 0px 8px 0px black;
+        // box-shadow: 0px 0px 8px 0px black;
+        border: 1px solid $blue;
         transition: 0.5s;
+        background-color: white;
+
 
 
         .separate_span {

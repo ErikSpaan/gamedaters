@@ -145,6 +145,9 @@ button {
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-image: url(/images/red_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container_edit .profile_container {
@@ -153,10 +156,10 @@ button {
   max-width: 550px;
   margin: 30px 30px;
   padding: 10px;
-  -webkit-box-shadow: 0px 0px 8px 0px black;
-          box-shadow: 0px 0px 8px 0px black;
+  border: 1px solid #1666a0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: white;
 }
 
 .container_edit .profile_container .separate_span {
@@ -993,14 +996,7 @@ button {
 }
 
 .container_edit .profile_container {
-  height: auto;
   width: 100%;
-  margin: 30px 30px;
-  padding: 10px;
-  -webkit-box-shadow: 0px 0px 8px 0px black;
-          box-shadow: 0px 0px 8px 0px black;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 @media screen and (min-width: 300px) and (max-width: 361px) {
