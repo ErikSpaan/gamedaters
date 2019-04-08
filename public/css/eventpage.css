@@ -89,7 +89,6 @@ body {
 .container_events .event_card_container .card_image .join_event {
   width: 30px;
   height: 30px;
-  border: 2px solid pink;
   margin-right: 20px;
 }
 
@@ -103,7 +102,6 @@ body {
 .container_events .event_card_container .card_image .join_event_button {
   width: 20px;
   height: 20px;
-  border: 2px solid pink;
 }
 
 .container_events .event_card_container .card_image .card_sign_in {
@@ -158,5 +156,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.container_events .joint_event_button {
+  display: block;
+  position: relative;
+  bottom: 390px;
+  left: 230px;
+  color: white;
 }
 /*# sourceMappingURL=eventpage.css.map */
