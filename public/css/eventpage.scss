@@ -58,7 +58,6 @@
             .join_event {
                 width: 30px;
                 height: 30px;
-                border: 2px solid pink;
                 margin-right: 20px;
                 
 
@@ -72,7 +71,7 @@
             .join_event_button {
                 width: 20px;
                 height: 20px;
-                border: 2px solid pink;
+                
             }
 
             .card_sign_in {
@@ -125,7 +124,13 @@
     }
 
 
-
+    .joint_event_button {
+        display:block;
+        position:relative;
+        bottom:390px;
+        left:230px;
+        color:white;
+    }
 
 
 
