@@ -1,7 +1,10 @@
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ asset('/css/personal_profile_edit.css') }}">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<div class="container">
+<div class="container_edit">
+    {{-- {{dd($check)}} --}}
     <div class="profile_container" id="profileContainer">
         <div class="photo_button_container">
             <div class="photo_box" id="photo_holder"><img src="images/profile_images/{{ $personalpage->personal_image_url }}" /></div>
@@ -21,7 +24,10 @@
                 <div id="changePassword">change password</div>
                 <div id="password_modal">
                     <div class="old_password_text">Please confirm your password</div>
-                    <div class="old_password"><input type="password" name=""></div>
+                    <div class="old_password">
+                        <input id="oldPassword" type="password" name="old_password" autofocus>
+                        <div id="oldPasswordButton">confirm</div>
+                    </div>
                     <div class="new_password_text">Choose a new password</div>
                     <div class="new_password"><input type="password" name=""><input type="password" name=""></div>
                 </div>

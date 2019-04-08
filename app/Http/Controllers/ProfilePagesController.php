@@ -135,8 +135,10 @@ class ProfilePagesController extends Controller
     public function edit(personalpage $personalpage)
 
     {
+    
         dd('edit profilepagescontroller');
         return view('personalpages/edit', compact('personalpage'));
+  
 
     }
 

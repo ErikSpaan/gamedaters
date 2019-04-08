@@ -383,7 +383,7 @@ html {
   }
 }
 
-.container {
+.container_edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,7 +396,7 @@ html {
   transition: 0.5s;
 }
 
-.container .profile_container {
+.container_edit .profile_container {
   height: auto;
   width: 100%;
   margin: 30px 30px;
