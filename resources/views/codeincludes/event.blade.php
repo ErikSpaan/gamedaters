@@ -2,7 +2,11 @@
     <link rel="stylesheet" href="{{ asset('/css/eventpage.css') }}">
 </head>
 
+<<<<<<< HEAD
 <div class="container_event">
+=======
+<div class="container_events">
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
     <div class="month_container">
         <a href="">january</a>
         <a href="">februari</a>
@@ -20,6 +24,10 @@
     <div class="event_card_container">
         <div class="card_image">
             <img src="/images/e3.png" alt="e3"/>
+<<<<<<< HEAD
+=======
+            <a href="" class="join_event_button"></a>
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
@@ -27,7 +35,7 @@
             <div class="card_description card_options">click here for description</div>
         </div>
         <div class="card_image">
-            <img src="/images/e3.png" alt="e3"/>
+            <img src="/images/e3.png" class="background_image" alt="e3"/>
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>
@@ -35,8 +43,12 @@
             <div class="card_description card_options">click here for description</div>
         </div>
         <div class="card_image">
+<<<<<<< HEAD
             <img src="/images/e3.png" alt="e3"/>
 
+=======
+            <img src="/images/e3.png" class="background_image" alt="e3"/>
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
             <div class="card_date card_options">hier komt de date</div>
             <div class="card_time card_options">hier komt de tijd</div>
             <div class="card_sign_in card_options">hier komt inschrijven</div>

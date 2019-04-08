@@ -2,7 +2,11 @@
 @import 'config';
 
 
+<<<<<<< HEAD
 .container_event {
+=======
+.container_events {
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
     width: 100%;
     height: 85%;
     padding-top: 10px;
@@ -47,7 +51,7 @@
             flex-direction: column;
             position: relative;
 
-            img {
+            .background_image {
                 object-fit: fill;
                 position: absolute;
                 width: 100%;
@@ -55,6 +59,20 @@
                 z-index: -1;
             }
 
+            .join_event {
+                width: 30px;
+                height: 30px;
+                border: 2px solid pink;
+                margin-right: 20px;
+                
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
             .join_event_button {
                 width: 20px;
                 height: 20px;

@@ -4,14 +4,17 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <div class="container_edit">
+<<<<<<< HEAD
     {{-- {{dd($check)}} --}}
+=======
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
     <div class="profile_container" id="profileContainer">
         <div class="photo_button_container">
             <div class="photo_box" id="photo_holder"><img src="images/profile_images/{{ $personalpage->personal_image_url }}" /></div>
             <form method="POST" action="/personalpages/{{ $personalpage->id }}" enctype="multipart/form-data">
                 {{ method_field('PATCH') }} {{-- to protect against cross site... --}} {{ csrf_field() }}
+            </div>
             <div class="upload_button_box"><input type="file" class="upload_button" placeholder="upload img" name="personal_image"></div>
-        </div>
             <div class="input_container">
                 <input type="text" name="personal_firstname" placeholder="first name"
                     value="{{ $personalpage->personal_firstname }}" class="input_profile_page">

@@ -1,3 +1,5 @@
+@if (Auth::user() && Auth::user()->role == 'admin')
+
 @extends('master')
 
 <!--Title on tab current page -->
@@ -38,8 +40,14 @@
         </div>
         <button class="button_events_create" type="submit">Create game</button>
       </form> 
-      <a href="\events"><button class="button_events_back">Back</button></a>    
+      <div class="event_pos_back_but">
+        <a href="\events"><button class="button_events_back">Back</button></a>    
+      </div>
  </div>
+@endsection
+
+@else 'Acces not allowed, only for admin!'
+@endif
     
-</body>
-</html>
+
+

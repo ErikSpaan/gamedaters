@@ -1,3 +1,5 @@
+@if (Auth::user() && Auth::user()->role == 'admin')
+
 @extends('master')
 
 <!--Title on tab current page -->
@@ -38,15 +40,19 @@
         <p>
             <a href="/games/{{ $game->id }}/edit"><button class="button_events_edit_los">Edit</button></a>
             <a href="/games"><button class="button_events_back">Back</button></a>  
-            <form method="POST" action="/games/{{ $game->id }}">       
-                {{-- {{ method_field('DELETE') }}
-                {{ csrf_field() }} --}}
-                @method('DELETE')
-                @csrf
-                <button class="button_events_delete_los" type="submit">Delete game</button>
-            </form>    
+            <div class="show_pos_del_but"> 
+                <form method="POST" action="/games/{{ $game->id }}">       
+                    {{-- {{ method_field('DELETE') }}
+                    {{ csrf_field() }} --}}
+                    @method('DELETE')
+                    @csrf
+                    <button class="button_events_delete_los" type="submit">Delete game</button>
+                </form>  
+            </div>  
         </p>   
-        
 
-@endsection    
+@endsection  
+
+@else 'Acces not allowed, only for admin!'
+@endif
 

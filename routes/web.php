@@ -45,6 +45,9 @@ Route::post('/getdates','AjaxController@index');
 Route::get('/personalpages',function(){ return view('personal_profile'); });
 Route::post('/findyourmatch','AjaxController@findyourmatch');
 
+<<<<<<< HEAD
 //ajax route for password update
 // Route::get('/',function(){ return view('personal_profile'); });
 Route::post('/changepassword','AjaxController@changePassword');
+=======
+>>>>>>> 24db6c826763bfc1516cf0c990a619d8e012713c
