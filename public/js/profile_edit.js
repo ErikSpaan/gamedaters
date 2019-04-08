@@ -20,7 +20,6 @@ document.getElementById('oldPasswordButton').addEventListener ("click", openNewP
 function openNewPassword() {
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     var password = $("input[name=old_password]").val();
-    console.log("password:" + password);
     $.ajax({
         /* the route pointing to the post function */
         url: '/changepassword',
@@ -30,15 +29,17 @@ function openNewPassword() {
         dataType: 'JSON',
         /* remind that 'data' is the response of the AjaxController */
         success: function (data) { 
-            console.log(data.msg);
-            
-            
-        //alert(JSON.stringify(data.msg));
-        // dates = data.msg[1].personal_firstname;    
-      
-        console.log('after php', data);
-             
-        // $("#filterResults").html(data); 
+            if (data.msg == "valid") {
+                document.getElementById('new_password_text').style.display = "block";
+                document.getElementById('new_password').style.display = "flex";
+                document.getElementById('oldPasswordButton').style.backgroundColor = "green";
+                document.getElementById('oldPasswordButton').innerHTML = "confirmed";
+                document.getElementById('oldPasswordButton').style.color = "white";
+            } else {
+                document.getElementById('oldPasswordButton').innerHTML = "invalid";
+                document.getElementById('oldPasswordButton').style.color = "red";
+                document.getElementById('oldPasswordButton').style.backgroundColor = "black";
+            }
         }    
     });
 };

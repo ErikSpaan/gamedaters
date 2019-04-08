@@ -28,8 +28,8 @@
                         <input id="oldPassword" type="password" name="old_password" autofocus>
                         <div id="oldPasswordButton">confirm</div>
                     </div>
-                    <div class="new_password_text">Choose a new password</div>
-                    <div class="new_password"><input type="password" name=""><input type="password" name=""></div>
+                    <div id="new_password_text">Choose a new password and save your changes</div>
+                    <div id="new_password"><input type="password" name="password" required></div>
                 </div>
                 <span class="separate_span">gender</span>
                 <div class="input_flex">

@@ -339,7 +339,7 @@ button {
                 padding-bottom: 5px;
 
                     #oldPasswordButton {
-                        width: 80px;
+                        width: 90px;
                         height: 20px;
                         text-align: center;
                         color: white;
@@ -348,17 +348,18 @@ button {
                         font-size: 12px;
                         letter-spacing: 2px;
                         cursor: pointer;
+                        transition: 0.5s;
                     }
                 }
 
-                .new_password_text {
+                #new_password_text {
                 width: 100%;
                 height: 25%;
                 text-align: center;
                 display: none;
                 }
 
-                .new_password {
+                #new_password {
                 width: 100%;
                 height: 25%;
                 display: flex;

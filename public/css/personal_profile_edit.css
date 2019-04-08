@@ -390,7 +390,7 @@ button {
 }
 
 .container_edit .profile_container .input_container #password_modal .old_password #oldPasswordButton {
-  width: 80px;
+  width: 90px;
   height: 20px;
   text-align: center;
   color: white;
@@ -399,16 +399,18 @@ button {
   font-size: 12px;
   letter-spacing: 2px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.container_edit .profile_container .input_container #password_modal .new_password_text {
+.container_edit .profile_container .input_container #password_modal #new_password_text {
   width: 100%;
   height: 25%;
   text-align: center;
   display: none;
 }
 
-.container_edit .profile_container .input_container #password_modal .new_password {
+.container_edit .profile_container .input_container #password_modal #new_password {
   width: 100%;
   height: 25%;
   display: -webkit-box;
