@@ -369,20 +369,33 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-bottom: 1.5px solid #C3091E;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-bottom: 5px;
 }
 
-.container_edit .profile_container .input_container #password_modal .new_password_text {
+.container_edit .profile_container .input_container #password_modal .old_password #oldPasswordButton {
+  width: 90px;
+  height: 20px;
+  text-align: center;
+  color: white;
+  background-color: #C3091E;
+  border-radius: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container_edit .profile_container .input_container #password_modal #new_password_text {
   width: 100%;
   height: 25%;
   text-align: center;
+  display: none;
 }
 
-.container_edit .profile_container .input_container #password_modal .new_password {
+.container_edit .profile_container .input_container #password_modal #new_password {
   width: 100%;
   height: 25%;
   display: -webkit-box;
@@ -390,6 +403,7 @@ button {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  display: none;
 }
 
 @-webkit-keyframes passwordBox {
@@ -723,8 +737,7 @@ button {
   .container_landing .flex1 .flex1_bottom p {
     font-size: 20px;
   }
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"],
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
+  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 170px;
     font-size: 16px;
   }
@@ -755,14 +768,12 @@ button {
     background-position: center;
     background-size: cover;
   }
-  .menu ul.menu-nav,
-  .menu div.menu-branding {
+  .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  .menu ul.menu-nav.show,
-  .menu div.menu-branding.show {
+  .menu ul.menu-nav.show, .menu div.menu-branding.show {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
@@ -791,8 +802,7 @@ button {
   .container_landing .flex1 .flex1_bottom p {
     font-size: 16px;
   }
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"],
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
+  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 100px;
     font-size: 14px;
   }
@@ -807,28 +817,22 @@ button {
     font-size: 30px;
     margin: 0 auto;
   }
-  .home_container a.link_personal,
-  .home_container .home_container-link1 {
+  .home_container a.link_personal, .home_container .home_container-link1 {
     margin: 15px 20%;
   }
-  .home_container a.link_personal h1,
-  .home_container .home_container-link1 h1 {
+  .home_container a.link_personal h1, .home_container .home_container-link1 h1 {
     font-size: 30px;
   }
-  .home_container a.link_chat,
-  .home_container .home_container-link2 {
+  .home_container a.link_chat, .home_container .home_container-link2 {
     margin: 15px 20%;
   }
-  .home_container a.link_chat h1,
-  .home_container .home_container-link2 h1 {
+  .home_container a.link_chat h1, .home_container .home_container-link2 h1 {
     font-size: 30px;
   }
-  .home_container a.link_events,
-  .home_container .home_container-link3 {
+  .home_container a.link_events, .home_container .home_container-link3 {
     margin: 15px 20%;
   }
-  .home_container a.link_events h1,
-  .home_container .home_container-link3 h1 {
+  .home_container a.link_events h1, .home_container .home_container-link3 h1 {
     font-size: 30px;
   }
   .photo_container img {
@@ -847,14 +851,12 @@ button {
     background-position: center;
     background-size: cover;
   }
-  .menu ul.menu-nav,
-  .menu div.menu-branding {
+  .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  .menu ul.menu-nav.show,
-  .menu div.menu-branding.show {
+  .menu ul.menu-nav.show, .menu div.menu-branding.show {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
@@ -893,8 +895,7 @@ button {
     padding-top: 5px;
     height: 10vh;
   }
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"],
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
+  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 100px;
     font-size: 14px;
   }
@@ -916,28 +917,22 @@ button {
     font-size: 25px;
     margin: 0 auto;
   }
-  .home_container a.link_personal,
-  .home_container .home_container-link1 {
+  .home_container a.link_personal, .home_container .home_container-link1 {
     margin: 15px 20%;
   }
-  .home_container a.link_personal h1,
-  .home_container .home_container-link1 h1 {
+  .home_container a.link_personal h1, .home_container .home_container-link1 h1 {
     font-size: 25px;
   }
-  .home_container a.link_chat,
-  .home_container .home_container-link2 {
+  .home_container a.link_chat, .home_container .home_container-link2 {
     margin: 15px 20%;
   }
-  .home_container a.link_chat h1,
-  .home_container .home_container-link2 h1 {
+  .home_container a.link_chat h1, .home_container .home_container-link2 h1 {
     font-size: 25px;
   }
-  .home_container a.link_events,
-  .home_container .home_container-link3 {
+  .home_container a.link_events, .home_container .home_container-link3 {
     margin: 15px 20%;
   }
-  .home_container a.link_events h1,
-  .home_container .home_container-link3 h1 {
+  .home_container a.link_events h1, .home_container .home_container-link3 h1 {
     font-size: 25px;
   }
   .photo_container img {
@@ -961,8 +956,7 @@ button {
     background-position: center;
     background-size: cover;
   }
-  .menu ul.menu-nav,
-  .menu div.menu-branding {
+  .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
@@ -1007,34 +1001,8 @@ button {
   transition: 0.5s;
 }
 
-.container_edit #personalPopup {
-  width: 100%;
-  height: 650px;
-  margin: 30px 30px;
-  padding: 10px;
-  -webkit-box-shadow: 0px 0px 8px 0px black;
-          box-shadow: 0px 0px 8px 0px black;
-  display: none;
-  opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-animation-name: personal_view;
-          animation-name: personal_view;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
 @media screen and (min-width: 300px) and (max-width: 361px) {
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"],
-  .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
+  .container_landing .flex2 .flex2_top .flex2_top-input input[type="email"], .container_landing .flex2 .flex2_top .flex2_top-input input[type="password"] {
     width: 100px;
     font-size: 12px;
     color: #1666a0;
@@ -1056,16 +1024,13 @@ button {
   .home_container a h1 {
     font-size: 20px;
   }
-  .home_container a.link_personal,
-  .home_container .home_container-link1 {
+  .home_container a.link_personal, .home_container .home_container-link1 {
     margin: 15px 20%;
   }
-  .home_container a.link_chat,
-  .home_container .home_container-link2 {
+  .home_container a.link_chat, .home_container .home_container-link2 {
     margin: 15px 20%;
   }
-  .home_container a.link_events,
-  .home_container .home_container-link3 {
+  .home_container a.link_events, .home_container .home_container-link3 {
     margin: 15px 20%;
   }
   .photo_container img {
@@ -1089,14 +1054,12 @@ button {
     background-position: center;
     background-size: cover;
   }
-  .menu ul.menu-nav,
-  .menu div.menu-branding {
+  .menu ul.menu-nav, .menu div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  .menu ul.menu-nav.show,
-  .menu div.menu-branding.show {
+  .menu ul.menu-nav.show, .menu div.menu-branding.show {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }

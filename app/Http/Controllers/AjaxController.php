@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Personalpage;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Event;
+
 
 class AjaxController extends Controller
 {
@@ -67,6 +70,31 @@ class AjaxController extends Controller
         return response()->json($response);
     } 
 
+    function changePassword(Request $request) {
+
+         $user_password = $request->old_password;
+
+         $user = User::find(Auth::user()->id);
+
+         $current_password = $user->password;
+
+        if (Hash::check($user_password, $current_password))
+        {
+            $check = 'valid';
+
+        } else {
+            $check = 'unvalid';
+            
+        }
+
+        $response = array(
+            'status' => 'success',
+            'msg' => $check,
+        );
+
+        echo json_encode($response);
+        // return response()->json($response);
+
     public function addevent(Request $request) {
         
         $event_id = $request->eventid;
@@ -85,7 +113,7 @@ class AjaxController extends Controller
         );
 
         return response()->json($response);
-        
+       
     }
   
 } //end class

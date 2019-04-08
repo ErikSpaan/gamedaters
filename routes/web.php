@@ -45,6 +45,11 @@ Route::post('/getdates','AjaxController@index');
 Route::get('/personalpages',function(){ return view('personal_profile'); });
 Route::post('/findyourmatch','AjaxController@findyourmatch');
 
+//ajax route for password update
+// Route::get('/',function(){ return view('personal_profile'); });
+Route::post('/changepassword','AjaxController@changePassword');
+
 //ajax route for join an event, saves in database and shows result of join
 //Route::get('/codeincludes',function(){ return view('eventpage'); });
 Route::post('/addevent','AjaxController@addevent');
+

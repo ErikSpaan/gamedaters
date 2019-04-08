@@ -25,14 +25,12 @@
     <div class="event_card_container">
         @foreach ($events as $event)
         <div class="card_image">
-            <img src="/images/e3.png" alt="e3"/>
-            <div class="joint_event_button">
-                @if ($user->events()->where('event_id', $event -> id)->exists()) 
+            <img src="/images/e3.png" class="background_image" alt="e3"/>
+            @if ($user->events()->where('event_id', $event -> id)->exists()) 
             <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_on.gif" width="20%"></a>
                 @else 
                 <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_off.gif" width="20%"></a>
-                @endif
-            </div>
+            @endif
             <div class="card_date card_options">date: {{ $event->event_date }}</div>
             <div class="card_time card_options">time: {{ $event->event_time }}</div>
             <div class="card_sign_in card_options">subscribe till: {{ $event->event_inschrijven_tm }}</div>
@@ -41,13 +39,13 @@
         </div>
         @endforeach
     </div>
-    <div class="navigate_container">
+      <div class="navigate_container">
         <a href="{{$events->previousPageUrl()}}">previous page</a>
         <a href="{{$events->nextPageUrl()}}">next page</a> 
-    </div>
-    <div class="total_events_container">
+      </div>
+      <div class="total_events_container">
         total events: {{ $events->total() }}
-    </div>
+      </div>
     
      
 </div>
