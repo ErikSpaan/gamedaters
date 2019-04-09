@@ -26,7 +26,7 @@
         <div class="card_image">
             <img src="/images/events/{{$event->event_image_url}}" class="background_image" alt="e3"/>
             @if ($user->events()->where('event_id', $event -> id)->exists()) 
-                <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_on.gif" width="250%"></a>
+                <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_on.gif"  width="250%"></a>
             @else 
                 <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_off.gif" width="250%"></a>
             @endif

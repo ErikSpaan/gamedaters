@@ -748,8 +748,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .profile_container .filter_flex .find_matches_button:hover {
-  -webkit-box-shadow: 0px 0px 50px 5px #C3091E;
-          box-shadow: 0px 0px 50px 5px #C3091E;
+  -webkit-box-shadow: 0px 0px 5px 5px #C3091E;
+          box-shadow: 0px 0px 5px 5px #C3091E;
   background-color: #C3091E;
 }
 
