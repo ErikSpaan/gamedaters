@@ -7,7 +7,7 @@
     </script>
 </head>
 {{-- start profile box 1 --}}
-<div class="profile_container">
+<div class="profile_container" id="profileContainer">
     <div class="profile_boxes">
             <div class="filter_flex">
                     <div class="filter_name">I'm looking for...</div>
