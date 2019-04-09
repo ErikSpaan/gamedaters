@@ -39,6 +39,7 @@ class PageController extends Controller
          return view('profilepage', compact('personalpage','filterResult','favorites'));
          //return view('profilepage', compact('personalpage'));
 
+        
     }
 
     public function personalpage() {

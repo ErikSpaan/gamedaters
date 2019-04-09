@@ -1,10 +1,3 @@
-document.getElementById('buttonPersonalView').addEventListener ('click', openView);
-
-function openView() {
-document.getElementById('profileContainer').style = "display: none";
-document.getElementById('personalPopup').style.display = "flex";
-} 
-
 function ageSlider(val) {
     document.getElementById("ageOutput").innerHTML = val; 
   }
@@ -15,9 +8,9 @@ function ageSlider(val) {
     document.getElementById("distanceOutput").innerHTML = val; 
   }
 
-  //function erik
+  //function erik 
+  
   function mydates(personalId) {
-    //alert(argument);
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
             /* the route pointing to the post function */
@@ -28,6 +21,7 @@ function ageSlider(val) {
             dataType: 'JSON',
             /* remind that 'data' is the response of the AjaxController */
             success: function (data) { 
+              // console.log('hello');
             //alert(JSON.stringify(data.msg));
             //dates = data.msg[1].personal_firstname;    
 
@@ -58,7 +52,7 @@ function findyourmatch(form) {
     var fage = $("input[name=filter_age]").val();
     var fdistance = $("input[name=filter_distance]").val();
     var fgenre = $("input[name=filter_genre]").val();
-    console.log(fgender,fage,fdistance,fgenre);
+    // console.log(fgender,fage,fdistance,fgenre);
     $.ajax({
             /* the route pointing to the post function */
             url: '/findyourmatch',
@@ -92,6 +86,10 @@ function findyourmatch(form) {
 
 //function erik
 function getProfile(personalId) {
+  document.getElementById('dateprofile').style.backgroundImage = "none";
+  document.getElementById('dateprofile').style.boxShadow = "none";
+  document.getElementById('dateprofile').style.border = "1px solid red";
+  document.getElementById('dateprofile').style.borderRadius = "10px";
   //alert(argument);
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   $.ajax({
