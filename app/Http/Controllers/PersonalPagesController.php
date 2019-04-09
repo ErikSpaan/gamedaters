@@ -28,9 +28,9 @@ class PersonalPagesController extends Controller
     public function index()
 
     {
-
+        dd('hello');
         $personalpages = Personalpage::all();
-
+        
 
 
         return view('personalpages.index', compact('personalpages'));
