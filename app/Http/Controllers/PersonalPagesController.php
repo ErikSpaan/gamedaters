@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Game;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -28,9 +28,9 @@ class PersonalPagesController extends Controller
     public function index()
 
     {
-
+        dd('hello');
         $personalpages = Personalpage::all();
-
+        
 
 
         return view('personalpages.index', compact('personalpages'));
@@ -182,6 +182,9 @@ class PersonalPagesController extends Controller
         $personalpage->save();
         Auth::user()->name = request('user_nickname');
         Auth::user()->email = request('user_email');
+        if (null !== request('password')) {
+            Auth::user()->password = Hash::make(request('password'));
+        }
         Auth::user()->save();
 
         return redirect('/profile');

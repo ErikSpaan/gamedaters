@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 use App\Personalpage;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\event;
+use App\game;
+
 
 class AjaxController extends Controller
 {
@@ -28,7 +33,7 @@ class AjaxController extends Controller
         }
     }
 
-        $mydates =  $user::first()->dates()->get();
+        $mydates =  User::find(Auth::user()->id)->dates()->get();
         
         $response = array(
             'status' => 'success',
@@ -65,8 +70,76 @@ class AjaxController extends Controller
 
         return response()->json($response);
     } 
+
+    public function changePassword(Request $request) {
+
+         $user_password = $request->old_password;
+
+         $user = User::find(Auth::user()->id);
+
+         $current_password = $user->password;
+
+        if (Hash::check($user_password, $current_password))
+        {
+            $check = 'valid';
+
+        } else {
+            $check = 'unvalid';
+            
+        }
+
+        $response = array(
+            'status' => 'success',
+            'msg' => $check,
+        );
+
+        echo json_encode($response);
+        // return response()->json($response);
+    }    
+
+public function addevent(Request $request) {
+
+        $event_id = $request->eventid;
+        $user = User::find(Auth::user()->id);
+        if ($user->events->contains($event_id)) {
+            $user->events()->detach($event_id);
+            $event_join = 'no';
+        } else {
+            $user->events()->attach($event_id);
+            $event_join = 'yes';
+        }
+       
+        $response = array(
+            'status' => 'success',
+            'msg' => $event_join,
+        );
+
+        return response()->json($response);
+       
+    }
+
+public function getProfile(Request $request) {
+
+    $mydate = $request->mydate;
+    $personalpage = Personalpage::find($mydate);
+    $date_user_id = $personalpage->user_id;
+    //$user = User::find(Auth::user()->id);
+    $nickname = User::find($date_user_id)->name;
+    $user = User::find($date_user_id);
+    $datergames = $user::find($user->id)->games()->get();
+    $response = array(
+        'status' => 'success',
+        'msg' => $personalpage,
+        'nickname' => $nickname,
+        'datergames' => $datergames,
+        'user' => $user,
+    );
+
+    return response()->json($response);
+}    
   
 } //end class
+
 
 
 

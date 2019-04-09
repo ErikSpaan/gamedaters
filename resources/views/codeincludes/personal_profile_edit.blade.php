@@ -1,14 +1,16 @@
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('/css/personal_profile_edit.css') }}">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<div class="container">
+<div class="container_edit">
     <div class="profile_container" id="profileContainer">
         <div class="photo_button_container">
             <div class="photo_box" id="photo_holder"><img src="images/profile_images/{{ $personalpage->personal_image_url }}" /></div>
             <form method="POST" action="/personalpages/{{ $personalpage->id }}" enctype="multipart/form-data">
                 {{ method_field('PATCH') }} {{-- to protect against cross site... --}} {{ csrf_field() }}
+            </div>
             <div class="upload_button_box"><input type="file" class="upload_button" placeholder="upload img" name="personal_image"></div>
-        </div>
             <div class="input_container">
                 <input type="text" name="personal_firstname" placeholder="first name"
                     value="{{ $personalpage->personal_firstname }}" class="input_profile_page">
@@ -21,9 +23,12 @@
                 <div id="changePassword">change password</div>
                 <div id="password_modal">
                     <div class="old_password_text">Please confirm your password</div>
-                    <div class="old_password"><input type="password" name=""></div>
-                    <div class="new_password_text">Choose a new password</div>
-                    <div class="new_password"><input type="password" name=""><input type="password" name=""></div>
+                    <div class="old_password">
+                        <input id="oldPassword" type="password" name="old_password" autofocus>
+                        <div id="oldPasswordButton">confirm</div>
+                    </div>
+                    <div id="new_password_text">Choose a new password and save your changes</div>
+                    <div id="new_password"><input type="password" name="password"></div>
                 </div>
                 <span class="separate_span">gender</span>
                 <div class="input_flex">
