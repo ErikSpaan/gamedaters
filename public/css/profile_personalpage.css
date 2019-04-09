@@ -422,6 +422,152 @@ input[type=range]:focus::-ms-fill-upper {
   background-size: cover;
   -webkit-box-shadow: 0 0 10px 4px #C3091E;
           box-shadow: 0 0 10px 4px #C3091E;
+  height: 90vh;
+  width: 400px;
+  max-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile_container .relative_box .photo_button_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+.profile_container .relative_box .photo_button_box .personal_popup_photo_box {
+  margin: 0 auto;
+  height: 100%;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.profile_container .relative_box .photo_button_box .personal_popup_photo_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes personal_view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes personal_view {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.profile_container .relative_box .back_button {
+  width: 50px;
+  height: 60px;
+}
+
+.profile_container .relative_box .back_button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.profile_container .relative_box .personal_popup_input_box {
+  width: 70%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.profile_container .relative_box .personal_popup_input_box .input_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: 25px;
+  margin: 5px 0;
+}
+
+.profile_container .relative_box .personal_popup_input_box .input_area .personal_popup_input_area {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #C3091E;
+}
+
+.profile_container .relative_box .personal_popup_input_box .input_area .personal_popup_db_input {
+  color: #1666a0;
+  font-size: 18px;
+}
+
+.profile_container .relative_box .personal_page_about_me_container {
+  width: 100%;
+  height: 20%;
+  padding: 8px 5px;
+  color: #1666a0;
+  overflow: hidden;
+}
+
+.profile_container .relative_box .personal_page_games_container {
+  width: 100%;
+  height: 30%;
+}
+
+.profile_container .relative_box .personal_page_games_container .personal_page_games_name_box {
+  margin: 0 auto;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+  color: #C3091E;
+  font-size: 18px;
+}
+
+.profile_container .relative_box .personal_page_games_container .personal_page_games_game_link_card_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 85%;
+}
+
+.profile_container .relative_box .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image {
+  height: 60%;
+  width: 18%;
+}
+
+.profile_container .relative_box .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.profile_container .relative_box .personal_page_games_container .personal_page_games_game_link_card_box .personal_page_games_image img:hover {
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 
 .profile_container .radio_box_container {
@@ -664,6 +810,10 @@ input[type=range]:focus::-ms-fill-upper {
   height: 50%;
   width: 60%;
   border-bottom: 1px solid black;
+}
+
+.profile_container .matches_flex .matches_card .card_name_box a {
+  cursor: pointer;
 }
 
 .profile_container .matches_flex .matches_card #card_button_box {

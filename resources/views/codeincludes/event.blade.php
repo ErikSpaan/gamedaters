@@ -30,11 +30,11 @@
             @else 
                 <a onclick="addevent({{ $event->id }})" class="join_event_button"><img id="event_img{{$event->id}}" src="/images/event_off.gif" width="250%"></a>
             @endif
-            <div class="card_date card_options">date: {{ $event->event_date }}</div>
-            <div class="card_time card_options">time: {{ $event->event_time }}</div>
-            <div class="card_sign_in card_options">subscribe till: {{ $event->event_inschrijven_tm }}</div>
             <div class="card_name card_options">name: {{ $event->event_name }}</div>
-            <div class="card_description card_options">description: {{ $event->event_description }}</div>
+            <div class="card_sign_in card_options">subscribe untill: {{ $event->event_inschrijven_tm }}</div>
+            <div class="card_time card_options">time: {{ $event->event_time }}</div>
+            <div class="card_date card_options">date: {{ $event->event_date }}</div>
+            <div class="card_description" title="{{ $event->event_description }}">hover for description</div>
         </div>
         @endforeach
     </div>

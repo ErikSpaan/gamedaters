@@ -94,15 +94,10 @@
                         <div class="card_name_box"><a onclick="getProfile({{ $favorite->id }})">{{ $favorite->personal_firstname }}</a></div>
                         <a onclick="mydates('{{ $favorite->id }}')"><div class="delete_mydate"><i class="fas fa-user-times"></i></div></a>
                         </div>
-
                     @endforeach
-                @endisset   
-
-            {{-- <div>{{$loaddates}} in this box your favorites will appear if you click the heart</div> --}}
-                
-                          
+                @endisset  
+             {{-- <div>{{$loaddates}} in this box your favorites will appear if you click the heart</div> --}}     
             </div>
-
         </div>
         <div class="games_container">
             <div class="filter_name">My top 5 games</div>
@@ -138,6 +133,7 @@
 </div>
 
 <script src="/js/profile.js"></script>
+
 
 
 
