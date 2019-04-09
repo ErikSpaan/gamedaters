@@ -34,7 +34,8 @@ class PageController extends Controller
         $filterResult = Personalpage::where("user_id", Auth::user()->id)->get();
         //get the favorite dates
         $user = User::find(Auth::user()->id);
-        $favorites =  $user::first()->dates()->get();
+        //dd(User::find(Auth::user()->id));
+        $favorites =  User::find(Auth::user()->id)->dates()->get();
 
          return view('profilepage', compact('personalpage','filterResult','favorites'));
          //return view('profilepage', compact('personalpage'));

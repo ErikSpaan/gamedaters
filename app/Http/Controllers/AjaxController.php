@@ -33,7 +33,7 @@ class AjaxController extends Controller
         }
     }
 
-        $mydates =  $user::first()->dates()->get();
+        $mydates =  User::find(Auth::user()->id)->dates()->get();
         
         $response = array(
             'status' => 'success',
@@ -97,9 +97,7 @@ class AjaxController extends Controller
         // return response()->json($response);
     }    
 
-
-
-    public function addevent(Request $request) {
+public function addevent(Request $request) {
 
         $event_id = $request->eventid;
         $user = User::find(Auth::user()->id);
