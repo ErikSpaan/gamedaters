@@ -1,4 +1,9 @@
-// import { encode } from "punycode";
+document.getElementById('buttonPersonalView').addEventListener ('click', openView);
+
+function openView() {
+document.getElementById('profileContainer').style = "display: none";
+document.getElementById('personalPopup').style.display = "flex";
+} 
 
 document.getElementById('changePassword').addEventListener ('click', changePassword);
 

@@ -97,9 +97,8 @@ class AjaxController extends Controller
         // return response()->json($response);
     }    
 
-    
-    public function addevent(Request $request) {
-        
+public function addevent(Request $request) {
+
         $event_id = $request->eventid;
         $user = User::find(Auth::user()->id);
         if ($user->events->contains($event_id)) {
