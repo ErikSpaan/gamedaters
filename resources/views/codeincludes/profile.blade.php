@@ -7,7 +7,7 @@
     </script>
 </head>
 {{-- start profile box 1 --}}
-<div class="profile_container">
+<div class="profile_container" id="profileContainer">
     <div class="profile_boxes">
             <div class="filter_flex">
                     <div class="filter_name">I'm looking for...</div>
@@ -100,32 +100,27 @@
             </div>
         </div>
         <div class="games_container">
-            <div class="filter_name">My top 5 games</div>
-            <div class="game_card">
-                <a href="#" class="game_photo_box"><img src="" alt=""/></a>
-                <input type="text" class="games_input" placeholder="find your game...">
-                <div id="game_delete_box"></div>
-            </div>
-            <div class="game_card">
-                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                <input type="text" class="games_input" placeholder="find your game...">
-                <div id="game_delete_box"></div>
-            </div>
-            <div class="game_card">
-                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                <input type="text" class="games_input" placeholder="find your game...">
-                <div id="game_delete_box"></div>
-            </div>
-            <div class="game_card">
-                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                <input type="text" class="games_input" placeholder="find your game...">
-                <div id="game_delete_box"></div>
-            </div>
-            <div class="game_card">
-                <a href="#" class="game_photo_box"><img src="" alt="" /></a>
-                <input type="text" class="games_input" placeholder="find your game...">
-                <div id="game_delete_box"></div>
-            </div>
+                <div class="filter_name">My top 5 games</div>
+                <div class="form-group">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Customer Data" />
+                </div>
+  
+             {{-- output of the selection --}}
+             <div id="gamesselection2"></div>     
+            <div id="getgames">
+            {{-- output for the first run in ajax for the other ones  --}}
+            @isset($myselectedgames)
+                @foreach($myselectedgames as $myselectedgame)
+                    <div class="matches_card">
+                    <img class="card_photo_box" src="/images/profile_images/{{$myselectedgame->game_image_url }}" alt=""/>
+                    <div class="card_name_box"><a onclick="mygames({{ $myselectedgame->id }})">{{ $myselectedgame->game_name }}</a></div>
+                    <a onclick="mydates({{ $myselectedgame->id }})" id="card_button_box"></a>
+                    </div>   
+                @endforeach
+            @endisset  
+
+            
+        </div>
         </div>
 
     </div>
@@ -134,6 +129,86 @@
 
 <script src="/js/profile.js"></script>
 
+ 
+<script>
+    $(document).ready(function(){
+     
+     fetch_customer_data();
+     
+     
+     function fetch_customer_data(query = '') {
+     
+        console.log('hello : ',query); 
+        
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
+      $.ajax({
+            url:'/live_search',
+            type:'POST',
+            data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), query:query},
+            dataType:'JSON',
+            success:function(data) {   
+                //console.log(data.table_data); 
+                console.log(JSON.stringify(data.result));   
+
+                foundGames=""
+                data.result.forEach(function(liveResult) {
+                showProfile = liveResult.id;
+           
+            foundGames+= '<div class="matches_card">';
+            //foundGames+= '<img class="card_photo_box" src="/images/profile_images/' + liveResult.game_image_url + '" alt=""/>';
+            foundGames+= '<div class="card_name_box"><a onclick="mygames(' + liveResult.id +')">' + liveResult.game_name + '</a></div>';
+            //foundGames+= '<a onclick="mydates(' + liveResult.id + ')" id="card_button_box"></a>';
+            foundGames+= '</div>';            
+        });
+
+                $('#gamesselection2').html(foundGames);
+                $('#total_records').text(data.total_data);
+            }
+        }); //end ajax
+     }; //end function
+     
+     $(document).on('keyup', '#search', function(){
+      var query = $(this).val();
+      fetch_customer_data(query);
+     }); //end function
+
+    }); //end document
+
+    function mygames(game_id) {
+        console.log('selected :',game_id);
+
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+    $.ajax({
+      url:'/my_games',
+      type:'POST',
+      data: {_token: CSRF_TOKEN, message:$(".getinfo").val(), gameid:game_id},
+      dataType:'JSON',
+      success:function(data) {   
+          //console.log(data.table_data); 
+          console.log(JSON.stringify(data.result));   
+          console.log('dataid :',data.id);  
+          getGames = ""
+          data.result.forEach(function(gamesSelection) {
+          showProfile = gamesSelection.id;
+     
+         console.log('gamesselection',gamesSelection);
+      
+            getGames+= '<div class="game_card">';
+            getGames+= '<img class="game_photo_box" src="/images/profile_images/' + gamesSelection.game_image_url + '" alt=""/>';
+            getGames+= '<div>' + gamesSelection.game_name + '</div>';
+            getGames+= '<a onclick=mygames("'+ gamesSelection.id+ '")><div id="game_delete_box"></div>X</a>';
+            getGames+= '</div>';
+  });
+
+          $('#getgames').html(getGames);
+        
+      }
+  }); //end ajax
+}; //end function
+    
+    
+</script>
 
 

@@ -57,3 +57,10 @@ Route::post('/addevent','AjaxController@addevent');
 //Route::get('/codeincludes',function(){ return view('eventpage'); });
 Route::post('/getprofile','AjaxController@getProfile');
 
+//ajax route for live search in the games
+Route::get('/live_search', 'AjaxController@liveSearch'); 
+Route::post('/live_search', 'AjaxController@liveSearch');
+
+//ajax route for add live search in the games users table
+Route::get('/my_games', 'AjaxController@myGames'); 
+Route::post('/my_games', 'AjaxController@myGames');
