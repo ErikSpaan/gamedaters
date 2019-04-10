@@ -753,7 +753,26 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #C3091E;
 }
 
-.profile_container .matches_card {
+.profile_container .matches_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 50%;
+  border-top: 2px solid #C3091E;
+}
+
+.profile_container .matches_flex .matches_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,7 +787,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-top: 10px;
 }
 
-.profile_container .matches_card .card_photo_box {
+.profile_container .matches_flex .matches_card .card_photo_box {
   height: 100%;
   width: 15%;
   -webkit-transition: 0.4s;
@@ -776,28 +795,28 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 10px;
 }
 
-.profile_container .matches_card .card_photo_box img {
+.profile_container .matches_flex .matches_card .card_photo_box img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.profile_container .matches_card .card_photo_box:hover {
+.profile_container .matches_flex .matches_card .card_photo_box:hover {
   -webkit-transform: scale(3);
           transform: scale(3);
 }
 
-.profile_container .matches_card .card_name_box {
+.profile_container .matches_flex .matches_card .card_name_box {
   height: 50%;
   width: 60%;
   border-bottom: 1px solid black;
 }
 
-.profile_container .matches_card .card_name_box a {
+.profile_container .matches_flex .matches_card .card_name_box a {
   cursor: pointer;
 }
 
-.profile_container .matches_card #card_button_box {
+.profile_container .matches_flex .matches_card #card_button_box {
   width: 7%;
   height: 50%;
   background-image: url("../images/heart.png");
@@ -808,7 +827,7 @@ input[type=range]:focus::-ms-fill-upper {
   transition: 0.4s;
 }
 
-.profile_container .matches_card #card_button_box:active {
+.profile_container .matches_flex .matches_card #card_button_box:active {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
