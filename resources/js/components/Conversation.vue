@@ -1,6 +1,7 @@
 <template>
+<!-- <a href="#">View Profile</a> -->
     <div class="conversation">
-        <h1>{{ contact ? contact.name : 'Select a Contact' }} --> <a href="#">View Profile</a></h1>
+        <h1>{{ contact ? contact.name : 'Select a Contact' }}</h1>
         <!-- -> <a href="#">{{ contact ? contact.id : 'View profile' }}</a> -->
         <MessagesFeed :contact="contact" :messages="messages"/>
         <MessageComposer @send="sendMessage"/>
@@ -52,6 +53,8 @@
         padding: 10px;
         margin: 0;
         border-bottom: 1px dashed #a8a8a8;
+        color: #1666a0;
+        font-weight: bold;
     }
 }
 </style>

@@ -87,9 +87,12 @@ function findyourmatch(form) {
 //function erik
 function getProfile(personalId) {
   document.getElementById('dateprofile').style.backgroundImage = "none";
-  document.getElementById('dateprofile').style.boxShadow = "none";
-  document.getElementById('dateprofile').style.border = "1px solid red";
+  document.getElementById('dateprofile').style.boxShadow = "0px 0px 20px 0px red";
+  // document.getElementById('dateprofile').style.border = "4px dotted red";
   document.getElementById('dateprofile').style.borderRadius = "10px";
+  // document.getElementById('dateprofile').style.backgroundColor = "lightgrey";
+ 
+
   //alert(argument);
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
   $.ajax({
@@ -138,7 +141,6 @@ function getProfile(personalId) {
           profile+='<div class="personal_page_games_name_box">games I like</div>';
           profile+='<div class="personal_page_games_game_link_card_box">';
           data.datergames.forEach(function(datergame) {
-          console.log(datergame);  
           profile+='<div class="personal_page_games_image"><img src="/images/games/'+datergame.game_image_url+'" alt="" title="{{ $game->game_description }}" /></div>';
           });  
           profile+='</div>';
