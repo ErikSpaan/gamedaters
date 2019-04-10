@@ -3,20 +3,20 @@ body {
 }
 
 $colors:(
-          button_edit : lighten(blue,25%),
-          button_edit_hover : blue,
-          button_edit_active : darken(blue, 25%),
-          button_delete : lighten(red, 25%),
-          button_delete_hover : red,
-          button_delete_active : darken(red, 25%),
+          button_edit : lighten(#1666a0,25%),
+          button_edit_hover : #1666a0,
+          button_edit_active : darken(#1666a0, 25%),
+          button_delete : lighten(#C3091E, 10%),
+          button_delete_hover : #C3091E,
+          button_delete_active : darken(#C3091E, 0%),
           hover_text: white,
           table_header_line : black,
-          button_create : lighten(green,25%),
+          button_create : lighten(green,0%),
           button_create_hover : green,
-          button_create_active : darken(green,25%),
-          button_back : lighten(orange,25%),
+          button_create_active : darken(green,0%),
+          button_back : lighten(orange,0%),
           button_back_hover : orange,
-          button_back_active : darken(orange,25%)
+          button_back_active : darken(orange,0%)
          
           );
 
