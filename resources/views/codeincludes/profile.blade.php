@@ -101,20 +101,18 @@
         </div>
         <div class="games_container">
                 <div class="filter_name">My top 5 games</div>
-                <div class="form-group">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Game and click to add" />
-                </div>
-  
+                <input type="text" name="search" id="search" class="form-control" placeholder="Search Game and click" />
              {{-- output of the selection --}}
+             <div class="matches_flex">
              <div id="gamesselection2"></div>     
             <div id="getgames">
             {{-- output for the first run in ajax for the other ones  --}}
             @isset($myselectedgames)
                 @foreach($myselectedgames as $myselectedgame)
                     <div class="matches_card">
-                    <img class="card_photo_box" src="/images/profile_images/{{$myselectedgame->game_image_url }}" alt=""/>
+                    <img class="card_photo_box" src="/images/games/{{$myselectedgame->game_image_url }}" alt=""/>
                     <div class="card_name_box"><a onclick="mygames({{ $myselectedgame->id }})">{{ $myselectedgame->game_name }}</a></div>
-                    <a onclick="mydates({{ $myselectedgame->id }})" id="card_button_box"></a>
+                    <a class="delete_knop" onclick="mygames({{ $myselectedgame->id }})">X</a>
                     </div>   
                 @endforeach
             @endisset  
@@ -122,7 +120,7 @@
             
         </div>
         </div>
-
+    </div>
     </div>
 
 </div>
@@ -156,12 +154,12 @@
 
             foundGames+= '<div class="matches_card">';
             //foundGames+= '<img class="card_photo_box" src="/images/profile_images/' + liveResult.game_image_url + '" alt=""/>';
-            foundGames+= '<div class="card_name_box"><a onclick="mygames(' + liveResult.id +')">' + liveResult.game_name + '</a></div>';
+            foundGames+= '<a class="output" onclick="mygames(' + liveResult.id +')">' + liveResult.game_name + '</a>';
             //foundGames+= '<a onclick="mydates(' + liveResult.id + ')" id="card_button_box"></a>';
             foundGames+= '</div>';            
         });
-        
 
+                $('#gamesselection2').show();
                 $('#gamesselection2').html(foundGames);
                 $('#total_records').text(data.total_data);
             }
@@ -195,14 +193,15 @@
      
          console.log('gamesselection',gamesSelection);
       
-            getGames+= '<div class="game_card">';
-            getGames+= '<img class="game_photo_box" src="/images/profile_images/' + gamesSelection.game_image_url + '" alt=""/>';
-            getGames+= '<div>' + gamesSelection.game_name + '</div>';
-            getGames+= '<a onclick=mygames("'+ gamesSelection.id+ '")><div id="game_delete_box"></div>X</a>';
+            getGames+= '<div class="matches_card">';
+            getGames+= '<img class="card_photo_box" src="/images/games/' + gamesSelection.game_image_url + '" alt=""/>';
+            getGames+= '<div class="card_name_box">' + gamesSelection.game_name + '</div>';
+            getGames+= '<a class="delete_knop" onclick=mygames("'+ gamesSelection.id+ '")>X</a>';
             getGames+= '</div>';
   });
 
           $('#getgames').html(getGames);
+          $('#gamesselection2').hide();
         
       }
   }); //end ajax

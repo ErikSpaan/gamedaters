@@ -666,10 +666,23 @@ input[type=range]:focus::-ms-fill-upper {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 15%;
+            height: 50px;
             width: 100%;
             margin-bottom: 10px;
             margin-top: 10px;
+            top: 0;
+            left: 0;
+
+            .delete_knop:hover {
+                color: $red;
+                cursor: pointer;
+            }
+
+
+            .output:hover {
+                color: $red;
+                cursor: pointer;
+            }
 
             .card_photo_box {
                 height: 100%;
@@ -678,11 +691,11 @@ input[type=range]:focus::-ms-fill-upper {
                 transition: 0.4s;
                 border-radius: 10px;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 10px;
-                }
+                // img {
+                //     width: 100%;
+                //     height: 100%;
+                //     border-radius: 10px;
+                // }
             }
 
             .card_photo_box:hover {
@@ -777,6 +790,10 @@ input[type=range]:focus::-ms-fill-upper {
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
+                #card_delete_box:hover {
+                    color:$red;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -785,9 +802,14 @@ input[type=range]:focus::-ms-fill-upper {
         width: 100%;
         height: 50%;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-direction: column;
         align-items: center;
+
+        input {
+            font-size: 12px;
+            cursor: pointer;
+        }
 
         .filter_name {
             width: 100%;
@@ -829,6 +851,8 @@ input[type=range]:focus::-ms-fill-upper {
                 background-repeat: no-repeat;
                 cursor: pointer;
             }
+
+          
 
         }
     }
