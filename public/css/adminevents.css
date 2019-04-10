@@ -48,39 +48,39 @@ table {
 
 .button_events_delete {
   border-radius: 6px;
-  background-color: #ff8080;
+  background-color: #f40b26;
 }
 
 .button_events_delete:hover {
-  background-color: red;
+  background-color: #C3091E;
   color: white;
 }
 
 .button_events_delete:active {
   border-radius: 6px;
-  background-color: maroon;
+  background-color: #c3091e;
 }
 
 .button_events_edit {
   border-radius: 6px;
-  background-color: #8080ff;
+  background-color: #4fa7e7;
 }
 
 .button_events_edit:hover {
-  background-color: blue;
+  background-color: #1666a0;
   color: white;
 }
 
 .button_events_edit:active {
   border-radius: 6px;
-  background-color: navy;
+  background-color: #071f30;
 }
 
 .button_events_create {
   border-radius: 6px;
   padding: 15px;
   margin: 5px;
-  background-color: #01ff01;
+  background-color: green;
 }
 
 .button_events_create:hover {
@@ -90,14 +90,14 @@ table {
 
 .button_events_create:active {
   border-radius: 6px;
-  background-color: #000100;
+  background-color: green;
 }
 
 .button_events_back {
   border-radius: 6px;
   padding: 15px;
   margin: 5px;
-  background-color: #ffd280;
+  background-color: orange;
 }
 
 .button_events_back:hover {
@@ -107,7 +107,7 @@ table {
 
 .button_events_back:active {
   border-radius: 6px;
-  background-color: #805300;
+  background-color: orange;
 }
 
 input[type=text] {
@@ -156,34 +156,34 @@ textarea {
   border-radius: 6px;
   padding: 15px;
   margin: 5px;
-  background-color: #8080ff;
+  background-color: #4fa7e7;
 }
 
 .button_events_edit_los:hover {
-  background-color: blue;
+  background-color: #1666a0;
   color: white;
 }
 
 .button_events_edit_los:active {
   border-radius: 6px;
-  background-color: navy;
+  background-color: #071f30;
 }
 
 .button_events_delete_los {
   border-radius: 6px;
   padding: 15px;
   margin: 5px;
-  background-color: #ff8080;
+  background-color: #f40b26;
 }
 
 .button_events_delete_los:hover {
-  background-color: red;
+  background-color: #C3091E;
   color: white;
 }
 
 .button_events_delete_los:active {
   border-radius: 6px;
-  background-color: maroon;
+  background-color: #c3091e;
 }
 
 .event_pos_back_but {
