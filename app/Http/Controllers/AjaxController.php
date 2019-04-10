@@ -12,6 +12,7 @@ use App\Personalpage;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\event;
 use App\game;
+use Illuminate\Support\Facades\DB;
 
 
 class AjaxController extends Controller
@@ -138,6 +139,56 @@ public function getProfile(Request $request) {
     return response()->json($response);
 }    
   
+public function liveSearch(Request $request) {
+         
+            $output = ''; 
+            $total_row = 0;
+            $query = $request->input('query');
+            if($query != '') 
+                { 
+                $data = DB::table('games')->where('game_name', 'like', '%'.$query.'%')->get();
+            } else { 
+                $data = DB::table('games')->orderBy('game_name', 'asc')->get(); 
+                
+            } 
+            $total_row = $data->count(); 
+                   
+            $data = array(  'status' => 'success',
+                            'result' => $data,
+                            'total_data' => $total_row,
+                        ); 
+
+            return response()->json($data); 
+    }
+
+public function myGames(Request $request) {
+
+    //get user id
+    $user = User::find(Auth::user()->id);
+    //count mydates
+    $count = $user->games()->count();
+    $mygame = $request->input('gameid');
+    //set maxcount
+    $maxCount = 5;
+    if ($user->games->contains($mygame)) {
+            $user->games()->detach($mygame);
+    } else {
+        if ($count<$maxCount) {    
+        $user->games()->attach($mygame);
+    }
+}
+
+    $mygames =  User::find(Auth::user()->id)->games()->get();
+    
+    $response = array(
+        'status' => 'success',
+        'result' => $mygames,
+        'id' => $mygame,
+    ); 
+   
+    return response()->json($response); 
+}
+
 } //end class
 
 

@@ -105,7 +105,7 @@ class ProfilePagesController extends Controller
         //get the favorite dates
         $user = User::find(Auth::user()->id);
         $favorites =  $user::first()->dates()->get();
-        
+        //$myselectedgames = 
      
         //dd( $resultsWithCorrectGender );
         
