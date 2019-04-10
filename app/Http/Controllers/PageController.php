@@ -36,8 +36,9 @@ class PageController extends Controller
         $user = User::find(Auth::user()->id);
         //dd(User::find(Auth::user()->id));
         $favorites =  User::find(Auth::user()->id)->dates()->get();
+        $myselectedgames = User::find(Auth::user()->id)->games()->get();
 
-         return view('profilepage', compact('personalpage','filterResult','favorites'));
+         return view('profilepage', compact('personalpage','filterResult','favorites','myselectedgames'));
          //return view('profilepage', compact('personalpage'));
 
         
