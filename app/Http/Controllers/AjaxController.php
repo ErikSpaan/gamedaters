@@ -146,9 +146,9 @@ public function liveSearch(Request $request) {
             $query = $request->input('query');
             if($query != '') 
                 { 
-                $data = DB::table('games')->where('game_name', 'like', '%'.$query.'%')->get();
+                $data = DB::table('games')->where('game_name', 'like', '%'.$query.'%')->take(5)->get();
             } else { 
-                $data = DB::table('games')->orderBy('game_name', 'asc')->get(); 
+                $data = DB::table('games')->where('game_name', '=', 'ddfgdfgs')->get(); 
                 
             } 
             $total_row = $data->count(); 

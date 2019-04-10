@@ -102,7 +102,7 @@
         <div class="games_container">
                 <div class="filter_name">My top 5 games</div>
                 <div class="form-group">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Customer Data" />
+                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Game and click to add" />
                 </div>
   
              {{-- output of the selection --}}
@@ -150,17 +150,17 @@
             success:function(data) {   
                 //console.log(data.table_data); 
                 console.log(JSON.stringify(data.result));   
-
                 foundGames=""
                 data.result.forEach(function(liveResult) {
                 showProfile = liveResult.id;
-           
+
             foundGames+= '<div class="matches_card">';
             //foundGames+= '<img class="card_photo_box" src="/images/profile_images/' + liveResult.game_image_url + '" alt=""/>';
             foundGames+= '<div class="card_name_box"><a onclick="mygames(' + liveResult.id +')">' + liveResult.game_name + '</a></div>';
             //foundGames+= '<a onclick="mydates(' + liveResult.id + ')" id="card_button_box"></a>';
             foundGames+= '</div>';            
         });
+        
 
                 $('#gamesselection2').html(foundGames);
                 $('#total_records').text(data.total_data);
